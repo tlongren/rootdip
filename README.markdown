@@ -7,3 +7,4 @@ html5press is a theme for WordPress based on [a design by Jesper](http://jayj.dk
 Background
 -----------------------------
 I thought Jesper's stuff looked nice, and no WordPress theme existed yet based on his HTML5 template. So here this is.
+You can find [a demo here](http://new.longren.org/ "HTML5Press Demo")
