@@ -265,28 +265,29 @@ blockquote p { margin: 0; }
 		border-radius: 3px;
 	}
 
-#menu ul li.menu-item > a {
-	background: none;
-	color: #F83D87;
-}
-#menu ul li.menu-item > a:hover {
-	background: #F83D87;
-	color: #fff;
-	text-decoration: none;
-	text-shadow: #F71570 1px 1px 1px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
-#menu ul.sub-menu li.current-menu-item > a {
-	background: #F83D87;
-	color: #fff;
-	text-decoration: none;
-	text-shadow: #F71570 1px 1px 1px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
+	#menu ul li.menu-item > a {
+		background: none;
+		color: #F83D87;
+		text-shadow: #F71570 0px 0px 0px;
+	}
+	#menu ul li.menu-item > a:hover {
+		background: #F83D87;
+		color: #fff;
+		text-decoration: none;
+		text-shadow: #F71570 1px 1px 1px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+	#menu ul.sub-menu li.current-menu-item > a {
+		background: #F83D87;
+		color: #fff;
+		text-decoration: none;
+		text-shadow: #F71570 1px 1px 1px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
 /* Post */
 .post { 
 	min-height: 300px;
