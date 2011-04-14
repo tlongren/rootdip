@@ -1,3 +1,4 @@
+<?php/*Template Name: Page With No Comments*/?>
 <?php get_header(); ?>
 
 <div id="main" class="grid_8 alpha">
@@ -15,9 +16,6 @@
                 	Created <time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time>
 				</span>
             </footer> <!-- end post meta -->
-			<article class="comments">
-				<?php comments_template(); ?>
-			</article>
         </article> <!-- end post 1 -->
 		<?php endwhile; endif; ?>
     

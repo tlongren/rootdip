@@ -18,7 +18,9 @@
 				</span>
                 <!-- <a href="<?php //the_permalink(); ?>" class="more-link alignright">Read more</a> -->
             </footer> <!-- end post meta -->
-        
+			<article class="comments">
+				<?php comments_template(); ?>
+			</article>
         </article> <!-- end post 1 -->
     <?php endwhile; else: ?>
 		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
