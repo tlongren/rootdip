@@ -1,0 +1,13 @@
+/*
+Theme Name: HTML5Press
+Theme URI: http://www.longren.org/wordpress/html5press
+Description: Ported HTML5 design to a WordPress theme.
+Author: Tyler Longren
+Author URI: http://www.longren.org/
+Version: 1.0
+Tags: black, white, pink, two-columns, fixed-width, threaded-comments, html5, custom-menu, right-sidebar,
+*/
+
+@import "css/style.css";
+@import "css/960.css";
+/*@import "css/colortip-1.0-jquery.css";*/
