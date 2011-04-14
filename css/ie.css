@@ -1,0 +1,15 @@
+/* CSS for IE 7 & IE 6 */
+
+.post h2 { padding-top: 20px; }
+
+/* IE6 warning */
+
+.ie {
+	background: #fffadc;
+	margin-bottom: 50px;
+	border: 2px solid #F83D87;
+	font-size: 12px;
+	padding: 10px;
+}
+
+.ie p { margin-bottom: 10px; }

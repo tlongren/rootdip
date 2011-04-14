@@ -1,0 +1,525 @@
+/**
+ * HTML5 And CSS3 Theme version 1.2
+ * By Jayj.dk 2009-2010
+ * Download for free at http://jayj.dk/a-free-html5-and-css3-theme/
+ 
+	Released under New BSD License
+	http://www.opensource.org/licenses/bsd-license.php
+	 
+	Copyright (c) 2009-2010, Jayj.dk
+	All rights reserved.
+	
+	Redistribution and use in source and binary forms, with or without modification,
+	are permitted provided that the following conditions are met:
+	
+		* Redistributions of source code must retain the above copyright notice,
+		  this list of conditions and the following disclaimer.
+	
+		* Redistributions in binary form must reproduce the above copyright notice,
+		  this list of conditions and the following disclaimer in the documentation
+		  and/or other materials provided with the distribution.
+	
+		* Neither the name of Jayj.dk nor the names of its
+		  contributors may be used to endorse or promote products derived from this
+		  software without specific prior written permission.
+	
+	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+	ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+	DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+	ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+	(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+	LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+	ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
+@font-face {
+	font-family: 'ChunkFive Regular';
+	src: url('../fonts/Chunkfive.eot');
+	src: local('ChunkFive Regular'), local('ChunkFive'), url('../fonts/Chunkfive.woff') format('woff'), url('../fonts/Chunkfive.svg#ChunkFive') format('svg'), url('../fonts/Chunkfive.otf') format('opentype');
+}
+
+/* Reset.css */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, q, small, strong, sub, sup, tt, var,
+ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+ul, ol { list-style: none;}
+img { border: none; }
+:focus { outline: 0; }
+ins { text-decoration: underline; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+/* End reset */
+
+body { 
+	background: #eee url(../images/bg.png) repeat;
+	color: #333333;
+	font: 14px/24px Georgia, 'Times New Roman', Times, serif;
+}
+
+/* HTML5 */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+/* Typography and default stuff */
+
+a {
+	color: #F71570;
+	text-decoration: none;
+	-webkit-transition: all .1s linear;
+	-moz-transition: all .1s linear;
+	transition: all .1s linear;
+}
+
+a:hover {
+	background: #F83D87;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: #F71570 1px 1px 1px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+p, dl, hr, h1, h2, h3, h4, h5, h6,
+ol, ul, pre, table, fieldset, blockquote, .widget {
+	margin-bottom: 20px;
+}
+
+h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+h3 { font-size: 36px; letter-spacing: -1px; }
+h4 { font-size: 23px; }
+h5 { font-size: 19px; }
+h6 { font-size: 16px; }
+
+#header h1,
+.post h2,
+h3 {
+	font-family: 'ChunkFive Regular', Arial, Helvetica, sans-serif; /* Chunkfive is called via @font-face */
+}
+
+hr { border: 0 solid #ccc; border-top-width: 1px; clear: both; height: 0; }
+ol { list-style: decimal; }
+ul { list-style: disc; }
+li { margin-left: 30px; }
+
+pre {
+	background: #cecdcd;
+	border: 2px solid #F83D87;
+	font-size: 12px;
+	padding: 10px;
+	opacity: .75;
+	-webkit-box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.65);
+	-moz-box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.65);
+	box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.65);
+	-webkit-transition: opacity .2s linear;
+	-moz-transition: opacity .2s linear;
+	transition: opacity .2s linear;
+}
+
+pre:hover {
+	opacity: 1;	
+}
+
+pre code { background: none; }
+code { background: #cfcfcf; font-size: 12px; }
+
+blockquote {
+	background: url(../images/quote.png) no-repeat 5px top;
+	border-left: 4px solid #F83D87;
+	border-bottom: 1px solid #F83D87;
+	color: #424242;
+	font-style: italic;
+	padding: 15px 0 10px 10px;
+	margin-left: 20px;
+	text-indent: 10px;
+	-webkit-box-shadow: inset 1px -1px 1px rgba(255, 255, 255, 0.65);
+	-moz-box-shadow: inset 1px -1px 1px rgba(255, 255, 255, 0.65);
+	box-shadow: inset 1px -1px 1px rgba(255, 255, 255, 0.65);
+}
+
+blockquote p { margin: 0; }
+
+/* Header */
+
+#header {
+	height: 115px;
+}
+
+#header h1 a {
+	color: #1e1e1e;
+	font-size: 76px;
+	font-weight: bold;
+	float: left;
+	margin-top: 65px;
+	padding: 20px 2px;
+	letter-spacing: -3px;
+	text-shadow: 0 1px 0 #fff;
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	transition: all 0.15s linear;
+}
+
+#header h1 a:hover {
+	background: none;
+	text-decoration: none; 
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+/* Content */
+#content { 
+	background: url(../images/content_bg.png) repeat; /* Fallback for browser that doesn't support rgba */
+	background: rgba(204, 204, 204, .4);
+	border: 1px solid #ccc;
+	border-left: none; border-right: none;
+	float: left;
+	width: 940px;
+	padding: 40px 10px 0 10px;
+}
+
+/* Nav */
+#menu .current-menu-item a {
+	background: #F83D87;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: #F71570 1px 1px 1px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+#menu {
+	border-bottom: 1px solid #cacaca;
+	list-style: none;
+}
+
+#menu li {
+	float: left;
+	margin: 0 15px 0 0;
+	padding-bottom: 5px;
+	position: relative;
+}
+
+#menu li a {
+	display: block;
+	font-size: 16px;
+	padding: 8px 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+	/* Level 2 */
+	#menu ul {
+		background: #cacaca;
+		background: rgba(202, 202, 202, 0.95);
+		display: none;
+		padding: 10px;
+		list-style: none;
+		position: absolute;
+		left: 0; top: 100%;
+		z-index: 100;
+		text-shadow: 1px 1px 0 #eae7e7;
+		
+		-webkit-box-shadow: 2px 3px 3px #4d4b4b;
+		-moz-box-shadow: 2px 3px 3px #4d4b4b;
+		box-shadow: 2px 3px 3px #4d4b4b;
+		
+		-webkit-border-bottom-right-radius: 5px;
+		-moz-border-radius-bottomright: 5px;
+		border-bottom-right-radius: 5px;
+	}
+	#menu li:hover > ul { display: block; }
+	#menu ul li {
+		float: none;
+		min-width: 150px;
+	}
+	#menu li.current_page_parent a{
+		background: #F83D87;
+		color: #fff;
+		text-decoration: none;
+		text-shadow: #F71570 1px 1px 1px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+
+#menu ul li.menu-item > a {
+	background: none;
+	color: #F83D87;
+}
+#menu ul li.menu-item > a:hover {
+	background: #F83D87;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: #F71570 1px 1px 1px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+#menu ul.sub-menu li.current-menu-item > a {
+	background: #F83D87;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: #F71570 1px 1px 1px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+/* Post */
+.post { 
+	min-height: 300px;
+	margin-bottom: 60px;
+	position: relative;
+}
+
+.post p { padding-right: 30px; }
+
+.post img.thumbnail + p { margin-top: 25px; } /* First p after the thumbnail */
+
+.post h2,
+.post h2 a {
+	color: #333;
+	display: block;
+	font-size: 54px;
+	font-weight: bold;
+	margin-left: 10px;
+	letter-spacing: -1px;
+	-webkit-transition: opacity 0.15s ease-in-out;
+	-moz-transition: opacity 0.15s ease-in-out;
+	transition: opacity 0.15s ease-in-out;
+}
+
+.post h2 a:hover { 
+	background: none; 
+	opacity: 0.7; 
+	text-decoration: none;
+	text-shadow: none;
+}
+
+.post h3 { margin: 30px 0; }
+
+	/* Post meta */
+	.postmeta {
+		margin: 30px 35px 0 0;
+		overflow: hidden;
+		text-shadow: 1px 1px 1px #F71570;
+	}
+	
+	.postmeta a { color: #fff; }
+
+
+/* Sidebar */
+
+.widget {
+	overflow: hidden;
+	padding-top: 5px;
+}
+
+.widget li { line-height: 30px; }
+
+.widget li a { 
+	color: #333;
+	padding: 4px 5px; 
+	-webkit-transition: margin-left 0.3s linear;
+	-moz-transition: margin-left 0.3s linear;
+	transition: margin-left 0.3s linear;
+}
+
+.widget li a:hover {
+	color: #fff;
+	margin-left: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.widget h3 a {
+	color: #333;
+}
+.widget h3 a:hover {
+	background: none;
+	color: #333;
+	text-decoration: none;
+	text-shadow: #333 0px 0px 0px;
+}
+
+
+/* Footer */
+#footer { 
+	margin: 20px 0 30px 20px;
+	text-shadow: 1px 0 1px #fff;
+}
+
+#footer a {
+	color: #111;
+	font-size: 16px;
+	padding: 2px 3px;
+	text-shadow: 1px 0 1px #fff;
+}
+.widget h3 a {
+	color: #333;
+}
+#footer a:hover {
+	color: #fff;
+	text-shadow: none;
+}
+
+#footer p { margin: 0; }
+
+/* Form */
+
+input,
+textarea,
+label {
+	font: 16px Georgia, "Times New Roman", Times, serif;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+	background: #cecdcd; /* Fallback */
+	background: rgba(206, 205, 205, 0.6);
+	border: 2px solid #F83D87;
+	padding: 6px 5px;
+	
+	-webkit-box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.65);
+	-moz-box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.65);
+	box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.65);
+}
+
+input[type=search] {
+	padding: 6px 5px;
+}
+
+textarea { overflow: auto; }
+
+input[type=text]:hover, input[type=text]:focus,
+input[type=email]:hover, input[type=email]:focus,
+textarea:hover, textarea:focus {
+	background: #cecdcd;
+	background: rgba(206, 205, 205, 0.8);
+	border: 2px solid #e02a72;
+	text-shadow: 1px 1px 0 #eae7e7;
+}
+
+form input[type=submit] {
+	border: none;
+	cursor: pointer;
+	padding: 12px 6px;
+}
+
+/* When a form input is invalid - Used on the email type field */
+input:invalid { 
+	border: 2px solid red;
+	-webkit-transform: rotate(1deg);
+	-moz-transform: rotate(1deg);
+	transform: rotate(1deg);
+}
+
+	/* Contactform */
+	#contactform {
+		margin-top: 30px;
+		overflow: hidden;
+	}
+	
+	#contactform p {
+		overflow: hidden;
+	}
+	
+	#contactform label {
+		float: left;
+		padding-top: 10px;
+	}
+
+
+.success {
+	background: #e7f7d3 url(../images/accepted.png) no-repeat 10px center;
+	background: rgba(231, 247, 211, 0.4) url(../images/accepted.png) no-repeat 10px center;
+	border: 1px solid #6c3;
+	padding: 20px 0 20px 80px;
+}
+
+.error {
+	background: #ffebe8 url(../images/cancel.png) no-repeat 10px center;
+	background: rgba(255,235,232,0.4) url(../images/cancel.png) no-repeat 10px center;
+	border: 1px solid #C00;
+	color: #C00;
+	line-height: 30px;
+	padding: 10px 0 10px 80px;
+}
+
+/* Misc */
+
+.alignleft { float: left; }
+.alignright { float: right; }
+
+.btn,
+.more-link,
+input[type=submit]  {
+	background: #F83D87;
+	color: #fff;
+	padding: 5px 16px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px; 
+}
+
+.btn:hover,
+.more-link:hover,
+input[type=submit]:hover {
+	background: #F71570;
+}
+
+img.alignleft, 
+img.alignright { 
+	background: #f2f2f2;
+	border: 2px solid #cecdcd;
+	padding: 5px;
+	-webkit-transition: border 0.2s linear;
+	-moz-transition: border 0.2s linear;
+	transition: border 0.2s linear;
+}
+
+img.alignleft { margin-right: 15px; }
+img.alignright { margin-left: 15px; }
+
+.thumbnail { margin-left: -50px; }
+.thumbnail:hover { border: 2px solid #F83D87; }
+
+.hide { display: none; }
+
+/* Thumbnail rotation - Uncomment to use */
+
+/*
+.thumbnail {
+	-webkit-transform: rotate(1deg); 
+	-moz-transform: rotate(1deg); 
+	transform: rotate(1deg); 
+}
+.post:nth-child(odd) .thumbnail {
+	-webkit-transform: rotate(-1deg);
+	-moz-transform: rotate(-1deg);
+	transform: rotate(-1deg);
+ }
+*/
