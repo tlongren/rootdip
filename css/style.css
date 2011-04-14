@@ -409,9 +409,8 @@ textarea {
 }
 
 input[type=search] {
-	padding: 6px 5px;
-	background:#FFF url(../images/search_icon.png) no-repeat 7px center;
-	padding:7px 15px 6px 25px;
+	background:#FFF url(../images/search_icon.png) no-repeat 3px center;
+	padding:7px 15px 6px 20px;
 }
 
 textarea { overflow: auto; }
