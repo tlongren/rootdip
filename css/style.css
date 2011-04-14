@@ -510,6 +510,10 @@ img.alignright { margin-left: 15px; }
 
 .hide { display: none; }
 
+/* Comments */
+.commentlist li {
+	list-style-type: none
+}
 /* Thumbnail rotation - Uncomment to use */
 
 /*
