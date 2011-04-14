@@ -14,7 +14,7 @@
             
             <footer class="postmeta">
                 <span class="btn alignleft">
-                	In <?php the_category(', '); ?> by <?php the_author(); ?> on <time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time('F j, Y'); ?></time>
+                	In <?php the_category(', '); ?> by <?php the_author(); ?> on <a href="<?php bloginfo('url'); ?>/<?php echo get_the_time('Y/m'); ?>"><time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time('F j, Y'); ?></time></a>
 				</span>
                 <!-- <a href="<?php //the_permalink(); ?>" class="more-link alignright">Read more</a> -->
             </footer> <!-- end post meta -->
