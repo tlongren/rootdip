@@ -7,10 +7,7 @@ if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
 else:
 ?>
 <aside class="widget">
-<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-        <input type="search" value="" name="s" id="s" placeholder="<?php _e('Search...'); ?>" />
-        <input type="submit" id="searchsubmit" value="<?php _e('Search...'); ?>" />
-</form>
+<?php get_search_form(); ?>
 </aside>
 
 <aside class="widget">

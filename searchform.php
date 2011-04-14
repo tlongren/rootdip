@@ -1,5 +1,4 @@
-<form action="/" method="get" accept-charset="utf-8">
-<div class="search">
-	<div class="txt"><input type="text" name="s" id="search" value="<?php the_search_query(); ?>" /></div>
-</div>
+<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+        <input type="search" value="" name="s" id="s" placeholder="<?php _e('Search...'); ?>" />
+        <input type="submit" id="searchsubmit" value="<?php _e('Search...'); ?>" />
 </form>
