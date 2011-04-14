@@ -27,7 +27,7 @@
 			<div class="clear"></div>
 			<footer class="postmeta">
                 <span class="btn alignleft">
-                	In <?php the_category(', '); ?> by <?php the_author(); ?> on <time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time('F j, Y'); ?></time>
+                	In <?php the_category(', '); ?> by <?php the_author(); ?> on <time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time>
 				</span>
             </footer> <!-- end post meta -->
         
