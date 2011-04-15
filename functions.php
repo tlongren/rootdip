@@ -53,7 +53,8 @@ function html5press_list_comments($comment, $args, $depth) {
          <br />
       <?php endif; ?>
 
-      <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','') ?><div class="authortag">Author</div></div>
+      <div class="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>"><?php printf( '%1$s at %2$s', get_comment_date(),  get_comment_time() ); ?></time></a><?php edit_comment_link(__('(Edit)'),'  ','') ?><div class="authortag">Author</div></div>
+		
       <?php comment_text() ?>
 
       <div class="reply">
