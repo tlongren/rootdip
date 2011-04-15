@@ -397,6 +397,7 @@ label {
 
 input[type=text],
 input[type=email],
+input[type=url],
 textarea {
 	background: #cecdcd; /* Fallback */
 	background: rgba(206, 205, 205, 0.6);
@@ -417,6 +418,7 @@ textarea { overflow: auto; }
 
 input[type=text]:hover, input[type=text]:focus,
 input[type=email]:hover, input[type=email]:focus,
+input[type=url]:hover, input[type=url]:focus,
 textarea:hover, textarea:focus {
 	background: #cecdcd;
 	background: rgba(206, 205, 205, 0.8);
@@ -428,46 +430,6 @@ form input[type=submit] {
 	border: none;
 	cursor: pointer;
 	padding: 12px 6px;
-}
-
-/* When a form input is invalid - Used on the email type field */
-input:invalid { 
-	border: 2px solid red;
-	-webkit-transform: rotate(1deg);
-	-moz-transform: rotate(1deg);
-	transform: rotate(1deg);
-}
-
-	/* Contactform */
-	#contactform {
-		margin-top: 30px;
-		overflow: hidden;
-	}
-	
-	#contactform p {
-		overflow: hidden;
-	}
-	
-	#contactform label {
-		float: left;
-		padding-top: 10px;
-	}
-
-
-.success {
-	background: #e7f7d3 url(../images/accepted.png) no-repeat 10px center;
-	background: rgba(231, 247, 211, 0.4) url(../images/accepted.png) no-repeat 10px center;
-	border: 1px solid #6c3;
-	padding: 20px 0 20px 80px;
-}
-
-.error {
-	background: #ffebe8 url(../images/cancel.png) no-repeat 10px center;
-	background: rgba(255,235,232,0.4) url(../images/cancel.png) no-repeat 10px center;
-	border: 1px solid #C00;
-	color: #C00;
-	line-height: 30px;
-	padding: 10px 0 10px 80px;
 }
 
 /* Misc */
@@ -564,6 +526,21 @@ img.alignright { margin-left: 15px; }
 }
 .commentlist .bypostauthor {
 }
+.authortag {
+	display: none;
+}
+.commentlist .bypostauthor .authortag {
+	position:absolute;
+	top:5px;
+	right:3px;
+	font-weight: bold;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	-o-transform: rotate(60deg);
+	transform: rotate(60deg);
+	writing-mode: lr-tb;
+	display: inline;
+}
 .commentlist .children {
 	list-style: none;
 	margin: 0;
@@ -605,7 +582,7 @@ h3#reply-title {
 	font-weight: bold;
 }
 #respond label {
-	color: #888;
+	color: #333;
 	font-size: 12px;
 }
 #respond input {
@@ -616,7 +593,7 @@ h3#reply-title {
 	width: 98%;
 }
 #respond .form-allowed-tags {
-	color: #888;
+	color: #333;
 	font-size: 12px;
 	line-height: 18px;
 }
