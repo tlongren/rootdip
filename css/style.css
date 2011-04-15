@@ -483,16 +483,18 @@ img.alignright { margin-left: 15px; }
 	margin: 0;
 }
 .commentlist li.comment {
-	border-bottom: none;
+	border-bottom:thin solid #F83D87;
 	line-height: 24px;
 	margin: 0 0 24px 0;
 	padding: 0 0 0 56px;
 	position: relative;
 }
+/*
 .commentlist li:last-child {
 	border-bottom: none;
 	margin-bottom: 0;
 }
+*/
 #comments .comment-body ul,
 #comments .comment-body ol {
 	margin-bottom: 18px;
