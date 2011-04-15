@@ -44,7 +44,14 @@
 <?php endif; // check for comment navigation ?>
 
 			<ol class="commentlist">
-				<?php wp_list_comments(); ?>
+			
+				<?php
+					/* Loop through and list the comments. Tell wp_list_comments()
+					 * to use html5press_list_comments() to format the comments.
+					 * See html5press_list_comments() in html5press/functions.php for more.
+					 */
+					wp_list_comments( array( 'callback' => 'html5press_list_comments' ) );
+				?>
 			</ol>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
