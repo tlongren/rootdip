@@ -8,8 +8,8 @@
  * located in the functions.php file.
  *
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage html5press
+ * @since html5press 1.0
  */
 ?>
 
@@ -44,15 +44,7 @@
 <?php endif; // check for comment navigation ?>
 
 			<ol class="commentlist">
-				<?php
-					/* Loop through and list the comments. Tell wp_list_comments()
-					 * to use twentyten_comment() to format the comments.
-					 * If you want to overload this in a child theme then you can
-					 * define twentyten_comment() and that will be used instead.
-					 * See twentyten_comment() in twentyten/functions.php for more.
-					 */
-					wp_list_comments( );
-				?>
+				<?php wp_list_comments(); ?>
 			</ol>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
