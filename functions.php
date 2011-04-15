@@ -1,6 +1,6 @@
 <?php
 
-add_action( 'after_theme_setup', 'html5press_theme_setup' );
+add_action( 'after_setup_theme', 'html5press_theme_setup' );
 
 function html5press_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
