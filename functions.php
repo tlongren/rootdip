@@ -3,7 +3,7 @@
 add_action( 'after_setup_theme', 'html5press_theme_setup' );
 
 function html5press_theme_setup() {
-	load_theme_textdomain( 'html5press',get_template_directory() );
+	load_theme_textdomain( 'html5press' );
 	add_theme_support( 'post-thumbnails' );
 	register_nav_menu( 'main-menu', __('Main Menu','html5press') );
 	add_theme_support( 'automatic-feed-links' );
