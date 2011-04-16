@@ -7,13 +7,13 @@
         
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             
-            <?php the_content(__('Read more')); ?>
+            <?php the_content(__( 'Read more','html5press' )); ?>
             
             <div class="clear"></div>
 			
 			<footer class="postmeta">
                 <span class="btn alignleft">
-                	Created <time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time>
+                	<?php _e( 'Created ','html5press'); ?><time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time>
 				</span>
 				<?php /* Edit Link */ edit_post_link( __('Edit page','html5press'), '<span class="btn alignright">', '</span>' ); ?>
             </footer> <!-- end post meta -->
