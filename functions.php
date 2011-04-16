@@ -3,8 +3,9 @@
 add_action( 'after_setup_theme', 'html5press_theme_setup' );
 
 function html5press_theme_setup() {
+	load_theme_textdomain( 'html5press',get_template_directory() );
 	add_theme_support( 'post-thumbnails' );
-	register_nav_menu('main-menu', __('Main Menu'));
+	register_nav_menu( 'main-menu', __('Main Menu','html5press') );
 	add_theme_support( 'automatic-feed-links' );
 }
 
@@ -26,13 +27,13 @@ add_filter('comment_form_default_fields', 'html5press_comments');
 function html5press_comments() {
 	$req = get_option('require_name_email');
 	$fields =  array(
-'author' => '<p>' . '<label for="author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span>*</span>' : '' ) .
+'author' => '<p>' . '<label for="author">' . __( 'Name','html5press' ) . '</label> ' . ( $req ? '<span>*</span>' : '' ) .
 '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' placeholder = "What should we call you?"' . ( $req ? ' required' : '' ) . '/></p>',
 
-'email'  => '<p><label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span>*</span>' : '' ) .
+'email'  => '<p><label for="email">' . __( 'Email','html5press' ) . '</label> ' . ( $req ? '<span>*</span>' : '' ) .
 '<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' placeholder="How can we reach you?"' . ( $req ? ' required' : '' ) . ' /></p>',
 
-'url'    => '<p><label for="url">' . __( 'Website' ) . '</label>' .
+'url'    => '<p><label for="url">' . __( 'Website','html5press' ) . '</label>' .
 '<input id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" placeholder="Have you got a website?" /></p>'
 );
 	return $fields;
@@ -41,7 +42,7 @@ function html5press_comments() {
 add_filter('comment_form_field_comment', 'html5press_commentfield');
 
 function html5press_commentfield() {
-	$commentArea = '<p><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required placeholder="What\'s on your mind?"    ></textarea></p>';
+	$commentArea = '<p><label for="comment">' . _x( 'Comment','noun','html5press' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required placeholder="What\'s on your mind?"    ></textarea></p>';
 	return $commentArea;
 }
 
@@ -55,7 +56,7 @@ function html5press_list_comments($comment, $args, $depth) {
          <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
       </div>
       <?php if ($comment->comment_approved == '0') : ?>
-         <em><?php _e('Your comment is awaiting moderation.') ?></em>
+         <em><?php _e( 'Your comment is awaiting moderation.','html5press' ) ?></em>
          <br />
       <?php endif; ?>
 
