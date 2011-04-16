@@ -70,4 +70,10 @@ function html5press_list_comments($comment, $args, $depth) {
      </div>
 <?php
 }
+
+add_filter( 'edit_post_link','html5press_edit_post_link' );
+function html5press_edit_post_link() {
+	$link = '<span class="alignright"><a class="post-edit-link more-link" href="'.get_edit_post_link().'">'.__( 'Edit This','html5press' ).'</a></span>';
+	return $link;
+}
 ?>
