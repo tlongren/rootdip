@@ -3,11 +3,6 @@
 add_action( 'after_setup_theme', 'html5press_theme_setup' );
 
 function html5press_theme_setup() {
-	load_theme_textdomain( 'html5press' );
-	add_theme_support( 'post-thumbnails' );
-	register_nav_menu( 'main-menu', __('Main Menu','html5press') );
-	add_theme_support( 'automatic-feed-links' );
-	
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
@@ -18,6 +13,10 @@ function html5press_theme_setup() {
 	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
 	if ( is_readable( $locale_file ) )
 		require_once( $locale_file );
+	
+	add_theme_support( 'post-thumbnails' ); // post thumbnails
+	register_nav_menu( 'main-menu', __('Main Menu','html5press') ); // navigation menus
+	add_theme_support( 'automatic-feed-links' ); // automatic feeds
 }
 
 add_action( 'widgets_init', 'html5press_sidebars' );
