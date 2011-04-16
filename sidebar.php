@@ -20,7 +20,7 @@ else:
 <aside class="widget">
 	<h3><?php _e( 'Categories'); ?></h3>
 	<ul>
-		<?php wp_list_categories( array('title_li' => false) ); ?>
+		<?php wp_list_categories( array('title_li' => false,'depth' => '-1') ); ?>
 	</ul>
 </aside>
 
