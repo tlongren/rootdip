@@ -7,6 +7,17 @@ function html5press_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	register_nav_menu( 'main-menu', __('Main Menu','html5press') );
 	add_theme_support( 'automatic-feed-links' );
+	
+	/**
+	 * Make theme available for translation
+	 * Translations can be filed in the /languages/ directory
+	 */
+	load_theme_textdomain( 'html5press', TEMPLATEPATH . '/languages' );
+
+	$locale = get_locale();
+	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
+	if ( is_readable( $locale_file ) )
+		require_once( $locale_file );
 }
 
 add_action( 'widgets_init', 'html5press_sidebars' );

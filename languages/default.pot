@@ -1,0 +1,190 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: html5press\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-17 00:45+0100\n"
+"PO-Revision-Date: 2011-04-17 00:45+0100\n"
+"Last-Translator: Jesper <kontakt@jayj.dk>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;esc_attr__;esc_attr_e;esc_html__;esc_html_e;_x;_ex;esc_attr_x;esc_html_x;_n;_nx;_n_noop;_nx_noop;__\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:6
+msgid "Error 404"
+msgstr ""
+
+#: 404.php:7
+msgid "The page you requested could not be found. Try searching or going back to the "
+msgstr ""
+
+#: 404.php:7
+msgid "home page"
+msgstr ""
+
+#: archive.php:6
+msgid "Archive for the"
+msgstr ""
+
+#: archive.php:6
+msgid "Category"
+msgstr ""
+
+#: archive.php:8
+msgid "Posts Tagged "
+msgstr ""
+
+#: archive.php:10
+#: archive.php:12
+#: archive.php:14
+msgid "Archive for "
+msgstr ""
+
+#: archive.php:16
+msgid "Author Archive"
+msgstr ""
+
+#: archive.php:18
+msgid "Blog Archives"
+msgstr ""
+
+#: archive.php:26
+#: index.php:11
+#: page-no-comments.php:10
+#: page.php:9
+#: single.php:14
+msgid "Read more"
+msgstr ""
+
+#: attachment.php:8
+msgid "Previous Attachment"
+msgstr ""
+
+#: attachment.php:8
+msgid "Next Attachment"
+msgstr ""
+
+#: comments.php:18
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: comments.php:35
+#, php-format
+msgid "One Response to %2$s"
+msgstr ""
+
+#: comments.php:41
+#: comments.php:59
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr ""
+
+#: comments.php:42
+#: comments.php:60
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: comments.php:71
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:4
+msgid "Copyright "
+msgstr ""
+
+#: footer.php:4
+msgid "This Website"
+msgstr ""
+
+#: footer.php:4
+msgid "Design by "
+msgstr ""
+
+#: footer.php:4
+msgid " & WordPress'd by "
+msgstr ""
+
+#: functions.php:8
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:41
+msgid "Name"
+msgstr ""
+
+#: functions.php:44
+msgid "Email"
+msgstr ""
+
+#: functions.php:47
+msgid "Website"
+msgstr ""
+
+#: functions.php:56
+msgid "Comment"
+msgstr ""
+
+#: functions.php:67
+#, php-format
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
+msgstr ""
+
+#: functions.php:70
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:74
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:74
+msgid "Author"
+msgstr ""
+
+#: functions.php:87
+msgid "Edit This"
+msgstr ""
+
+#: index.php:17
+#: single.php:20
+msgid "In "
+msgstr ""
+
+#: index.php:17
+#: single.php:20
+msgid " by "
+msgstr ""
+
+#: index.php:17
+#: single.php:20
+msgid " on "
+msgstr ""
+
+#: index.php:26
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: page-no-comments.php:16
+#: page.php:15
+msgid "Created "
+msgstr ""
+
+#: searchform.php:2
+#: searchform.php:3
+msgid "Search..."
+msgstr ""
+
+#: sidebar.php:14
+msgid "Archives"
+msgstr ""
+
+#: sidebar.php:21
+msgid "Categories"
+msgstr ""
+
+#: sidebar.php:28
+msgid "Meta"
+msgstr ""
+
