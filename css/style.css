@@ -472,6 +472,11 @@ img.alignright { margin-left: 15px; }
 
 .hide { display: none; }
 
+img#wpstats {
+	height:0;
+	overflow:hidden;
+}
+
 /* Comments */
 /* =Comments
 -------------------------------------------------------------- */
