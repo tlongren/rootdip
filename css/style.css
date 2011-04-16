@@ -533,7 +533,7 @@ img.alignright { margin-left: 15px; }
 }
 .commentlist .bypostauthor .authortag {
 	position:absolute;
-	top:5px;
+	top:20px;
 	right:3px;
 	font-weight: bold;
 	-webkit-transform: rotate(60deg);
