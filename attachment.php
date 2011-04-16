@@ -23,7 +23,7 @@
                 <span class="btn alignleft">
                 	Created <time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time>
 				</span>
-				<?php /* Edit Link */ edit_post_link( __('Edit attachment','html5press'), '<span class="btn alignright">', '</span>' ); ?>
+				<?php /* Edit Link */ edit_post_link(); ?>
             </footer> <!-- end post meta -->
 			<article class="comments">
 				<?php comments_template(); ?>
