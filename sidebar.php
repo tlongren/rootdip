@@ -13,7 +13,14 @@ else:
 <aside class="widget">
 	<h3><?php _e( 'Archives'); ?></h3>
 	<ul>
-		<?php wp_get_archives( 'type=monthly' ); ?>
+		<?php wp_get_archives( array('type' => 'monthly') ); ?>
+	</ul>
+</aside>
+
+<aside class="widget">
+	<h3><?php _e( 'Categories'); ?></h3>
+	<ul>
+		<?php wp_list_categories( array('title_li' => false) ); ?>
 	</ul>
 </aside>
 
