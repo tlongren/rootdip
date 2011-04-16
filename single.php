@@ -17,6 +17,7 @@
                 <span class="btn alignleft">
                 	In <?php the_category(', '); ?> by <?php the_author(); ?> on <a href="<?php bloginfo('url'); ?>/<?php echo get_the_time('Y/m'); ?>"><time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time></a>
 				</span>
+				<?php /* Edit Link */ edit_post_link( __('Edit entry'), '<span class="btn alignright">', '</span>' ); ?>
             </footer> <!-- end post meta -->
 			<article class="comments">
 				<?php comments_template(); ?>

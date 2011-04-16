@@ -15,6 +15,7 @@
                 <span class="btn alignleft">
                 	Created <time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time>
 				</span>
+				<?php /* Edit Link */ edit_post_link( __('Edit page'), '<span class="btn alignright">', '</span>' ); ?>
             </footer> <!-- end post meta -->
         </article> <!-- end post 1 -->
 		<?php endwhile; endif; ?>
