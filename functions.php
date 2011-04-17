@@ -52,7 +52,7 @@ function html5press_comments() {
 add_filter('comment_form_field_comment', 'html5press_commentfield');
 
 function html5press_commentfield() {
-	$commentArea = '<p><label for="comment">' . _x( 'Comment','noun','html5press' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required placeholder="What\'s on your mind?"    ></textarea></p>';
+	$commentArea = '<p><label for="comment">' . _x( 'Comment','noun','html5press' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required placeholder="What\'s on your mind?"></textarea></p>';
 	return $commentArea;
 }
 
