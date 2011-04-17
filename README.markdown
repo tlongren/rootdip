@@ -12,6 +12,7 @@ Demo
 -----------------------------
 You can find [a demo here](http://new.longren.org/ "HTML5Press Demo")
 
+
 Notes
 -----------------------------
 There's a page template called Archives. Don't enter any page content, just title the page and select Archives for the page template. The archives will be generated automatically. See [here for an example](http://new.longren.org/archives/ "HTML5Press Archives Demo").
