@@ -5,7 +5,7 @@
 		<p>
 		<?php 
 		printf( _x('Powered by %1$s and %2$s','html5press'),
-			sprintf('<a href="http://wordpress.org/">%1$s<span>%2$s</span></a>',
+			sprintf('<a href="http://wordpress.org/">%1$s %2$s</a>',
 				__('WordPress','html5press'),
 				get_bloginfo('version')
 			),
