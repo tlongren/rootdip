@@ -1,5 +1,17 @@
 <?php
 
+define( 'html5press_version', '1.0-rc1' );
+function html5press_getinfo( $show = '' ) {
+        $output = '';
+
+		switch ( $show ) {
+			case 'version' :
+			$output = html5press_version;
+					break;
+		}
+		return $output;
+}
+
 add_action( 'after_setup_theme', 'html5press_theme_setup' );
 
 function html5press_theme_setup() {
