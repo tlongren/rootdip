@@ -1,5 +1,5 @@
 <?php
-/*Template Name: Archives - DO NOT EDIT*/
+/*Template Name: Archives*/
 $count_posts    = wp_count_posts( 'post' );
 $count_pages    = wp_count_posts( 'page' );
 $count_comments = wp_count_comments();
