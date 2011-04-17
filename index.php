@@ -8,7 +8,7 @@
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' ); ?>
             <?php if ( has_post_thumbnail() ) { ?><a href="<?php the_permalink(); ?>"><img src="<?php echo "$image[0]"; ?>" alt="" class="thumbnail alignleft" /></a><?php } ?>
             
-            <?php the_content(__('Read more')); ?>
+            <?php the_content(__( 'Read more','html5press' )); ?>
             
             <div class="clear"></div>  
             
