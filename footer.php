@@ -20,7 +20,7 @@
     <div class="clear"></div>
 
 </div> <!-- end wrapper -->
-
+<div id="message"><a href="#top">Scroll to top</a></div> 
 	<?php wp_footer(); ?>
 </body>
 </html>

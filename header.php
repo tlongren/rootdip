@@ -21,10 +21,35 @@
     	<link href="<?php echo get_template_directory_uri(); ?>/css/ie.css" rel="stylesheet" type="text/css" />
     <![endif]-->
 <?php wp_head(); ?>
+<script type="text/javascript">
+	var $j = jQuery.noConflict();
+	$j(function () {
+	var scroll_timer;
+	var displayed = false;
+	var $message = $j('#message a');
+	var $window = $j(window);
+	var top = $j(document.body).children(0).position().top;
+	$window.scroll(function () {
+		window.clearTimeout(scroll_timer);
+		scroll_timer = window.setTimeout(function () {
+			if($window.scrollTop() <= top)
+			{
+				displayed = false;
+				$message.fadeOut(500);
+			}
+			else if(displayed == false)
+			{
+				displayed = true;
+				$message.stop(true, true).show().click(function () { $message.fadeOut(500); });
+			}
+		}, 100);
+	});
+});
+</script>
 </head>
 
 <body>
-
+<div id="top"></div>
 <div id="wrapper" class="container_12">
 
     <header id="header" class="grid_12">
