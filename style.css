@@ -493,9 +493,8 @@ img#wpstats {
 	overflow:hidden;
 }
 
-/* Scroll to Top */
-#message a {
-	/* display: block before hiding */
+#toTop {
+/* display: block before hiding */
 	display: block;
 	display: none;
  
