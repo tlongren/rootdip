@@ -1,6 +1,6 @@
 <?php
 
-define( 'html5press_version', '1.0-rc1' );
+define( 'html5press_version', '1.0' );
 function html5press_getinfo( $show = '' ) {
         $output = '';
 
