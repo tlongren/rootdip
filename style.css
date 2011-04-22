@@ -125,6 +125,8 @@ h6 { font-size: 16px; }
 
 #header h1,
 .post h2,
+.page h2,
+.attachment h2,
 h3 {
 	font-family: 'ChunkFive Regular', Arial, Helvetica, sans-serif; /* Chunkfive is called via @font-face */
 }
@@ -299,18 +301,28 @@ blockquote p { margin: 0; }
 		border-radius: 3px;
 	}
 /* Post */
-.post { 
+.post,
+.page,
+.attachment { 
 	min-height: 300px;
 	margin-bottom: 60px;
 	position: relative;
 }
 
-.post p { padding-right: 30px; }
+.post p,
+.page p,
+.attachment p { padding-right: 30px; }
 
-.post img.thumbnail + p { margin-top: 25px; } /* First p after the thumbnail */
+.post img.thumbnail + p,
+.page img.thumbnail + p,
+.attachment img.thumbnail + p { margin-top: 25px; } /* First p after the thumbnail */
 
 .post h2,
-.post h2 a {
+.post h2 a,
+.page h2,
+.page h2 a,
+.attachment h2,
+.attachment h2 a {
 	color: #333;
 	display: block;
 	font-size: 54px;
@@ -322,14 +334,18 @@ blockquote p { margin: 0; }
 	transition: opacity 0.15s ease-in-out;
 }
 
-.post h2 a:hover { 
+.post h2 a:hover,
+.page h2 a:hover,
+.attachment h2 a:hover { 
 	background: none; 
 	opacity: 0.7; 
 	text-decoration: none;
 	text-shadow: none;
 }
 
-.post h3 { margin: 30px 0; }
+.post h3,
+.page h3,
+.attachment h3 { margin: 30px 0; }
 
 	/* Post meta */
 	.postmeta {
