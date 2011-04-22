@@ -18,7 +18,7 @@
 		<h2 class="pagetitle"><?php _e( 'Blog Archives','html5press' ); ?></h2>
  	  <?php } ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <article class="post">
+        <article <?php post_class(); ?>>
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' ); ?>
 			<?php if ( has_post_thumbnail() ) { ?><a href="<?php the_permalink(); ?>"><img src="<?php echo "$image[0]"; ?>" alt="" class="thumbnail alignleft" /></a><?php } ?>

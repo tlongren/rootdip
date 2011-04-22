@@ -10,7 +10,7 @@ $count_tags         = wp_count_terms( 'post_tag', array( 'hide_empty' => true ) 
 
 <div id="main" class="grid_8 alpha">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <article class="post">
+        <article <?php post_class(); ?>>
         
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             

@@ -2,7 +2,7 @@
 
 <div id="main" class="grid_8 alpha">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <article class="post">
+        <article <?php post_class(); ?>>
         
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<div class="alignleft"><?php previous_image_link(false,__('Previous Attachment','html5press')); ?></div><div class="alignright"><?php next_image_link(false,__('Next Attachment','html5press')); ?></div>
