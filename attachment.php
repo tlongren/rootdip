@@ -13,7 +13,7 @@
 			<figcaption><?php if ( !empty($post->post_excerpt) ) the_excerpt() ?></figcaption>
 			</figure>
 <?php else : ?>
-			<a href="<?php echo wp_get_attachment_url($post->ID) ?>" title="<?php echo wp_specialchars( get_the_title($post->ID), 1 ) ?>" rel="attachment"><?php echo basename($post->guid) ?></a>
+			<a href="<?php echo wp_get_attachment_url($post->ID) ?>" title="<?php echo esc_html( get_the_title($post->ID), 1 ) ?>" rel="attachment"><?php echo basename($post->guid) ?></a>
 			<div><?php if ( !empty($post->post_excerpt) ) the_excerpt() ?></div>
 <?php endif; ?>	
 
