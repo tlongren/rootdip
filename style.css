@@ -356,6 +356,9 @@ blockquote p { margin: 0; }
 	
 	.postmeta a { color: #fff; }
 
+.sticky {
+	background:url(images/pin.png) no-repeat left top;
+}
 
 /* Sidebar */
 
