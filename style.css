@@ -468,6 +468,7 @@ form input[type=submit] {
 
 .alignleft { float: left; }
 .alignright { float: right; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 .btn,
 .more-link,
