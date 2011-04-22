@@ -34,7 +34,10 @@
         
         </article> <!-- end post 1 -->
 		<?php endwhile; endif; ?>
-    
+		<div class="navigation">
+			<div class="nav-previous alignleft"><?php previous_posts_link( __( '<span class="meta-nav">&larr;</span> Newer Posts','html5press' ) ); ?></div>
+			<div class="nav-next alignright"><?php next_posts_link( __( 'Older Posts <span class="meta-nav">&rarr;</span>','html5press' ) ); ?></div>
+		</div>
     </div> <!-- end main -->
 
 <?php get_sidebar(); ?>
