@@ -551,6 +551,21 @@ img#wpstats {
 	text-align: center;
 }
 
+.wp-caption img {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+.wp-caption p.wp-caption-text {
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+.gallery-caption {
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
 /* Comments */
 /* =Comments
 -------------------------------------------------------------- */
