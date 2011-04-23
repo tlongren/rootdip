@@ -5,7 +5,12 @@
         <article <?php post_class(); ?>>
         
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			<div class="alignleft"><?php previous_post_link(); ?></div><div class="alignright"><?php next_post_link(); ?></div>
+			<div class="post-tags alignleft">
+				<p><?php the_tags('Tagged with: '); ?></p>
+			</div>
+			<div class="clear"></div>
+			<div class="alignleft"><?php previous_post_link(); ?></div>
+			<div class="alignright"><?php next_post_link(); ?></div>
             <div class="clear"></div>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' ); ?>
 			<?php $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
@@ -21,6 +26,7 @@
 				</span>
 				<?php /* Edit Link */ edit_post_link(); ?>
             </footer> <!-- end post meta -->
+			
 			<article class="comments">
 				<?php comments_template(); ?>
 			</article>

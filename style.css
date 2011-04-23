@@ -346,6 +346,14 @@ blockquote p { margin: 0; }
 	background:url(images/pin.png) no-repeat left top;
 }
 
+.post-tags {
+	margin: 5px 0 10px 5px;
+	background:url(images/tag.png) no-repeat left 8px;
+}
+.post-tags p {
+	margin: 5px 0 10px 26px;
+}
+
 /* Sidebar */
 
 .widget {
@@ -470,6 +478,8 @@ input[type=submit]  {
 input[type=submit]:hover {
 	background: #F71570;
 }
+
+article .btn a { color: #fff; }
 
 img.alignleft, 
 img.alignright { 
