@@ -14,7 +14,7 @@
             
             <footer class="postmeta">
                 <span class="btn alignleft">
-                	<?php _e( 'In ','html5press'); ?><?php the_category(', '); ?><?php _e( ' by ','html5press'); ?><?php the_author(); ?><?php _e( ' on ','html5press'); ?><a href="<?php bloginfo('url'); ?>/<?php echo get_the_time('Y/m'); ?>"><time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time></a>
+                	<?php _e( 'In ','html5press'); ?><?php the_category(', '); ?><?php _e( ' by ','html5press'); ?><?php the_author_posts_link(); ?><?php _e( ' on ','html5press'); ?><a href="<?php bloginfo('url'); ?>/<?php echo get_the_time('Y/m'); ?>"><time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time></a>
 				</span>
 				<?php /* Edit Link */ edit_post_link(); ?>
             </footer> <!-- end post meta -->
