@@ -1,6 +1,6 @@
 <?php
 if ( ! isset( $content_width ) ) $content_width = 580;
-define( 'html5press_version', '1.1' );
+define( 'html5press_version', '1.2' );
 function html5press_getinfo( $show = '' ) {
         $output = '';
 
