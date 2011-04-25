@@ -5,9 +5,8 @@
 		<p>
 		<?php 
 		printf( _x('Powered by %1$s and %2$s','html5press'),
-			sprintf('<a href="http://wordpress.org/">%1$s %2$s</a>',
-				__('WordPress','html5press'),
-				get_bloginfo('version')
+			sprintf('<a href="http://wordpress.org/">%1$s</a>',
+				__('WordPress','html5press')
 			),
 			sprintf('<a href="http://www.longren.org/wordpress/html5press/" title="%1$s">HTML5Press %2$s</a>',
 				__('HTML5Press WordPress Theme.','html5press'),
