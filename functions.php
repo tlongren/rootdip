@@ -29,6 +29,8 @@ function html5press_theme_setup() {
 	add_theme_support( 'post-thumbnails' ); // post thumbnails
 	register_nav_menu( 'main-menu', __('Main Menu','html5press') ); // navigation menus
 	add_theme_support( 'automatic-feed-links' ); // automatic feeds
+	
+	wp_enqueue_script('jquery');
 }
 
 add_action( 'widgets_init', 'html5press_sidebars' );
