@@ -100,4 +100,10 @@ function html5press_edit_post_link() {
 	$link = '<span class="alignright"><a class="post-edit-link more-link" href="'.get_edit_post_link().'">'.__( 'Edit This','html5press' ).'</a></span>';
 	return $link;
 }
+
+add_filter( 'wp_page_menu','html5press_page_menu' );
+function html5press_page_menu($menu) {
+	return preg_replace('/<ul>/', '<ul id="menu">', $menu, 1);
+	return $menu;
+}
 ?>
