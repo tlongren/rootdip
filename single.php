@@ -5,9 +5,11 @@
         <article <?php post_class(); ?>>
         
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<?php if (has_tag()) { ?>
 			<div class="post-tags alignleft">
 				<p><?php the_tags(__( 'Tagged with: ','html5press' )); ?></p>
 			</div>
+			<?php } ?>
 			<div class="clear"></div>
 			<div class="alignleft"><?php previous_post_link(); ?></div>
 			<div class="alignright"><?php next_post_link(); ?></div>
