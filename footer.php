@@ -14,7 +14,6 @@
 		)
 	);?>
 	</p>
-	<p><?php printf( __('Generated in %s seconds with %d queries.', 'html5press'), timer_stop(0, 3), get_num_queries() ); ?></p>
 	</footer> <!-- end footer -->
     
     <div class="clear"></div>
