@@ -1,4 +1,6 @@
 <?php
+require_once ( get_template_directory() . '/theme-options.php' );
+$options = get_option('html5press_theme_options');
 if ( ! isset( $content_width ) ) $content_width = 580;
 define( 'html5press_version', '1.3-rc1' );
 function html5press_getinfo( $show = '' ) {
@@ -30,7 +32,9 @@ function html5press_theme_setup() {
 	register_nav_menu( 'main-menu', __('Main Menu','html5press') ); // navigation menus
 	add_theme_support( 'automatic-feed-links' ); // automatic feeds
 	
-	wp_enqueue_script('jquery');
+	if ($options['backToTop'] == 1) {
+		wp_enqueue_script('jquery');
+	}
 }
 
 add_action( 'widgets_init', 'html5press_sidebars' );
