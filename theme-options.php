@@ -63,8 +63,6 @@ function theme_options_do_page() {
  * Sanitize and validate input. Accepts an array, return a sanitized array.
  */
 function theme_options_validate( $input ) {
-	global $select_options;
-
 	// Our checkbox value is either 0 or 1
 	if ( ! isset( $input['backToTop'] ) )
 		$input['backToTop'] = null;
