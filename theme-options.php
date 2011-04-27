@@ -21,7 +21,6 @@ function theme_options_add_page() {
  * Create the options page
  */
 function theme_options_do_page() {
-	global $select_options, $radio_options;
 
 	if ( ! isset( $_REQUEST['settings-updated'] ) )
 		$_REQUEST['settings-updated'] = false;
