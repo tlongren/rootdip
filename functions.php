@@ -1,6 +1,11 @@
 <?php
 require_once ( get_template_directory() . '/theme-options.php' );
-$options = get_option('html5press_theme_options');
+function html5press_layout_view() {
+	global $html5press_options;
+	$settings = get_option( 'html5press_options', $html5press_options );
+}
+
+add_action( 'wp_head', 'html5press_layout_view' );
 if ( ! isset( $content_width ) ) $content_width = 580;
 define( 'html5press_version', '1.3-rc1' );
 function html5press_getinfo( $show = '' ) {

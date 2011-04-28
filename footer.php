@@ -1,4 +1,4 @@
-    
+    <?php global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options ); ?>
     <footer id="footer" class="grid_12">
         <!-- You're free to remove the credit link in the footer, but please, please leave it there. -->
         <p><?php _e( 'Copyright ','html5press' ); ?>&copy; <?php echo date('Y'); ?> <a href="<?php bloginfo('url'); ?>" title="<?php _e( 'This Website','html5press' ); ?>"><?php bloginfo('name'); ?></a> - <?php _e( 'Design by ','html5press' ); ?><a href="http://jayj.dk" title="Design by Jayj.dk">Jayj.dk</a><?php _e( ' & WordPress\'d by ','html5press' ); ?><a href="http://www.longren.org/wordpress/html5press/">Tyler Longren</a></p>
@@ -19,7 +19,7 @@
     <div class="clear"></div>
 
 </div> <!-- end wrapper -->
-	<?php $options = get_option('html5press_theme_options'); if ($options['backToTop'] == 1) { ?>
+	<?php if ($html5press_settings['back_to_top'] == 1) { ?>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/easing.js" type="text/javascript"></script> 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.ui.totop.js" type="text/javascript"></script>
 	<script type="text/javascript">
