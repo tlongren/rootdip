@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<?php global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options ); ?>
 <div id="main" class="grid_8 alpha">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>
@@ -15,7 +15,7 @@
 			<div class="alignright"><?php next_post_link(); ?></div>
             <div class="clear"></div>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' ); ?>
-			<?php $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' ); ?>
+			<?php $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), $html5press_settings['featured_image_size'] ); ?>
             <?php if ( has_post_thumbnail() ) { ?><a href="<?php echo "$large_image[0]"; ?>" rel="thumbnail"><img src="<?php echo "$image[0]"; ?>" alt="" class="thumbnail alignleft" /></a><?php } ?>
             
             <?php the_content(__('Read more')); ?>

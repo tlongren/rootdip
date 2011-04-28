@@ -2,7 +2,8 @@
 
 // Default options values
 $html5press_options = array(
-	'back_to_top' => true
+	'back_to_top' => true,
+	'featured_image_size' => 'large'
 );
 
 if ( is_admin() ) : // Load only if we are viewing an admin page
@@ -14,6 +15,26 @@ function html5press_register_settings() {
 
 add_action( 'admin_init', 'html5press_register_settings' );
 
+// Store image sizes in array
+$html5press_image_sizes = array(
+	'full' => array(
+		'value' => 'full',
+		'label' => 'Full'
+	),
+	'large' => array(
+		'value' => 'large',
+		'label' => 'Large'
+	),
+	'medium' => array(
+		'value' => 'medium',
+		'label' => 'Medium'
+	),
+	'thumbnail' => array(
+		'value' => 'thumbnail',
+		'label' => 'Thumbnail'
+	)
+);
+
 function html5press_theme_options() {
 	// Add theme options page to the addmin menu
 	add_theme_page( 'HTML5Press Options', 'HTML5Press Options', 'edit_theme_options', 'theme_options', 'html5press_theme_options_page' );
@@ -23,15 +44,14 @@ add_action( 'admin_menu', 'html5press_theme_options' );
 
 // Function to generate options page
 function html5press_theme_options_page() {
-	global $html5press_options, $html5press_categories, $html5press_layouts;
+	global $html5press_options, $html5press_image_sizes;
 
 	if ( ! isset( $_REQUEST['settings-updated'] ) )
-		$_REQUEST['settings-updated'] = false; // This checks whether the form has just been submitted. ?>
+		$_REQUEST['settings-updated'] = false; ?>
 
 	<div class="wrap">
 
-	<?php screen_icon(); echo "<h2>" . get_current_theme() . __( ' Theme Options' ) . "</h2>";
-	// This shows the page's name and an icon if one has been provided ?>
+	<?php screen_icon(); echo "<h2>" . get_current_theme() . __( ' Theme Options' ) . "</h2>"; ?>
 
 	<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
 	<div class="updated fade"><p><strong><?php _e( 'Options saved', 'html5press' ); ?></strong></p></div>
@@ -51,7 +71,21 @@ function html5press_theme_options_page() {
 	<label for="back_to_top">Enabled</label>
 	</td>
 	</tr>
-
+	<tr valign="top"><th scope="row"><label for="featured_image_size">Linked Featured Image Size</label></th>
+	<td>
+	<select id="featured_image_size" name="html5press_options[featured_image_size]">
+	<?php
+	foreach ( $html5press_image_sizes as $images ) :
+		$label = $images['label'];
+		$selected = '';
+		if ( $images['value'] == $settings['featured_image_size'] )
+			$selected = 'selected="selected"';
+		echo '<option style="padding-right: 10px;" value="' . esc_attr( $images['value'] ) . '" ' . $selected . '>' . $label . '</option>';
+	endforeach;
+	?>
+	</select>
+	</td>
+	</tr>
 	</table>
 
 	<p class="submit"><input type="submit" class="button-primary" value="Save Options" /></p>
@@ -64,9 +98,14 @@ function html5press_theme_options_page() {
 }
 
 function html5press_validate_options( $input ) {
-	global $html5press_options;
+	global $html5press_options,$html5press_image_sizes;
 
 	$settings = get_option( 'html5press_options', $html5press_options );
+	
+	// We select the previous value of the field, to restore it in case an invalid entry has been given
+	$prev = $settings['featured_image_size'];
+	if ( !array_key_exists( $input['featured_image_size'], $html5press_image_sizes ) )
+		$input['featured_image_size'] = $prev;
 	
 	// If the checkbox has not been checked, we void it
 	if ( ! isset( $input['back_to_top'] ) )
