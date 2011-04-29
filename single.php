@@ -19,7 +19,7 @@
             <?php if ( has_post_thumbnail() ) { ?><a href="<?php echo "$large_image[0]"; ?>" rel="thumbnail"><img src="<?php echo "$image[0]"; ?>" alt="" class="thumbnail alignleft" /></a><?php } ?>
             
             <?php the_content(__('Read more')); ?>
-            
+			<?php wp_link_pages( array( 'before' => '<p class="post-page-links aligncenter">' . __( 'Pages:', 'html5press' ), 'after' => '</p>' ) ); ?>
             <div class="clear"></div>
 			
 			<footer class="postmeta">

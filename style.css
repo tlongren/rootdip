@@ -354,6 +354,8 @@ blockquote p { margin: 0; }
 	margin: 5px 0 10px 26px;
 }
 
+.post-page-links { text-align:center; font-size: 18px; }
+
 /* Sidebar */
 
 .widget {
