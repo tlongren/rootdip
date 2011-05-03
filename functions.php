@@ -36,9 +36,20 @@ function html5press_theme_setup() {
 	add_theme_support( 'post-thumbnails' ); // post thumbnails
 	register_nav_menu( 'main-menu', __('Main Menu','html5press') ); // navigation menus
 	add_theme_support( 'automatic-feed-links' ); // automatic feeds
-	
-	if ($options['backToTop'] == 1) {
-		wp_enqueue_script('jquery');
+}
+
+add_action( 'init', 'html5press_register_scripts' );
+function html5press_register_scripts() {
+	if ( !is_admin() ) {
+		wp_deregister_script( 'jquery' );
+		wp_register_script( 'jquery', ( 'https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js' ), false, null, true );
+		wp_enqueue_script( 'jquery' );
+		global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options );
+		// if back to top is enabled, add easing and the back to top javascript.
+		if ($html5press_settings['back_to_top'] == 1) {
+			wp_enqueue_script('easing', get_bloginfo('stylesheet_directory').'/js/easing.js', 'jquery', '1.1.2');
+			wp_enqueue_script('totop', get_bloginfo('stylesheet_directory').'/js/jquery.ui.totop.js', 'jquery', '1.1');
+		}
 	}
 }
 

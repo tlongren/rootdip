@@ -20,8 +20,6 @@
 
 </div> <!-- end wrapper -->
 	<?php if ($html5press_settings['back_to_top'] == 1) { ?>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/easing.js" type="text/javascript"></script> 
-	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.ui.totop.js" type="text/javascript"></script>
 	<script type="text/javascript">
 	jQuery(document).ready(function() {		
 		jQuery().UItoTop({ easingType: 'easeOutQuart',text: 'Back To Top',min: '300'});
