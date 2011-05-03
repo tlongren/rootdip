@@ -115,4 +115,16 @@ function html5press_page_menu($menu) {
 	return preg_replace('/<ul>/', '<ul id="menu">', $menu, 1);
 	return $menu;
 }
+
+add_action( 'wp_before_admin_bar_render', 'html5press_admin_bar_link' );
+function html5press_admin_bar_link() {
+	global $wp_admin_bar;
+	$wp_admin_bar->add_menu( array(
+		'parent' => 'appearance',
+		'id' => 'html5press-options',
+		'title' => __('HTML5Press Options'),
+		'href' => admin_url( 'themes.php?page=theme_options'),
+		'meta' => false
+	));
+}
 ?>
