@@ -1,6 +1,6 @@
 jQuery(function(){
 	jQuery('#slider').bxSlider({
-		easing: 'easeOutBounce',
+		easing: 'jswing',
 		mode: 'horizontal',
 		pager: true,
 		speed: 700,
