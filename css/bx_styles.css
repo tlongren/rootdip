@@ -1,0 +1,141 @@
+/* @override http://localhost/bxslider_v3_plugin/css/styles.css */
+
+/*
+ * To change the color scheme of slider change each 
+ * background property for each of the five styles below
+ */
+
+/*next button*/
+#slider-wrapper {
+	width: 520px;
+	margin-left: 50px;
+}
+.bx-next {
+	color: #333;
+	position:absolute;
+	top:40%;
+	right:-50px;
+	z-index:999;
+	width: 30px;
+	height: 30px;
+	font-size: 30px;
+	font-weight: 900;
+	border:3px solid #333;
+	-webkit-border-radius:300px;
+	-moz-border-radius:300px;
+	border-radius:300px;
+	/*
+	background: -webkit-gradient(linear, left top, left bottombottom, from(#539abf), to(#315d88));  
+	background: -moz-linear-gradient(top, #539abf, #315d88);
+	*/
+	background: url(../images/arrow_right_16x16.png) no-repeat 7px 7px;
+}
+
+/*previous button*/
+.bx-prev {
+	color: #333;
+	position:absolute;
+	top:40%;
+	left:-50px;
+	z-index:999;
+	width: 30px;
+	height: 30px;
+	font-size: 30px;
+	font-weight: 900;
+	border:3px solid #333;
+	-webkit-border-radius:300px;
+	-moz-border-radius:300px;
+	border-radius:300px;
+	/*
+	background: -webkit-gradient(linear, left top, left bottombottom, from(#539abf), to(#315d88));  
+	background: -moz-linear-gradient(top, #539abf, #315d88);
+	*/
+	background: url(../images/arrow_left_16x16.png) no-repeat 7px 7px;
+}
+
+/*pager links*/
+.bx-pager a {
+	margin-right: 5px;
+	color: #333;
+	padding: 3px 8px 3px 6px;
+	font-size: 12px;
+	zoom:1;
+	border:3px solid #333;
+	-webkit-border-radius:300px;
+	-moz-border-radius:300px;
+	border-radius:300px;
+}
+
+/*next/prev button hover state*/
+.bx-prev:hover {
+	border:3px solid #F83D87;
+	-webkit-border-radius:300px;
+	-moz-border-radius:300px;
+	border-radius:300px;
+	background: url(../images/arrow_left_16x16.png) no-repeat 7px 7px;
+}
+
+.bx-next:hover {
+	border:3px solid #F83D87;
+	-webkit-border-radius:300px;
+	-moz-border-radius:300px;
+	border-radius:300px;
+	background: url(../images/arrow_right_16x16.png) no-repeat 7px 7px;
+}
+
+/*pager links hover and active states*/
+.bx-pager .pager-active,
+.bx-pager a:hover {
+	border:3px solid #F83D87;
+	-webkit-border-radius:300px;
+	-moz-border-radius:300px;
+	border-radius:300px;
+	background: none;
+}
+
+/*pager wrapper*/
+.bx-pager {
+	text-align:center;
+	padding-top: 7px;
+	font-size:12px;
+	color:#666;
+}
+
+/*captions*/
+.bx-captions {
+	text-align:center;
+	font-size: 12px;
+	padding: 7px 0;
+	color: #666;
+}
+
+/*auto controls*/
+.bx-auto {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.bx-auto a {
+	color: #666;
+	font-size: 12px;
+}
+
+#slider {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	overflow: hidden;
+	height: 226px;
+}
+
+#slider li {
+	padding: 0;
+	margin: 0;
+	zoom:1;
+}
+
+#slider img {
+	float: left;
+	margin-right: 36px;
+	border: solid #666 1px;
+}

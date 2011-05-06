@@ -3,7 +3,9 @@
 // Default options values
 $html5press_options = array(
 	'back_to_top' => true,
-	'featured_image_size' => 'large'
+	'featured_image_size' => 'large',
+	'featured_cat' => '',
+	'num_featured' => '5'
 );
 
 if ( is_admin() ) : // Load only if we are viewing an admin page
@@ -35,6 +37,40 @@ $html5press_image_sizes = array(
 	)
 );
 
+// Store categories in array
+$html5press_categories[0] = array(
+	'value' => 0,
+	'label' => ''
+);
+$html5press_cats = get_categories(); $i = 1;
+foreach( $html5press_cats as $html5press_cat ) :
+	$html5press_categories[$html5press_cat->cat_ID] = array(
+		'value' => $html5press_cat->cat_ID,
+		'label' => $html5press_cat->cat_name
+	);
+	$i++;
+endforeach;
+
+// Store number of featured posts to show options
+$html5press_num_featured_options = array(
+	'five' => array(
+		'value' => '5',
+		'label' => '5'
+	),
+	'ten' => array(
+		'value' => '10',
+		'label' => '10'
+	),
+	'fifteen' => array(
+		'value' => '15',
+		'label' => '15'
+	),
+	'twenty' => array(
+		'value' => '20',
+		'label' => '20'
+	)
+);
+
 function html5press_theme_options() {
 	// Add theme options page to the addmin menu
 	add_theme_page( 'HTML5Press Options', 'HTML5Press Options', 'edit_theme_options', 'theme_options', 'html5press_theme_options_page' );
@@ -44,7 +80,7 @@ add_action( 'admin_menu', 'html5press_theme_options' );
 
 // Function to generate options page
 function html5press_theme_options_page() {
-	global $html5press_options, $html5press_image_sizes;
+	global $html5press_options, $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options;
 
 	if ( ! isset( $_REQUEST['settings-updated'] ) )
 		$_REQUEST['settings-updated'] = false; ?>
@@ -86,6 +122,36 @@ function html5press_theme_options_page() {
 	</select>
 	</td>
 	</tr>
+	<tr valign="top"><th scope="row"><label for="featured_cat">Featured Category</label></th>
+	<td>
+	<select id="featured_cat" name="html5press_options[featured_cat]">
+	<?php
+	foreach ( $html5press_categories as $category ) :
+		$label = $category['label'];
+		$selected = '';
+		if ( $category['value'] == $settings['featured_cat'] )
+			$selected = 'selected="selected"';
+		echo '<option style="padding-right: 10px;" value="' . esc_attr( $category['value'] ) . '" ' . $selected . '>' . $label . '</option>';
+	endforeach;
+	?>
+	</select>
+	</td>
+	</tr>
+	<tr valign="top"><th scope="row"><label for="num_featured"># Featured Posts to Show</label></th>
+	<td>
+	<select id="num_featured" name="html5press_options[num_featured]">
+	<?php
+	foreach ( $html5press_num_featured_options as $featured ) :
+		$label = $featured['label'];
+		$selected = '';
+		if ( $featured['value'] == $settings['num_featured'] )
+			$selected = 'selected="selected"';
+		echo '<option style="padding-right: 10px;" value="' . esc_attr( $featured['value'] ) . '" ' . $selected . '>' . $label . '</option>';
+	endforeach;
+	?>
+	</select>
+	</td>
+	</tr>
 	</table>
 
 	<p class="submit"><input type="submit" class="button-primary" value="Save Options" /></p>
@@ -98,9 +164,21 @@ function html5press_theme_options_page() {
 }
 
 function html5press_validate_options( $input ) {
-	global $html5press_options,$html5press_image_sizes;
+	global $html5press_options, $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options;
 
 	$settings = get_option( 'html5press_options', $html5press_options );
+	
+	// We select the previous value of the field, to restore it in case an invalid entry has been given
+	$prev = $settings['featured_cat'];
+	// We verify if the given value exists in the categories array
+	if ( !array_key_exists( $input['featured_cat'], $html5press_categories ) )
+		$input['featured_cat'] = $prev;
+		
+	// We select the previous value of the field, to restore it in case an invalid entry has been given
+	$prev = $settings['num_featured'];
+	// We verify if the given value exists in the categories array
+	if ( !array_key_exists( $input['num_featured'], $html5press_num_featured_options ) )
+		$input['num_featured'] = $prev;
 	
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
 	$prev = $settings['featured_image_size'];
