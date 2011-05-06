@@ -175,10 +175,10 @@ function html5press_validate_options( $input ) {
 		$input['featured_cat'] = $prev;
 		
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
-	$prev = $settings['num_featured'];
+	// $prev = $settings['num_featured'];
 	// We verify if the given value exists in the categories array
-	if ( !array_key_exists( $input['num_featured'], $html5press_num_featured_options ) )
-		$input['num_featured'] = $prev;
+	// if ( !array_key_exists( $input['num_featured'], $html5press_num_featured_options ) )
+		// $input['num_featured'] = $prev;
 	
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
 	$prev = $settings['featured_image_size'];
@@ -195,3 +195,4 @@ function html5press_validate_options( $input ) {
 }
 
 endif;  // EndIf is_admin()
+?>
