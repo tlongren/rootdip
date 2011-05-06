@@ -122,7 +122,7 @@ function html5press_theme_options_page() {
 	</select>
 	</td>
 	</tr>
-	<tr valign="top"><th scope="row"><label for="featured_cat">Featured Category</label></th>
+	<tr valign="top"><th scope="row"><label for="featured_cat">Featured Post Category</label></th>
 	<td>
 	<select id="featured_cat" name="html5press_options[featured_cat]">
 	<?php
