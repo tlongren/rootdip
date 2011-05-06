@@ -53,7 +53,7 @@ function html5press_register_scripts() {
 		global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options );
 		// if back to top is enabled, add easing and the back to top javascript.
 		if ($html5press_settings['back_to_top'] == 1) {
-			wp_enqueue_script('easing', get_bloginfo('stylesheet_directory').'/js/easing.js', 'jquery', '1.1.2');
+			wp_enqueue_script('easing', get_bloginfo('stylesheet_directory').'/js/easing.min.js', 'jquery', '1.1.2');
 			wp_enqueue_script('totop', get_bloginfo('stylesheet_directory').'/js/jquery.ui.totop.js', 'jquery', '1.1');
 		}
 		wp_enqueue_script('bxslider', get_bloginfo('stylesheet_directory').'/js/jquery.bxSlider.min.js', 'jquery', '3.0');
