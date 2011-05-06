@@ -1,12 +1,16 @@
 <?php
 require_once ( get_template_directory() . '/theme-options.php' );
+
+// Setup options
+add_action( 'wp_head', 'html5press_layout_view' );
 function html5press_layout_view() {
 	global $html5press_options;
 	$settings = get_option( 'html5press_options', $html5press_options );
 }
 
-add_action( 'wp_head', 'html5press_layout_view' );
 if ( ! isset( $content_width ) ) $content_width = 580;
+
+// Set html5press version
 define( 'html5press_version', '1.3' );
 function html5press_getinfo( $show = '' ) {
         $output = '';
@@ -19,8 +23,8 @@ function html5press_getinfo( $show = '' ) {
 		return $output;
 }
 
+// Setup theme basics
 add_action( 'after_setup_theme', 'html5press_theme_setup' );
-
 function html5press_theme_setup() {
 	/**
 	 * Make theme available for translation
@@ -36,8 +40,10 @@ function html5press_theme_setup() {
 	add_theme_support( 'post-thumbnails' ); // post thumbnails
 	register_nav_menu( 'main-menu', __('Main Menu','html5press') ); // navigation menus
 	add_theme_support( 'automatic-feed-links' ); // automatic feeds
+	add_image_size('bxthumb', 200, 200, true);
 }
 
+// Register all the javascript and css we need to accompany those scripts
 add_action( 'init', 'html5press_register_scripts' );
 function html5press_register_scripts() {
 	if ( !is_admin() ) {
@@ -50,11 +56,14 @@ function html5press_register_scripts() {
 			wp_enqueue_script('easing', get_bloginfo('stylesheet_directory').'/js/easing.js', 'jquery', '1.1.2');
 			wp_enqueue_script('totop', get_bloginfo('stylesheet_directory').'/js/jquery.ui.totop.js', 'jquery', '1.1');
 		}
+		wp_enqueue_script('bxslider', get_bloginfo('stylesheet_directory').'/js/jquery.bxSlider.min.js', 'jquery', '3.0');
+		wp_enqueue_style('bxslider-style', get_bloginfo('stylesheet_directory').'/css/bx_styles.css', 'bxslider', '1.0');
+		wp_enqueue_script('bxslider-load', get_bloginfo('stylesheet_directory').'/js/bxslider-load.js', 'bxslider', '1.0');
 	}
 }
 
+// Setup sidebars
 add_action( 'widgets_init', 'html5press_sidebars' );
-
 function html5press_sidebars() {
 	register_sidebar(array(
 		'id' => 'right-sidebar',
@@ -66,8 +75,8 @@ function html5press_sidebars() {
 	));
 }
 
+// Setup comments form
 add_filter('comment_form_default_fields', 'html5press_comments');
-
 function html5press_comments() {
 	$req = get_option('require_name_email');
 	$fields =  array(
@@ -83,13 +92,14 @@ function html5press_comments() {
 	return $fields;
 }
 
+// Setup actual comment form field
 add_filter('comment_form_field_comment', 'html5press_commentfield');
-
 function html5press_commentfield() {
 	$commentArea = '<p><label for="comment">' . _x( 'Comment','noun','html5press' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required placeholder="What\'s on your mind?"></textarea></p>';
 	return $commentArea;
 }
 
+// Show comments the HTML5Press way
 function html5press_list_comments($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
@@ -115,18 +125,21 @@ function html5press_list_comments($comment, $args, $depth) {
 <?php
 }
 
+// Style the "edit post" links
 add_filter( 'edit_post_link','html5press_edit_post_link' );
 function html5press_edit_post_link() {
 	$link = '<span class="alignright"><a class="post-edit-link more-link" href="'.get_edit_post_link().'">'.__( 'Edit This','html5press' ).'</a></span>';
 	return $link;
 }
 
+// Make page menus show correctly
 add_filter( 'wp_page_menu','html5press_page_menu' );
 function html5press_page_menu($menu) {
 	return preg_replace('/<ul>/', '<ul id="menu">', $menu, 1);
 	return $menu;
 }
 
+// Setup HTML5Press Options link in the admin bar
 add_action( 'wp_before_admin_bar_render', 'html5press_admin_bar_link' );
 function html5press_admin_bar_link() {
 	global $wp_admin_bar;
@@ -137,5 +150,33 @@ function html5press_admin_bar_link() {
 		'href' => admin_url( 'themes.php?page=theme_options'),
 		'meta' => false
 	));
+}
+
+function html5press_featured_posts() { ?>
+		<div id="slider-wrapper">
+			<ul id="slider">
+				<?php
+				global $wp_query, $html5press_options;
+				$settings = get_option( 'html5press_options', $html5press_options );
+				$tmp = $wp_query;
+				$wp_query = new WP_Query('posts_per_page='.esc_attr( $settings['num_featured'] ).'&cat='.esc_attr( $settings['featured_cat']));
+				if(have_posts()) :
+					while(have_posts()) :
+						the_post();
+				?>
+							<li>							
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('bxthumb'); ?></a>	
+								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4> 
+								<p><?php the_excerpt(); ?></p> 
+								<div class="clear"></div>
+							</li> 
+				<?php
+					endwhile;
+				endif;
+				$wp_query = $tmp;
+				?>
+			</ul>
+		</div><!-- close #slider-wrapper -->
+<?php
 }
 ?>
