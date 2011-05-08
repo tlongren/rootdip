@@ -48,7 +48,7 @@ add_action( 'init', 'html5press_register_scripts' );
 function html5press_register_scripts() {
 	if ( !is_admin() ) {
 		wp_deregister_script( 'jquery' );
-		wp_register_script( 'jquery', ( 'https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js' ), false, null, true );
+		wp_register_script( 'jquery', ( 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js' ), false, null, true );
 		wp_enqueue_script( 'jquery' );
 		global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options );
 		// if back to top is enabled, add easing and the back to top javascript.
