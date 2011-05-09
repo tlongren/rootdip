@@ -176,6 +176,7 @@ function html5press_featured_posts() { ?>
 				$wp_query = $tmp;
 				?>
 			</ul>
+			<nav class="bx-pager"></nav>
 		</div><!-- close #slider-wrapper -->
 <?php
 }

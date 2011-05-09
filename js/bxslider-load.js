@@ -7,6 +7,7 @@ jQuery(function(){
 		auto: true,
 		autoControls: false,
 		nextText: '',
-		prevText: ''
+		prevText: '',
+		pagerSelector: '.bx-pager'
 	});
 });
