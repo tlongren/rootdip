@@ -10,7 +10,9 @@ I thought Jesper's stuff looked nice, and no WordPress theme existed yet based o
 
 Demo
 -----------------------------
-You can find [a demo here](http://html5press.com/ "HTML5Press Demo")
+You can find [a demo here](http://html5press.com/ "HTML5Press Demo") and a screenshot below.
+
+![HTML5Press Screenshot](https://github.com/tlongren/html5press/raw/master/screenshot.png "HTML5Press Screenshot")
 
 
 Notes
