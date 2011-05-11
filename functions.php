@@ -128,7 +128,14 @@ function html5press_list_comments($comment, $args, $depth) {
 // Style the "edit post" links
 add_filter( 'edit_post_link','html5press_edit_post_link' );
 function html5press_edit_post_link() {
-	$link = '<span class="alignright"><a class="post-edit-link more-link" href="'.get_edit_post_link().'">'.__( 'Edit This','html5press' ).'</a></span>';
+	$link = '<span class="alignright"><a class="edit-link" href="'.get_edit_post_link().'">'.__( 'Edit This','html5press' ).'</a></span>';
+	return $link;
+}
+
+// Style the "read more" links
+add_filter( 'the_content_more_link','html5press_read_more_link' );
+function html5press_read_more_link() {
+	$link = '<span class="alignleft more-span"><a class="more-link" href="'.get_permalink().'">'.__( 'Read More','html5press' ).'</a></span>';
 	return $link;
 }
 

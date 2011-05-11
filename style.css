@@ -465,8 +465,13 @@ form input[type=submit] {
 .alignright { float: right; }
 .aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
+.more-span {
+	padding-top: 15px;
+}
+
 .btn,
 .more-link,
+.edit-link,
 input[type=submit]  {
 	background: #F83D87;
 	color: #fff;
@@ -478,6 +483,7 @@ input[type=submit]  {
 
 .btn:hover,
 .more-link:hover,
+.edit-link:hover,
 input[type=submit]:hover {
 	background: #F71570;
 }
