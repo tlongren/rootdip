@@ -159,6 +159,7 @@ function html5press_admin_bar_link() {
 	));
 }
 
+// Setup featured posts slider
 function html5press_featured_posts() { ?>
 		<div id="slider-wrapper">
 			<ul id="slider">
