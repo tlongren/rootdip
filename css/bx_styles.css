@@ -5,11 +5,13 @@
  * background property for each of the five styles below
  */
 
-/*next button*/
 #slider-wrapper {
-	width: 520px;
+	width: 500px;
 	margin-left: 50px;
+	padding-bottom: 60px;
 }
+
+/*next button*/
 .bx-next {
 	color: #333;
 	position:absolute;
