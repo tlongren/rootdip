@@ -30,7 +30,7 @@
 
     <header id="header" class="grid_12">
     
-    	<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+    	<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
     
     </header> <!-- end header -->
 	<div id="content">
