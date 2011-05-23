@@ -49,17 +49,17 @@ function html5press_register_scripts() {
 	if ( !is_admin() ) {
 		
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script('modernizr', get_bloginfo('stylesheet_directory').'/js/modernizr-1.7.min.js', '', '1.7');
-		wp_enqueue_script('respond', get_bloginfo('stylesheet_directory').'/js/respond.min.js', '', '1.0');
+		wp_enqueue_script('modernizr', get_stylesheet_directory_uri().'/js/modernizr-1.7.min.js', '', '1.7');
+		wp_enqueue_script('respond', get_stylesheet_directory_uri().'/js/respond.min.js', '', '1.0');
 		global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options );
 		// if back to top is enabled, add easing and the back to top javascript.
 		if ($html5press_settings['back_to_top'] == 1) {
-			wp_enqueue_script('easing', get_bloginfo('stylesheet_directory').'/js/easing.min.js', 'jquery', '1.1.2');
-			wp_enqueue_script('totop', get_bloginfo('stylesheet_directory').'/js/jquery.ui.totop.js', 'jquery', '1.1');
+			wp_enqueue_script('easing', get_stylesheet_directory_uri().'/js/easing.min.js', 'jquery', '1.1.2');
+			wp_enqueue_script('totop', get_stylesheet_directory_uri().'/js/jquery.ui.totop.js', 'jquery', '1.1');
 		}
-		wp_enqueue_script('bxslider', get_bloginfo('stylesheet_directory').'/js/jquery.bxSlider.min.js', 'jquery', '3.0');
-		wp_enqueue_style('bxslider-style', get_bloginfo('stylesheet_directory').'/css/bx_styles.css', 'bxslider', '1.0');
-		wp_enqueue_script('bxslider-load', get_bloginfo('stylesheet_directory').'/js/bxslider-load.js', 'bxslider', '1.0');
+		wp_enqueue_script('bxslider', get_stylesheet_directory_uri().'/js/jquery.bxSlider.min.js', 'jquery', '3.0');
+		wp_enqueue_style('bxslider-style', get_stylesheet_directory_uri().'/css/bx_styles.css', 'bxslider', '1.0');
+		wp_enqueue_script('bxslider-load', get_stylesheet_directory_uri().'/js/bxslider-load.js', 'bxslider', '1.0');
 	}
 }
 
