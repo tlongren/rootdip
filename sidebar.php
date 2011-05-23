@@ -1,4 +1,4 @@
-<div id="sidebar" class="grid_4 omega">
+<aside id="sidebar" role="complementary">
 <?php
 if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
 <?php
@@ -33,5 +33,5 @@ else:
 	</ul>
 </aside>
 <?php endif; ?>
-</div> <!-- end sidebar -->
+</aside> <!-- end sidebar -->
  </div> <!-- end content -->

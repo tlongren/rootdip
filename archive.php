@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="main" class="grid_8 alpha">
+<div id="content" role="main">
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
  	  <?php /* If this is a category archive */ if (is_category()) { ?>
 		<h2 class="pagetitle"><?php _e( 'Archive for the','html5press' ); ?> &#8216;<?php single_cat_title(); ?>&#8217; <?php _e( 'Category','html5press' ); ?></h2>
@@ -19,16 +19,19 @@
  	  <?php } ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' ); ?>
-			<?php if ( has_post_thumbnail() ) { ?><a href="<?php the_permalink(); ?>"><img src="<?php echo "$image[0]"; ?>" alt="" class="thumbnail alignleft" /></a><?php } ?>
+			<?php if ( has_post_thumbnail() ) { ?><figure><a href="<?php the_permalink(); ?>"><img src="<?php echo "$image[0]"; ?>" alt="" class="thumbnail alignleft" /></a></figure><?php } ?>
             
             <?php the_content(__('Read more')); ?>
-			<div class="clear"></div>
-			<footer class="postmeta">
-                <span class="btn alignleft">
-                	In <?php the_category(', '); ?> by <?php the_author_posts_link(); ?> on <time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time>
-				</span>
+
+			<footer class="post-meta">
+				<p>
+                    <?php _e( 'In ','html5press'); ?><?php the_category(', '); ?>
+                    <?php _e( 'by ','html5press'); ?> <span class="author vcard"><?php the_author_posts_link(); ?></span>
+                    <?php _e( 'on ','html5press'); ?> <time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time>
+					<?php wp_link_pages( array( 'before' => __( '<span class="alignright">Pages:', 'html5press' ), 'after' => '</span>' ) ); ?>
+				</p>
 				<?php /* Edit Link */ edit_post_link(); ?>
             </footer> <!-- end post meta -->
         

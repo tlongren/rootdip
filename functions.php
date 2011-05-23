@@ -11,7 +11,7 @@ function html5press_layout_view() {
 if ( ! isset( $content_width ) ) $content_width = 580;
 
 // Set html5press version
-define( 'html5press_version', '1.4' );
+define( 'html5press_version', '1.5-rc1' );
 function html5press_getinfo( $show = '' ) {
         $output = '';
 
@@ -47,9 +47,10 @@ function html5press_theme_setup() {
 add_action( 'init', 'html5press_register_scripts' );
 function html5press_register_scripts() {
 	if ( !is_admin() ) {
-		wp_deregister_script( 'jquery' );
-		wp_register_script( 'jquery', ( 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js' ), false, null, true );
+		
 		wp_enqueue_script( 'jquery' );
+		wp_enqueue_script('modernizr', get_bloginfo('stylesheet_directory').'/js/modernizr-1.7.min.js', '', '1.7');
+		wp_enqueue_script('respond', get_bloginfo('stylesheet_directory').'/js/respond.min.js', '', '1.0');
 		global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options );
 		// if back to top is enabled, add easing and the back to top javascript.
 		if ($html5press_settings['back_to_top'] == 1) {
@@ -80,10 +81,10 @@ add_filter('comment_form_default_fields', 'html5press_comments');
 function html5press_comments() {
 	$req = get_option('require_name_email');
 	$fields =  array(
-'author' => '<p>' . '<label for="author">' . __( 'Name','html5press' ) . '</label> ' . ( $req ? '<span>*</span>' : '' ) .
+'author' => '<p><label for="author">' . __( 'Name','html5press' ) . '' . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . 
 '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' placeholder = "What should we call you?"' . ( $req ? ' required' : '' ) . '/></p>',
 
-'email'  => '<p><label for="email">' . __( 'Email','html5press' ) . '</label> ' . ( $req ? '<span>*</span>' : '' ) .
+'email'  => '<p><label for="email">' . __( 'Email','html5press' ) . '' . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . 
 '<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' placeholder="How can we reach you?"' . ( $req ? ' required' : '' ) . ' /></p>',
 
 'url'    => '<p><label for="url">' . __( 'Website','html5press' ) . '</label>' .
@@ -128,16 +129,18 @@ function html5press_list_comments($comment, $args, $depth) {
 // Style the "edit post" links
 add_filter( 'edit_post_link','html5press_edit_post_link' );
 function html5press_edit_post_link() {
-	$link = '<span class="alignright"><a class="edit-link" href="'.get_edit_post_link().'">'.__( 'Edit This','html5press' ).'</a></span>';
+	$link = '<a class="more-link" href="'.get_edit_post_link().'">'.__( 'Edit This','html5press' ).'</a>';
 	return $link;
 }
 
 // Style the "read more" links
+/*
 add_filter( 'the_content_more_link','html5press_read_more_link' );
 function html5press_read_more_link() {
 	$link = '<span class="alignleft more-span"><a class="more-link" href="'.get_permalink().'">'.__( 'Read More','html5press' ).'</a></span>';
 	return $link;
 }
+*/
 
 // Make page menus show correctly
 add_filter( 'wp_page_menu','html5press_page_menu' );
@@ -157,6 +160,12 @@ function html5press_admin_bar_link() {
 		'href' => admin_url( 'themes.php?page=theme_options'),
 		'meta' => false
 	));
+}
+
+// Custom the_excerpt size for the featured post slider
+add_filter('excerpt_length', 'html5press_excerpt_length');
+function html5press_excerpt_length($length) {
+	return 30;
 }
 
 // Setup featured posts slider
