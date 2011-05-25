@@ -113,10 +113,6 @@ body {
 		background-attachment: fixed;
 	}
 
-/* Always force a scrollbar in non-IE 
-	Remove iOS text size adjust without disabling user zoom: www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
-html { overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-
 #wrapper {
 	width: 1000px;
 	margin: 0 auto;
@@ -939,11 +935,11 @@ div.warning { margin-bottom: 20px; }
 	margin-left: 30px;
 }
 .post-tags {
-	margin: 5px 0 10px 5px;
-	background:url(images/tag.png) no-repeat left 8px;
-}
-.post-tags p {
-	margin: 5px 0 10px 26px;
+    margin: 5px 0 5px 5px;
+    background: url(images/tag.png) no-repeat left 3px;
+    display: block;
+    padding-left: 30px;
+	font-size: 14px;
 }
 .post-page-links { text-align:center; font-size: 18px; }
 
