@@ -4,6 +4,7 @@
 $html5press_options = array(
 	'back_to_top' => true,
 	'featured_image_size' => 'large',
+	'theme_color' => 'pink',
 	'featured_cat' => '',
 	'num_featured' => '5'
 );
@@ -71,6 +72,26 @@ $html5press_num_featured_options = array(
 	)
 );
 
+// Store stylesheet choices in an array
+$html5press_theme_colors = array(
+	'pink' => array(
+		'value' => 'pink',
+		'label' => 'Pink'
+	),
+	'blue' => array(
+		'value' => 'blue',
+		'label' => 'Blue'
+	),
+	'green' => array(
+		'value' => 'green',
+		'label' => 'Green'
+	),
+	'red' => array(
+		'value' => 'red',
+		'label' => 'Red'
+	)
+);
+
 function html5press_theme_options() {
 	// Add theme options page to the addmin menu
 	add_theme_page( 'HTML5Press Options', 'HTML5Press Options', 'edit_theme_options', 'theme_options', 'html5press_theme_options_page' );
@@ -80,7 +101,7 @@ add_action( 'admin_menu', 'html5press_theme_options' );
 
 // Function to generate options page
 function html5press_theme_options_page() {
-	global $html5press_options, $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options;
+	global $html5press_options, $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors;
 
 	if ( ! isset( $_REQUEST['settings-updated'] ) )
 		$_REQUEST['settings-updated'] = false; ?>
@@ -117,6 +138,21 @@ function html5press_theme_options_page() {
 		if ( $images['value'] == $settings['featured_image_size'] )
 			$selected = 'selected="selected"';
 		echo '<option style="padding-right: 10px;" value="' . esc_attr( $images['value'] ) . '" ' . $selected . '>' . $label . '</option>';
+	endforeach;
+	?>
+	</select>
+	</td>
+	</tr>
+	<tr valign="top"><th scope="row"><label for="theme_color">Theme Color</label></th>
+	<td>
+	<select id="theme_color" name="html5press_options[theme_color]">
+	<?php
+	foreach ( $html5press_theme_colors as $colors ) :
+		$label = $colors['label'];
+		$selected = '';
+		if ( $colors['value'] == $settings['theme_color'] )
+			$selected = 'selected="selected"';
+		echo '<option style="padding-right: 10px;" value="' . esc_attr( $colors['value'] ) . '" ' . $selected . '>' . $label . '</option>';
 	endforeach;
 	?>
 	</select>
@@ -164,7 +200,7 @@ function html5press_theme_options_page() {
 }
 
 function html5press_validate_options( $input ) {
-	global $html5press_options, $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options;
+	global $html5press_options, $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors;
 
 	$settings = get_option( 'html5press_options', $html5press_options );
 	
@@ -179,6 +215,11 @@ function html5press_validate_options( $input ) {
 	// We verify if the given value exists in the categories array
 	if ( !array_key_exists( $input['num_featured'], $html5press_num_featured_options ) )
 		$input['num_featured'] = $prev;
+		
+	// We select the previous value of the field, to restore it in case an invalid entry has been given
+	$prev = $settings['theme_color'];
+	if ( !array_key_exists( $input['theme_color'], $html5press_theme_colors ) )
+		$input['theme_color'] = $prev;
 	
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
 	$prev = $settings['featured_image_size'];

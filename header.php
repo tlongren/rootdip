@@ -1,3 +1,4 @@
+<?php global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options ); ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
@@ -16,8 +17,16 @@
 	
 	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css" />
+	<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css" />
+    <?php if ($html5press_settings['theme_color'] == 'pink') { ?>
+    <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/pink.css" rel="stylesheet" type="text/css" />
+	<?php } else if ($html5press_settings['theme_color'] == 'blue') { ?>
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/blue.css" rel="stylesheet" type="text/css" />
+	<?php } else if ($html5press_settings['theme_color'] == 'green') { ?>
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/green.css" rel="stylesheet" type="text/css" />
+	<?php } else if ($html5press_settings['theme_color'] == 'red') { ?>
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/red.css" rel="stylesheet" type="text/css" />
+	<?php } ?>
 	<link href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold" rel="stylesheet" />
     
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
