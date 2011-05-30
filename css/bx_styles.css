@@ -68,33 +68,6 @@
 	border-radius:300px;
 }
 
-/*next/prev button hover state*/
-.bx-prev:hover {
-	border:3px solid #F83D87;
-	-webkit-border-radius:300px;
-	-moz-border-radius:300px;
-	border-radius:300px;
-	background: url(../images/arrow_left_16x16.png) no-repeat 7px 7px;
-}
-
-.bx-next:hover {
-	border:3px solid #F83D87;
-	-webkit-border-radius:300px;
-	-moz-border-radius:300px;
-	border-radius:300px;
-	background: url(../images/arrow_right_16x16.png) no-repeat 7px 7px;
-}
-
-/*pager links hover and active states*/
-.bx-pager .pager-active,
-.bx-pager a:hover {
-	border:3px solid #F83D87;
-	-webkit-border-radius:300px;
-	-moz-border-radius:300px;
-	border-radius:300px;
-	background: none;
-}
-
 /*pager wrapper*/
 .bx-pager {
 	text-align:center;

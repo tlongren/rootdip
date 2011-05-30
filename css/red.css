@@ -1,0 +1,80 @@
+a {
+	color: #D81711;
+	text-decoration: none;
+	-webkit-transition: all 100ms linear;
+	/*-moz-transition: all 100ms linear;*/
+	transition: all 100ms linear;
+}
+
+a:hover {
+	color: #AA0A05;
+	text-shadow: 0 1px 0 #fff;
+}
+
+#menu a:hover {
+	color: #AA0A05;
+	border-radius: 10px 0 10px 0;
+	opacity: 0.75;
+}
+
+/* Current nav, buttons, more-link */
+#menu .current-menu-item > a,
+.btn,
+.more-link,
+input[type=submit],
+legend {
+	background: #D81711; /* Fallback */
+	background: -moz-linear-gradient(top, #D81711 0%, #AA0A05 100%); /* FF 3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D81711), color-stop(100%,#AA0A05)); /* Chrome, Safari 4+ */
+	background: -webkit-linear-gradient(top, #D81711 0%,#AA0A05 100%); /* Chrome 10+, Safari 5.1+ */
+	background: -o-linear-gradient(top, #D81711 0%,#AA0A05 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #D81711 0%,#AA0A05 100%); /* IE10+ */
+	background: linear-gradient(top, #D81711 0%,#AA0A05 100%); /* W3C */
+	
+	color: #fff;
+	border-color: transparent;
+	border-radius: 10px 0 10px 0;
+	font-weight: bold;
+	padding: 14px 20px;
+	text-shadow: 0 1px 0 #D81711;
+	-webkit-transition: all 100ms linear;
+	/*-moz-transition: all 100ms linear;*/
+	transition: all 100ms linear;
+}
+
+.hentry .entry-title a:hover { 
+	color: #D81711;
+}
+
+.widget li a:hover {
+		color: #D81711;
+		margin-left: 10px;
+	}
+
+input[type="submit"]:hover {
+	text-shadow: 0 1px 0 #D81711;
+}
+
+/*pager links hover and active states*/
+.bx-pager .pager-active,
+.bx-pager a:hover {
+	border:3px solid #D81711;
+	-webkit-border-radius:300px;
+	-moz-border-radius:300px;
+	border-radius:300px;
+	background: none;
+}
+/*next/prev button hover state*/
+.bx-prev:hover {
+	border:3px solid #D81711;
+	-webkit-border-radius:300px;
+	-moz-border-radius:300px;
+	border-radius:300px;
+}
+
+.bx-next:hover {
+	border:3px solid #D81711;
+	-webkit-border-radius:300px;
+	-moz-border-radius:300px;
+	border-radius:300px;
+}
