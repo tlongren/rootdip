@@ -126,19 +126,6 @@ html { overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust:
  * Typography and default HTML elements
  */
 
-a {
-	color: #F71570;
-	text-decoration: none;
-	-webkit-transition: all 100ms linear;
-	/*-moz-transition: all 100ms linear;*/
-	transition: all 100ms linear;
-}
-
-a:hover {
-	color: #AC0649;
-	text-shadow: 0 1px 0 #fff;
-}
-
 a:active { outline: none; }
 
 p, dl, hr, h1, h2, h3,
@@ -248,7 +235,7 @@ pre {
 	}*/
 
 code {
-	background: #f6dde7;
+	background: #cecece;
 	font-size: 14px;
 	padding: 3px;
 	border-radius: 3px;
@@ -495,31 +482,6 @@ hr {
 	opacity: 0.75;
 }
 
-/* Current nav, buttons, more-link */
-#menu .current-menu-item > a,
-.btn,
-.more-link,
-input[type=submit],
-legend {
-	background: #fa4fab; /* Fallback */
-	background: -moz-linear-gradient(top, #fa4fab 0%, #f7387c 100%); /* FF 3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fa4fab), color-stop(100%,#f7387c)); /* Chrome, Safari 4+ */
-	background: -webkit-linear-gradient(top, #fa4fab 0%,#f7387c 100%); /* Chrome 10+, Safari 5.1+ */
-	background: -o-linear-gradient(top, #fa4fab 0%,#f7387c 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #fa4fab 0%,#f7387c 100%); /* IE10+ */
-	background: linear-gradient(top, #fa4fab 0%,#f7387c 100%); /* W3C */
-	
-	color: #fff;
-	border-color: transparent;
-	border-radius: 10px 0 10px 0;
-	font-weight: bold;
-	padding: 14px 20px;
-	text-shadow: 0 1px 0 #AC0649;
-	-webkit-transition: all 100ms linear;
-	/*-moz-transition: all 100ms linear;*/
-	transition: all 100ms linear;
-}
-
 #menu .current-menu-item > a:hover,
 .btn:hover,
 .more-link:hover,
@@ -584,10 +546,6 @@ input[type=submit]:hover {
 	-webkit-transition: color 150ms ease-in-out;
 	/*-moz-transition: color 150ms ease-in-out;*/
 	transition: color 150ms ease-in-out;
-}
-
-.hentry .entry-title a:hover { 
-	color: #ac0649;
 }
 
 /* Post meta */
@@ -723,11 +681,6 @@ figcaption {
 		/*-moz-transition: margin-left 300ms linear;*/
 		transition: margin-left 300ms linear;
 	}
-	
-	.widget li a:hover {
-		color: #AC0649;
-		margin-left: 10px;
-	}
 
 /*
  * Footer
@@ -844,10 +797,6 @@ select {
 /* Submit */
 input[type="submit"] {
 	color: #fff;
-}
-
-input[type="submit"]:hover {
-	text-shadow: 0 1px 0 #AC0649;
 }
 
 /* Search inputs */
