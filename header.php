@@ -17,16 +17,8 @@
 	
 	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css" />
-    <?php if ($html5press_settings['theme_color'] == 'pink') { ?>
-    <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/pink.css" rel="stylesheet" type="text/css" />
-	<?php } else if ($html5press_settings['theme_color'] == 'blue') { ?>
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/blue.css" rel="stylesheet" type="text/css" />
-	<?php } else if ($html5press_settings['theme_color'] == 'green') { ?>
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/green.css" rel="stylesheet" type="text/css" />
-	<?php } else if ($html5press_settings['theme_color'] == 'red') { ?>
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/red.css" rel="stylesheet" type="text/css" />
-	<?php } ?>
+	<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" />
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/<?php echo esc_attr( $html5press_settings['theme_color'] ); ?>.css" rel="stylesheet" />
 	<link href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold" rel="stylesheet" />
     
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
