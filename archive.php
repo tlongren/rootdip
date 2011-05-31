@@ -36,6 +36,7 @@
             </footer> <!-- end post meta -->
         
         </article> <!-- end post 1 -->
+		<hr />
 		<?php endwhile; endif; ?>
 		<div class="navigation">
 			<div class="nav-previous alignleft"><?php previous_posts_link( __( '<span class="meta-nav">&larr;</span> Newer Posts','html5press' ) ); ?></div>
