@@ -955,6 +955,7 @@ img#wpstats {
 	margin: 0;
 	padding: 0 4px 5px;
 }
+#main #gallery-1 .gallery-item {width:auto !important;}
 /* Comments */
 /* =Comments
 -------------------------------------------------------------- */
