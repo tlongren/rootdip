@@ -17,6 +17,10 @@ a:hover {
 	opacity: 0.75;
 }
 
+figure:hover {
+	border: 2px solid #D81711;
+}
+
 /* Current nav, buttons, more-link */
 #menu .current-menu-item > a,
 .btn,

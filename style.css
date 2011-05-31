@@ -624,10 +624,6 @@ figure {
 	transition: border 200ms ease;
 }
 
-figure:hover {
-	border: 2px solid #F83D87;
-}
-
 figure,
 figure.alignleft  {
 	margin: 0 20px 20px 0;
