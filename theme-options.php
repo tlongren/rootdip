@@ -122,7 +122,7 @@ function html5press_theme_options_page() {
 
 	<table class="form-table">
 
-	<tr valign="top"><th scope="row">"Back to Top" Button</th>
+	<tr valign="top"><th scope="row"><label for="back_to_top">"Back to Top" Button</label></th>
 	<td>
 	<input type="checkbox" id="back_to_top" name="html5press_options[back_to_top]" value="1" <?php checked( true, $settings['back_to_top'] ); ?> />
 	<label for="back_to_top">Enabled</label>
