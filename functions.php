@@ -54,11 +54,7 @@ function html5press_register_scripts() {
 		
 		/**
 		* Modernizr enables HTML5 elements & feature detects
-		*
-		* For optimal performance in your child theme, use a custom Modernizr build: www.modernizr.com/download/
-		* use wp_deregister_script( 'modernizr' ); and
-		* wp_enqueue_script( 'modernizr', CHILD_THEME_URI . '/js/modernizr-2.0.min.js', '', '2.0' );
-		* in your child theme functions.php
+		* For optimal performance, use a custom Modernizr build: www.modernizr.com/download/
 		*/
 		wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/js/modernizr-2.0.min.js', '', '2.0' );
 		wp_enqueue_script('respond', get_stylesheet_directory_uri() . '/js/respond.min.js', array( 'modernizr' ), '1.0');
