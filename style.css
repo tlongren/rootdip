@@ -856,24 +856,6 @@ input[type="search"]::-webkit-search-results-button {
 
 div.warning { margin-bottom: 20px; }
 
-/**
- * Media queries for responsive design.
- * These follow after, and will override, the primary styles
- * The closing /mediaquery comment is required by respond.js min/max-width Media Query polyfill
- */
-
-@media only screen and (max-width: 1024px) {
-
-	/* Style adjustments for viewports 1024px and under go here */
-	#wrapper { width: 100%; }
-	#site-title a, #site-description { float: none; margin-bottom: 0; }
-	#main { width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-	#content { float: none; width: 100%; }
-	#sidebar { float: none; margin-top: 20px; }
-	figure { margin-left: 0; }
-
-}/*/mediaquery*/
-
 /* WordPress Theme Specific Styles */
 
 .sticky {
@@ -1089,4 +1071,22 @@ h3#reply-title {
 #respond .form-submit input {
 	font-size: 14px;
 	width: auto;
+}
+
+/**
+ * Media queries for responsive design.
+ * These follow after, and will override, the primary styles
+ * The closing /mediaquery comment is required by respond.js min/max-width Media Query polyfill
+ */
+
+@media only screen and (max-width: 1024px) {
+
+	/* Style adjustments for viewports 1024px and under go here */
+	#wrapper { width: 100%; }
+	#site-title a, #site-description { float: none; margin-bottom: 0; }
+	#main { width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+	#content { float: none; width: 100%; }
+	#sidebar { float: none; margin-top: 20px; }
+	figure { margin-left: 0; }
+
 }
