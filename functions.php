@@ -43,36 +43,36 @@ function html5press_theme_setup() {
 	add_image_size('bxthumb', 200, 200, true);
 }
 
-// Register all the javascript and css we need to accompany those scripts
-add_action( 'init', 'html5press_register_scripts' );
+// Register all the javascript
+add_action( 'wp_enqueue_scripts', 'html5press_register_scripts' );
 function html5press_register_scripts() {
-	if ( !is_admin() ) {
-		
-		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script('modernizr', get_stylesheet_directory_uri().'/js/modernizr-2.0.min.js', '', '2.0');
-		wp_enqueue_script('respond', get_stylesheet_directory_uri().'/js/respond.min.js', array( 'modernizr' ), '1.0');
-		
-		/**
-		* Modernizr enables HTML5 elements & feature detects
-		* For optimal performance, use a custom Modernizr build: www.modernizr.com/download/
-		*/
-		wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/js/modernizr-2.0.min.js', '', '2.0' );
-		wp_enqueue_script('respond', get_stylesheet_directory_uri() . '/js/respond.min.js', array( 'modernizr' ), '1.0');
+   
+	/**
+	 * Modernizr enables HTML5 elements & feature detects
+	 * For optimal performance, use a custom Modernizr build: www.modernizr.com/download/
+	 */
+	wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/js/modernizr-2.0.min.js', '', '2.0' );
+	wp_enqueue_script( 'respond', get_stylesheet_directory_uri() . '/js/respond.min.js', array( 'modernizr' ), '1.0' );
+
+	// Make sure jQuery is loaded after Modernizr
+	wp_deregister_script( 'jquery' );
+	wp_enqueue_script( 'jquery', includes_url( 'js/jquery/jquery.js' ), array( 'modernizr' ), null );
 	
-		// Make sure jQuery is loaded after Modernizr
-		wp_deregister_script( 'jquery' );
-		wp_enqueue_script( 'jquery', includes_url( 'js/jquery/jquery.js' ), array( 'modernizr' ), null );
-		
-		global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options );
-		// if back to top is enabled, add easing and the back to top javascript.
-		if ($html5press_settings['back_to_top'] == 1) {
-			wp_enqueue_script('easing', get_stylesheet_directory_uri().'/js/easing.min.js', array( 'jquery' ), '1.1.2', true );
-			wp_enqueue_script('totop', get_stylesheet_directory_uri().'/js/jquery.ui.totop.js', array( 'jquery' ), '1.1', true );
-		}
-		wp_enqueue_script( 'bxslider', get_stylesheet_directory_uri().'/js/jquery.bxSlider.min.js', array( 'jquery' ), '3.0', true );
-		wp_enqueue_style( 'bxslider-style', get_stylesheet_directory_uri().'/css/bx_styles.css', array( 'bxslider' ), '1.0' );
-		wp_enqueue_script( 'bxslider-load', get_stylesheet_directory_uri().'/js/bxslider-load.js', array( 'bxslider' ), '1.0', true );
+	global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options );
+	// If back to top is enabled, add easing and the back to top javascript.
+	if ( $html5press_settings['back_to_top'] == 1 ) {
+		wp_enqueue_script( 'easing', get_stylesheet_directory_uri() . '/js/easing.min.js', array( 'jquery' ), '1.1.2', true );
+		wp_enqueue_script( 'totop', get_stylesheet_directory_uri() . '/js/jquery.ui.totop.js', array( 'jquery' ), '1.1', true );
 	}
+	
+	wp_enqueue_script( 'bxslider', get_stylesheet_directory_uri() . '/js/jquery.bxSlider.min.js', array( 'jquery' ), '3.0', true );
+	wp_enqueue_script( 'bxslider-load', get_stylesheet_directory_uri() . '/js/bxslider-load.js', array( 'bxslider' ), '1.0', true );
+}
+
+// Register styles to accompany the scripts above
+add_action( 'wp_print_styles', 'html5press_register_styles' );
+function html5press_register_styles() {
+	wp_enqueue_style( 'bxslider-style', get_stylesheet_directory_uri().'/css/bx_styles.css');
 }
 
 // Setup sidebars
