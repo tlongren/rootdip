@@ -57,22 +57,25 @@ function html5press_register_scripts() {
 	// Make sure jQuery is loaded after Modernizr
 	wp_deregister_script( 'jquery' );
 	wp_enqueue_script( 'jquery', includes_url( 'js/jquery/jquery.js' ), array( 'modernizr' ), null );
-	
+	wp_enqueue_script( 'easing', get_stylesheet_directory_uri() . '/js/easing.min.js', array( 'jquery' ), '1.1.2', true );
 	global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options );
 	// If back to top is enabled, add easing and the back to top javascript.
 	if ( $html5press_settings['back_to_top'] == 1 ) {
-		wp_enqueue_script( 'easing', get_stylesheet_directory_uri() . '/js/easing.min.js', array( 'jquery' ), '1.1.2', true );
 		wp_enqueue_script( 'totop', get_stylesheet_directory_uri() . '/js/jquery.ui.totop.js', array( 'jquery' ), '1.1', true );
 	}
-	
-	wp_enqueue_script( 'bxslider', get_stylesheet_directory_uri() . '/js/jquery.bxSlider.min.js', array( 'jquery' ), '3.0', true );
-	wp_enqueue_script( 'bxslider-load', get_stylesheet_directory_uri() . '/js/bxslider-load.js', array( 'bxslider' ), '1.0', true );
+	if ( !empty($html5press_settings['featured_cat']) ) {
+		wp_enqueue_script( 'bxslider', get_stylesheet_directory_uri() . '/js/jquery.bxSlider.min.js', array( 'jquery' ), '3.0', true );
+		wp_enqueue_script( 'bxslider-load', get_stylesheet_directory_uri() . '/js/bxslider-load.js', array( 'bxslider' ), '1.0', true );
+	}
 }
 
 // Register styles to accompany the scripts above
 add_action( 'wp_print_styles', 'html5press_register_styles' );
 function html5press_register_styles() {
-	wp_enqueue_style( 'bxslider-style', get_stylesheet_directory_uri().'/css/bx_styles.css');
+	global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options );
+	if ( !empty($html5press_settings['featured_cat']) ) {
+		wp_enqueue_style( 'bxslider-style', get_stylesheet_directory_uri().'/css/bx_styles.css');
+	}
 }
 
 // Setup sidebars
