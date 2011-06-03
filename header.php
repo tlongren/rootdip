@@ -33,7 +33,7 @@
 	
 		<hgroup>
 			<h1 id="site-title"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-			<h2 id="site-description"><?php bloginfo('description'); ?></h2>
+			<?php if ($html5press_settings['show_tagline'] == 1) { ?><h2 id="site-description"><?php bloginfo('description'); ?></h2><?php } ?>
 		</hgroup>
 		
     </header> <!-- end header -->

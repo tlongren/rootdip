@@ -3,6 +3,7 @@
 // Default options values
 $html5press_options = array(
 	'back_to_top' => true,
+	'show_tagline' => true,
 	'featured_image_size' => 'large',
 	'theme_color' => 'pink',
 	'featured_cat' => '',
@@ -128,6 +129,12 @@ function html5press_theme_options_page() {
 	<label for="back_to_top">Enabled</label>
 	</td>
 	</tr>
+	<tr valign="top"><th scope="row"><label for="show_tagline">Show Tagline In Header</label></th>
+	<td>
+	<input type="checkbox" id="show_tagline" name="html5press_options[show_tagline]" value="1" <?php checked( true, $settings['show_tagline'] ); ?> />
+	<label for="show_tagline">Enabled</label>
+	</td>
+	</tr>
 	<tr valign="top"><th scope="row"><label for="featured_image_size">Linked Featured Image Size</label></th>
 	<td>
 	<select id="featured_image_size" name="html5press_options[featured_image_size]">
@@ -225,6 +232,12 @@ function html5press_validate_options( $input ) {
 	$prev = $settings['featured_image_size'];
 	if ( !array_key_exists( $input['featured_image_size'], $html5press_image_sizes ) )
 		$input['featured_image_size'] = $prev;
+	
+	// If the checkbox has not been checked, we void it
+	if ( ! isset( $input['show_tagline'] ) )
+		$input['show_tagline'] = null;
+	// We verify if the input is a boolean value
+	$input['show_tagline'] = ( $input['show_tagline'] == 1 ? 1 : 0 );
 	
 	// If the checkbox has not been checked, we void it
 	if ( ! isset( $input['back_to_top'] ) )
