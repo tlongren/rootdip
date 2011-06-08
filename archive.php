@@ -1,5 +1,11 @@
 <?php get_header(); ?>
-
+<?php
+if(isset($_GET['author_name'])) :
+	$curauth = get_userdatabylogin($author_name);
+else :
+	$curauth = get_userdata(intval($author));
+endif;
+?>
 <div id="content" role="main">
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
  	  <?php /* If this is a category archive */ if (is_category()) { ?>
@@ -13,7 +19,7 @@
  	  <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
 		<h2 class="pagetitle"><?php _e( 'Archive for ','html5press' ); ?><?php the_time('Y'); ?></h2>
 	  <?php /* If this is an author archive */ } elseif (is_author()) { ?>
-		<h2 class="pagetitle"><?php _e( 'Author Archive ','html5press' ); ?><?php the_author(); ?></h2>
+		<h2 class="pagetitle"><?php _e( 'Author Archive for ','html5press' ); ?><?php echo $curauth->display_name; ?></h2>
  	  <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 		<h2 class="pagetitle"><?php _e( 'Blog Archives','html5press' ); ?></h2>
  	  <?php } ?>
