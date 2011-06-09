@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 <div id="content" role="main">
-	<h2 class="pagetitle">Results for <?php /* Search Count */ $allsearch = &new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e( '<span class="search-terms">"','html5press' ); echo $key; _e( '"</span>','html5press' ); _e( ' &mdash; ','html5press' ); echo $count . ' '; _e( 'articles','html5press' ); wp_reset_query(); ?></h2>
+	<?php $results = absint( $wp_query->found_posts ); ?>
+	<h2 class="pagetitle">
+		<?php printf( _n( "%d Results for", "%d Search Results for:", $results, 'html5press' ), $results ); ?>
+		<span class="search-terms">"<?php echo esc_attr( get_search_query() ); ?>"</span>
+	</h2>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>
         
