@@ -84,10 +84,10 @@ function html5press_sidebars() {
 	register_sidebar(array(
 		'id' => 'right-sidebar',
 		'name' => 'Right Sidebar',
-		'before_widget' => '<aside class="widget">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => "</h3>\n"
+		'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h1 class="widget-title">',
+		'after_title' => "</h1>\n"
 	));
 }
 
