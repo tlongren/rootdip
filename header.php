@@ -41,5 +41,6 @@
 <div id="main" class="clearfix">
     <!-- Navigation -->
 	<nav id="menu" class="clearfix" role="navigation">
+		<h1 class="assistive-text">Main menu</h1>
 		<?php wp_nav_menu( array( 'menu' => 'top-menu', 'container' => 'false' ) ); ?>
 	</nav> <!-- #nav -->

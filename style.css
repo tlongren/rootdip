@@ -856,6 +856,13 @@ input[type="search"]::-webkit-search-results-button {
 
 div.warning { margin-bottom: 20px; }
 
+/* Help text that's hidden for the normal user */
+.assistive-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
 /* WordPress Theme Specific Styles */
 
 .sticky {
@@ -1071,6 +1078,17 @@ h3#reply-title {
 #respond .form-submit input {
 	font-size: 14px;
 	width: auto;
+}
+
+h2,
+.entry-title {
+	font-size: 28px;
+}
+
+h3,
+.widget-title {
+	font-size: 26px;
+	letter-spacing: -1px;
 }
 
 /**
