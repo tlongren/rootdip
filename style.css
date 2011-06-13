@@ -355,7 +355,7 @@ hr {
 	border: 0;
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-	margin: 20px 0;
+	margin: 20px 0 40px;
 	padding: 0;
 }
 
@@ -524,7 +524,7 @@ input[type=submit]:hover {
  */
  
 .hentry {
-	padding: 20px 0 40px;
+	padding: 0 0 40px;
 	/*position: relative;*/
 }
 
@@ -864,12 +864,11 @@ div.warning { margin-bottom: 20px; }
 }
 
 /* WordPress Theme Specific Styles */
+/* Post Format Styles */
+.format-link { background:url(images/link.png) no-repeat left top; }
+.sticky { background:url(images/pin.png) no-repeat left top; }
 
-.sticky {
-	background:url(images/pin.png) no-repeat left top;
-}
-
-.sticky .entry-title {
+.sticky .entry-title, .format-link .entry-title {
 	margin-left: 30px;
 }
 .post-tags {
@@ -1090,9 +1089,6 @@ h3,
 	font-size: 26px;
 	letter-spacing: -1px;
 }
-
-/* Post Format Styles */
-.format-link { background:url(images/link.png) no-repeat left 20px; }
 
 /**
  * Media queries for responsive design.
