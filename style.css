@@ -1091,6 +1091,9 @@ h3,
 	letter-spacing: -1px;
 }
 
+/* Post Format Styles */
+.format-link { background:url(images/link.png) no-repeat left 20px; }
+
 /**
  * Media queries for responsive design.
  * These follow after, and will override, the primary styles
