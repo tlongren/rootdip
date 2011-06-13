@@ -36,7 +36,7 @@ function html5press_theme_setup() {
 	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
 	if ( is_readable( $locale_file ) )
 		require_once( $locale_file );
-	
+	add_theme_support( 'post-formats', array( 'link' ) );
 	add_theme_support( 'post-thumbnails' ); // post thumbnails
 	register_nav_menu( 'main-menu', __('Main Menu','html5press') ); // navigation menus
 	add_theme_support( 'automatic-feed-links' ); // automatic feeds
@@ -181,6 +181,15 @@ function html5press_admin_bar_link() {
 add_filter('excerpt_length', 'html5press_excerpt_length');
 function html5press_excerpt_length($length) {
 	return 30;
+}
+
+// Link post titles to the link for link post formats
+add_filter('post_link', 'html5press_link_filter', 10, 2);
+function html5press_link_filter($link, $post) {
+     if (has_post_format('link', $post) && get_post_meta($post->ID, 'LinkFormatURL', true)) {
+          $link = get_post_meta($post->ID, 'LinkFormatURL', true);
+     }
+     return $link;
 }
 
 // Setup featured posts slider
