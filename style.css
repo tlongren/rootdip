@@ -924,6 +924,11 @@ img#wpstats {
 	text-align: center;
 }
 
+a#toTop:hover {
+	color: #fff;
+	text-shadow: none;
+}
+
 .wp-caption img {
 	border: 0 none;
 	margin: 0;
