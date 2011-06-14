@@ -15,8 +15,7 @@
 	);?>
 	<?php
 	if ($html5press_settings['show_query_stats'] == 1) { ?>
-		 - <?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?> seconds
-	<?php } ?>
+		 - <?php echo get_num_queries(); _e( ' queries in ','html5press' ); timer_stop(1); _e( ' seconds','html5press' ); } ?>
 	</p>
 	</footer> <!-- end footer -->
     
