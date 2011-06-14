@@ -90,6 +90,10 @@ $html5press_theme_colors = array(
 	'red' => array(
 		'value' => 'red',
 		'label' => 'Red'
+	),
+	'black' => array(
+		'value' => 'black',
+		'label' => 'Black'
 	)
 );
 
