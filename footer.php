@@ -13,6 +13,10 @@
 			html5press_getinfo('version')
 		)
 	);?>
+	<?php
+	if ($html5press_settings['show_query_stats'] == 1) { ?>
+		 - <?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?> seconds
+	<?php } ?>
 	</p>
 	</footer> <!-- end footer -->
     

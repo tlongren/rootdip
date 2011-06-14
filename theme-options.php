@@ -4,6 +4,7 @@
 $html5press_options = array(
 	'back_to_top' => true,
 	'show_tagline' => true,
+	'show_query_stats' => false,
 	'featured_image_size' => 'large',
 	'theme_color' => 'pink',
 	'featured_cat' => '',
@@ -139,6 +140,12 @@ function html5press_theme_options_page() {
 	<label for="show_tagline">Enabled</label>
 	</td>
 	</tr>
+	<tr valign="top"><th scope="row"><label for="show_query_stats">Show Query Stats In Footer</label></th>
+	<td>
+	<input type="checkbox" id="show_query_stats" name="html5press_options[show_query_stats]" value="1" <?php checked( true, $settings['show_query_stats'] ); ?> />
+	<label for="show_query_stats">Enabled</label>
+	</td>
+	</tr>
 	<tr valign="top"><th scope="row"><label for="featured_image_size">Linked Featured Image Size</label></th>
 	<td>
 	<select id="featured_image_size" name="html5press_options[featured_image_size]">
@@ -242,6 +249,12 @@ function html5press_validate_options( $input ) {
 		$input['show_tagline'] = null;
 	// We verify if the input is a boolean value
 	$input['show_tagline'] = ( $input['show_tagline'] == 1 ? 1 : 0 );
+	
+	// If the checkbox has not been checked, we void it
+	if ( ! isset( $input['show_query_stats'] ) )
+		$input['show_query_stats'] = null;
+	// We verify if the input is a boolean value
+	$input['show_query_stats'] = ( $input['show_query_stats'] == 1 ? 1 : 0 );
 	
 	// If the checkbox has not been checked, we void it
 	if ( ! isset( $input['back_to_top'] ) )
