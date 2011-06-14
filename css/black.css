@@ -62,7 +62,7 @@ input[type="submit"]:hover {
 /*pager links hover and active states*/
 .bx-pager .pager-active,
 .bx-pager a:hover {
-	border:3px solid #444444;
+	border:3px solid #FFF;
 	-webkit-border-radius:300px;
 	-moz-border-radius:300px;
 	border-radius:300px;
