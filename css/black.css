@@ -82,3 +82,7 @@ input[type="submit"]:hover {
 	-moz-border-radius:300px;
 	border-radius:300px;
 }
+
+/* These selection declarations have to be separate */
+::-moz-selection{ background: #444444; color: #fff; text-shadow: none; }
+::selection { background: #444444; color: #fff; text-shadow: none; }
