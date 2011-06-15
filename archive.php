@@ -44,10 +44,11 @@ endif;
         </article> <!-- end post 1 -->
 		<hr />
 		<?php endwhile; endif; ?>
-		<div class="navigation">
+		<h2 class="assistive-text"><?php _e( 'Post navigation', 'html5press' ); ?></h2>
+		<nav class="navigation">
 			<div class="nav-previous alignleft"><?php previous_posts_link( __( '<span class="meta-nav">&larr;</span> Newer Posts','html5press' ) ); ?></div>
 			<div class="nav-next alignright"><?php next_posts_link( __( 'Older Posts <span class="meta-nav">&rarr;</span>','html5press' ) ); ?></div>
-		</div>
+		</nav>
     </div> <!-- end main -->
 
 <?php get_sidebar(); ?>
