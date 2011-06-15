@@ -17,4 +17,6 @@ You can find [a demo here](http://html5press.com/ "HTML5Press Demo") and a scree
 
 Notes
 -----------------------------
-There's a page template called Archives. Don't enter any page content, just title the page and select Archives for the page template. The archives will be generated automatically. See [here for an example](http://html5press.com/archives/ "HTML5Press Archives Demo").
+1. __Archive Page__: There's a page template called Archives. Don't enter any page content, just title the page and select Archives for the page template. The archives will be generated automatically. See [here for an example](http://html5press.com/archives/ "HTML5Press Archives Demo").
+
+2. __Link Post Format__: To utilize the link Post Format, simply write a new post and select "Link" for the format. You'll also need to add a custom field with the URL you want to link to. The custom field name should be __LinkFormatURL__ and the custom field value should be the URL you want to link to.
