@@ -11,21 +11,21 @@ else:
 </aside>
 
 <aside class="widget">
-	<h2><?php _e( 'Archives','html5press' ); ?></h2>
+	<h2 class="widget-title"><?php _e( 'Archives','html5press' ); ?></h2>
 	<ul>
 		<?php wp_get_archives( array('type' => 'monthly') ); ?>
 	</ul>
 </aside>
 
 <aside class="widget">
-	<h2><?php _e( 'Categories','html5press' ); ?></h2>
+	<h2 class="widget-title"><?php _e( 'Categories','html5press' ); ?></h2>
 	<ul>
 		<?php wp_list_categories( array('title_li' => false,'depth' => '-1') ); ?>
 	</ul>
 </aside>
 
 <aside class="widget">
-	<h2><?php _e( 'Meta','html5press' ); ?></h2>
+	<h2 class="widget-title"><?php _e( 'Meta','html5press' ); ?></h2>
 	<ul>
 		<?php wp_register(); ?>
 		<li><?php wp_loginout(); ?></li>
