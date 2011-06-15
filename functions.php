@@ -86,8 +86,8 @@ function html5press_sidebars() {
 		'name' => 'Right Sidebar',
 		'before_widget' => '<aside class="widget">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h1 class="widget-title">',
-		'after_title' => "</h1>\n"
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => "</h2>\n"
 	));
 }
 
