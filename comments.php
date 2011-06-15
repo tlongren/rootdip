@@ -56,6 +56,7 @@
 			</ol>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+			<h2 class="assistive-text"><?php _e( 'Comment navigation', 'html5press' ); ?></h2> 
 			<nav class="navigation">
 				<div class="nav-previous alignleft"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments','html5press' ) ); ?></div>
 				<div class="nav-next alignright"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>','html5press' ) ); ?></div>
