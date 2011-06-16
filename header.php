@@ -11,7 +11,7 @@
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     
-    <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
+    <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
     
     <meta name="description" content="" />
 	
