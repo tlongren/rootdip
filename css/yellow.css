@@ -1,0 +1,88 @@
+a {
+	color: #F7C41F;
+	text-decoration: none;
+	-webkit-transition: all 100ms linear;
+	/*-moz-transition: all 100ms linear;*/
+	transition: all 100ms linear;
+}
+
+a:hover {
+	color: #FC930A;
+	text-shadow: 0 1px 0 #fff;
+}
+
+#menu a:hover {
+	color: #FC930A;
+	border-radius: 10px 0 10px 0;
+	opacity: 0.75;
+}
+
+figure:hover {
+	border: 2px solid #F7C41F;
+}
+
+/* Current nav, buttons, more-link */
+#menu .current-menu-item > a,
+.btn,
+.more-link,
+input[type=submit],
+legend {
+	background: #F7C41F; /* Fallback */
+	background: -moz-linear-gradient(top, #F7C41F 0%, #FC930A 100%); /* FF 3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F7C41F), color-stop(100%,#FC930A)); /* Chrome, Safari 4+ */
+	background: -webkit-linear-gradient(top, #F7C41F 0%,#FC930A 100%); /* Chrome 10+, Safari 5.1+ */
+	background: -o-linear-gradient(top, #F7C41F 0%,#FC930A 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #F7C41F 0%,#FC930A 100%); /* IE10+ */
+	background: linear-gradient(top, #F7C41F 0%,#FC930A 100%); /* W3C */
+	
+	color: #fff;
+	border-color: transparent;
+	border-radius: 10px 0 10px 0;
+	font-weight: bold;
+	padding: 14px 20px;
+	text-shadow: 0 1px 0 #F7C41F;
+	-webkit-transition: all 100ms linear;
+	/*-moz-transition: all 100ms linear;*/
+	transition: all 100ms linear;
+}
+
+.hentry .entry-title a:hover { 
+	color: #F7C41F;
+}
+
+.widget li a:hover {
+		color: #F7C41F;
+		margin-left: 10px;
+	}
+
+input[type="submit"]:hover {
+	text-shadow: 0 1px 0 #F7C41F;
+}
+
+/*pager links hover and active states*/
+.bx-pager .pager-active,
+.bx-pager a:hover {
+	border:3px solid #F7C41F;
+	-webkit-border-radius:300px;
+	-moz-border-radius:300px;
+	border-radius:300px;
+	background: none;
+}
+/*next/prev button hover state*/
+.bx-prev:hover {
+	border:3px solid #F7C41F;
+	-webkit-border-radius:300px;
+	-moz-border-radius:300px;
+	border-radius:300px;
+}
+
+.bx-next:hover {
+	border:3px solid #F7C41F;
+	-webkit-border-radius:300px;
+	-moz-border-radius:300px;
+	border-radius:300px;
+}
+
+/* These selection declarations have to be separate */
+::-moz-selection{ background: #F7C41F; color: #fff; text-shadow: none; }
+::selection { background: #F7C41F; color: #fff; text-shadow: none; }
