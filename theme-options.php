@@ -103,10 +103,6 @@ $html5press_theme_colors = array(
 	'orange' => array(
 		'value' => 'orange',
 		'label' => 'Orange'
-	),
-	'yellow' => array(
-		'value' => 'yellow',
-		'label' => 'Yellow'
 	)
 );
 
