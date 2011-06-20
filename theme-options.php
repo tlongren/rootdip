@@ -84,10 +84,6 @@ $html5press_theme_colors = array(
 		'value' => 'blue',
 		'label' => 'Blue'
 	),
-	'lightblue' => array(
-		'value' => 'lightblue',
-		'label' => 'Light Blue'
-	),
 	'green' => array(
 		'value' => 'green',
 		'label' => 'Green'
