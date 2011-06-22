@@ -861,9 +861,10 @@ div.warning { margin-bottom: 20px; }
 /* WordPress Theme Specific Styles */
 /* Post Format Styles */
 .format-link { background:url(images/link.png) no-repeat left top; }
+.format-quote { background:url(images/left_quote.png) no-repeat left top; }
 .sticky { background:url(images/pin.png) no-repeat left top; }
 
-.sticky .entry-title, .format-link .entry-title {
+.sticky .entry-title, .format-link .entry-title, .format-quote .entry-title {
 	margin-left: 30px;
 }
 .post-tags {
