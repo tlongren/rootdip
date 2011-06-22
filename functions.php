@@ -36,7 +36,7 @@ function html5press_theme_setup() {
 	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
 	if ( is_readable( $locale_file ) )
 		require_once( $locale_file );
-	add_theme_support( 'post-formats', array( 'link','quote' ) );
+	add_theme_support( 'post-formats', array( 'link','quote','status' ) );
 	add_theme_support( 'post-thumbnails' ); // post thumbnails
 	register_nav_menu( 'main-menu', __('Main Menu','html5press') ); // navigation menus
 	add_theme_support( 'automatic-feed-links' ); // automatic feeds
