@@ -21,6 +21,8 @@ Notes
 
 2. __Link Post Format__: To utilize the link Post Format, simply write a new post and select "Link" for the format. You'll also need to add a custom field with the URL you want to link to. The custom field name should be __LinkFormatURL__ and the custom field value should be the URL you want to link to.
 
+3. __Quote Post Format__: When using this post format, I usually use the author or source as the post title, and then put the quote inside a blockquote for the actual post content.
+
 Other Considerations
 -----------------------------
 A majority of the images included in HTML5Press are from the [iconic icon set](http://somerandomdude.com/projects/iconic/ "Iconic Icons!") by [P.J. Onori](http://somerandomdude.com/ "Some Random Dude"). Images from Iconic are the tag, sticky post identifier, link post format identifier, status post format identifier, quote post format identifier and left and right arrows. I will likely use more images from Iconic as I add additional features/post formats to HTML5Press.
