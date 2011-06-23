@@ -882,6 +882,8 @@ div.warning { margin-bottom: 20px; }
 }
 article .btn a { color: #fff; }
 
+.pagetitle { 	margin-bottom: 35px; }
+
 img#wpstats {
 	height:0;
 	overflow:hidden;
