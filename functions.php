@@ -11,7 +11,7 @@ function html5press_layout_view() {
 if ( ! isset( $content_width ) ) $content_width = 580;
 
 // Set html5press version
-define( 'html5press_version', '1.8-rc2' );
+define( 'html5press_version', '1.8-rc1' );
 function html5press_getinfo( $show = '' ) {
         $output = '';
 
@@ -86,7 +86,6 @@ function html5press_update_notice() {
 	if ( current_user_can( 'update_themes' ) ) :
 
 		include_once( ABSPATH . WPINC . '/feed.php' );
-		$theme_data = get_theme_data( trailingslashit( TEMPLATEPATH ) . 'style.css' ); // Get version number from style.css. You should just use the version you've defined earlier in the functions.php 
 
 		// Get the update feed
 		$rss = fetch_feed( 'http://www.longren.org/html5press.xml' );
@@ -100,8 +99,8 @@ function html5press_update_notice() {
 
 			foreach ( $rss_items as $item ) {
 				// Compare feed version to theme version
-				if ( version_compare( $item->get_title(), $theme_data['Version'] ) > 0 )
-					echo '<div id="update-nag">HTML5Press ' . esc_html( $item->get_title() ) .' is available! <a href="' . esc_url( $item->get_permalink() ) .'">Click here to download the update</a>. ' . esc_html( $item->get_description() ) .
+				if ( version_compare( $item->get_title(), html5press_getinfo( 'version ') ) > 0 )
+					echo '<div id="update-nag">HTML5Press ' . esc_html( $item->get_title() ) .' is available! <a href="' . esc_url( $item->get_permalink() ) .'">Click here to download</a>. ' . esc_html( $item->get_description() ) .
 '</div>';
 }
 endif;
