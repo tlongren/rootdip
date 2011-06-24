@@ -11,7 +11,7 @@ function html5press_layout_view() {
 if ( ! isset( $content_width ) ) $content_width = 580;
 
 // Set html5press version
-define( 'html5press_version', '1.8-rc1' );
+define( 'html5press_version', '1.8-rc2' );
 function html5press_getinfo( $show = '' ) {
         $output = '';
 
@@ -99,7 +99,7 @@ function html5press_update_notice() {
 
 			foreach ( $rss_items as $item ) {
 				// Compare feed version to theme version
-				if ( version_compare( $item->get_title(), html5press_getinfo( 'version ') ) > 0 )
+				if ( version_compare( $item->get_title(), html5press_getinfo('version') ) > 0 )
 					echo '<div id="update-nag">HTML5Press ' . esc_html( $item->get_title() ) .' is available! <a href="' . esc_url( $item->get_permalink() ) .'">Click here to download</a>. ' . esc_html( $item->get_description() ) .
 '</div>';
 }
