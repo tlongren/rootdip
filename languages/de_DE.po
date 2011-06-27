@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: html5press\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-20 22:00+0100\n"
-"PO-Revision-Date: 2011-06-20 22:05+0100\n"
+"POT-Creation-Date: 2011-06-24 15:57+0100\n"
+"PO-Revision-Date: 2011-06-24 15:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,51 +16,143 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:6
+#: 404.php:5
 msgid "Error 404"
 msgstr "Fehler 404"
 
-#: 404.php:7
+#: 404.php:6
 msgid "The page you requested could not be found. Try searching or going back to the "
 msgstr "Die angeforderte Seite konnte nicht gefunden werden. Benutze die Suchfunktion oder gehe zurück zur "
 
-#: 404.php:7
+#: 404.php:6
 msgid "home page"
 msgstr "Homepage"
 
-#: archive.php:6
+#: archive.php:12
 msgid "Archive for the"
 msgstr "Archiv für den"
 
-#: archive.php:6
+#: archive.php:12
 msgid "Category"
 msgstr "Kategorie"
 
-#: archive.php:8
+#: archive.php:14
 msgid "Posts Tagged "
 msgstr "Artikel mit Schlagwörtern"
 
-#: archive.php:10
-#: archive.php:12
-#: archive.php:14
+#: archive.php:16
+#: archive.php:18
+#: archive.php:20
 msgid "Archive for "
 msgstr "Archiv für "
 
-#: archive.php:16
-msgid "Author Archive"
-msgstr "Autorenarchiv"
+#: archive.php:22
+msgid "Author Archive for "
+msgstr "Autorenarchiv für"
 
-#: archive.php:18
+#: archive.php:24
 msgid "Blog Archives"
 msgstr "Archive"
 
-#: archive.php:26
-#: index.php:11
-#: page-no-comments.php:10
-#: page.php:9
-#: single.php:14
+#: archive.php:32
+#: index.php:12
+#: page-no-comments.php:15
+#: page.php:12
+#: search.php:15
+#: single.php:16
 msgid "Read more"
 msgstr "Weiterlesen"
+
+#: archive.php:36
+#: index.php:16
+#: search.php:19
+msgid "In "
+msgstr "In"
+
+#: archive.php:37
+#: index.php:17
+#: search.php:20
+msgid "by "
+msgstr "von "
+
+#: archive.php:38
+#: index.php:18
+#: search.php:21
+msgid "on "
+msgstr "am "
+
+#: archive.php:39
+#: index.php:19
+#: search.php:22
+#: single.php:30
+msgid "<span class=\"alignright\">Pages:"
+msgstr "<span class=\"alignright\">Seiten:"
+
+#: archive.php:47
+#: index.php:31
+msgid "Post navigation"
+msgstr "Artikelnavigation"
+
+#: archive.php:49
+#: index.php:33
+#: search.php:35
+msgid "<span class=\"meta-nav\">&larr;</span> Newer Posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Neuere  Kommentare"
+
+#: archive.php:50
+#: index.php:34
+#: search.php:36
+msgid "Older Posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Ältere Kommentare <span class=\"meta-nav\">&rarr;</span>"
+
+#: archives.php:20
+#, php-format
+msgid "This is the frontpage of the <strong>%1$s</strong> archives. Currently the archives consist of <strong>%2$s</strong>, <strong>%3$s</strong> and <strong>%4$s</strong>, with a total of <strong>%5$s</strong> and <strong>%6$s</strong>."
+msgstr "Dies ist die Archivübersichtsseite von <strong>%1$s</strong>. Derzeit bestehen die Archive aus <strong>%2$s</strong>, <strong>%3$s</strong> und <strong>%4$s</strong>, mit insgesamt <strong>%5$s</strong> und <strong>%6$s</strong>."
+
+#: archives.php:22
+#, php-format
+msgid "%d post"
+msgstr "%d Artikel"
+
+#: archives.php:23
+#, php-format
+msgid "%d page"
+msgstr "%d Seite"
+
+#: archives.php:24
+#, php-format
+msgid "%d comment"
+msgstr "%d Kommentar"
+
+#: archives.php:25
+#, php-format
+msgid "%d category"
+msgstr "%d Kategorie"
+
+#: archives.php:26
+#, php-format
+msgid "%d tag"
+msgstr "%d Schlagwort"
+
+#: archives.php:35
+msgid "Tag Cloud"
+msgstr "Schlagwortwolke"
+
+#: archives.php:41
+msgid "Browse by Month"
+msgstr "Sortieren nach Monaten"
+
+#: archives.php:48
+msgid "Browse by Category"
+msgstr "Sortieren nach Kategorien"
+
+#: archives.php:55
+#: attachment.php:22
+#: page-no-comments.php:19
+#: page.php:16
+msgid "Created "
+msgstr "Erstellt "
 
 #: attachment.php:8
 msgid "Previous Attachment"
@@ -80,16 +172,20 @@ msgid "One Response to %2$s"
 msgstr "Ein Kommentar zu %2$s"
 
 #: comments.php:41
-#: comments.php:59
+#: comments.php:61
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
 msgstr "<span class=\"meta-nav\">&larr;</span> Ältere Kommentare"
 
 #: comments.php:42
-#: comments.php:60
+#: comments.php:62
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Neuere Kommentare <span class=\"meta-nav\">&rarr;</span>"
 
-#: comments.php:71
+#: comments.php:59
+msgid "Comment navigation"
+msgstr "Kommentarnavigation"
+
+#: comments.php:74
 msgid "Comments are closed."
 msgstr "Kommentare sind geschlossen."
 
@@ -109,70 +205,85 @@ msgstr "Design von "
 msgid " & WordPress'd by "
 msgstr " & für WordPress adaptiert von "
 
-#: functions.php:8
+#: footer.php:7
+#, php-format
+msgid "Powered by %1$s and %2$s"
+msgstr "Angetrieben von %1$s und %2$s"
+
+#: footer.php:9
+msgid "WordPress"
+msgstr "WordPress"
+
+#: footer.php:12
+msgid "HTML5Press WordPress Theme."
+msgstr "HTML5Press WordPress Theme."
+
+#: footer.php:18
+msgid " queries in "
+msgstr "Abfragen in "
+
+#: footer.php:18
+msgid " seconds"
+msgstr "Sekunden"
+
+#: functions.php:41
 msgid "Main Menu"
 msgstr "Hauptmenü"
 
-#: functions.php:41
+#: functions.php:99
 msgid "Name"
 msgstr "Name"
 
-#: functions.php:44
+#: functions.php:102
 msgid "Email"
 msgstr "E-Mail"
 
-#: functions.php:47
+#: functions.php:105
 msgid "Website"
 msgstr "Website"
 
-#: functions.php:56
+#: functions.php:114
 msgid "Comment"
 msgstr "Kommentar"
 
-#: functions.php:67
+#: functions.php:126
 #, php-format
 msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
 msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">sagt:</span>"
 
-#: functions.php:70
+#: functions.php:129
 msgid "Your comment is awaiting moderation."
 msgstr "Dein Kommentar wartet auf Freischaltung."
 
-#: functions.php:74
+#: functions.php:133
 msgid "(Edit)"
 msgstr "(Edit)"
 
-#: functions.php:74
+#: functions.php:133
 msgid "Author"
 msgstr "Autor"
 
-#: functions.php:87
+#: functions.php:147
 msgid "Edit This"
 msgstr "Bearbeiten"
 
-#: index.php:17
-#: single.php:20
-msgid "In "
-msgstr "In"
+#: functions.php:174
+msgid "HTML5Press Options"
+msgstr "HTML5Press Optionen"
 
-#: index.php:17
-#: single.php:20
-msgid " by "
-msgstr " von "
+#: header.php:44
+msgid "Main menu"
+msgstr "Hauptmenü"
 
-#: index.php:17
-#: single.php:20
-msgid " on "
-msgstr " am "
-
-#: index.php:26
+#: index.php:29
+#: search.php:32
 msgid "Sorry, no posts matched your criteria."
 msgstr "Keine Artikel entsprechen den Kriterien."
 
-#: page-no-comments.php:16
-#: page.php:15
-msgid "Created "
-msgstr "Erstellt "
+#: search.php:5
+#, php-format
+msgid "%d Results for"
+msgstr "%d Resultate für"
 
 #: searchform.php:2
 #: searchform.php:3
@@ -190,4 +301,26 @@ msgstr "Kategorien"
 #: sidebar.php:28
 msgid "Meta"
 msgstr "Meta"
+
+#: single.php:21
+#, php-format
+msgid "In %1$s by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%2$s\" title=\"%3$s\">%4$s</a></span> on <time class=\"entry-date\" datetime=\"%5$s\" pubdate>%6$s</time></a>"
+msgstr "In %1$s von <span class=\"author vcard\"><a class=\"url fn n\" href=\"%2$s\" title=\"%3$s\">%4$s</a></span> am <time class=\"entry-date\" datetime=\"%5$s\" pubdate>%6$s</time></a>"
+
+#: single.php:24
+#, php-format
+msgid "View all posts by %s"
+msgstr "Alle Artikel von %s ansehen"
+
+#: single.php:32
+msgid "Tagged with: "
+msgstr "Schlagwörter: "
+
+#: theme-options.php:129
+msgid " Theme Options"
+msgstr " Theme Optionen"
+
+#: theme-options.php:132
+msgid "Options saved"
+msgstr "Optionen gespeichert"
 
