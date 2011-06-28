@@ -757,16 +757,6 @@ textarea {
 	box-shadow: 0px 1px 1px #bbb;
 }
 
-input:hover,
-input:focus,
-textarea:hover,
-textarea:focus {
-	color: #333;
-	-webkit-box-shadow: 0px 1px 1px #ccc, inset 1px 2px 1px rgba(250, 79, 170, 0.3);
-	-moz-box-shadow: 0px 1px 1px #ccc, inset 1px 2px 1px rgba(250, 79, 170, 0.3);
-	box-shadow: 0px 1px 1px #ccc, inset 1px 2px 1px rgba(250, 79, 170, 0.3);
-}
-
 textarea {
 	border-radius: 10px;
 }
