@@ -2,7 +2,7 @@ a {
 	color: #40BC01;
 	text-decoration: none;
 	-webkit-transition: all 100ms linear;
-	/*-moz-transition: all 100ms linear;*/
+	-moz-transition: all 100ms linear;
 	transition: all 100ms linear;
 }
 
@@ -42,7 +42,7 @@ legend {
 	padding: 14px 20px;
 	text-shadow: 0 1px 0 #40BC01;
 	-webkit-transition: all 100ms linear;
-	/*-moz-transition: all 100ms linear;*/
+	-moz-transition: all 100ms linear;
 	transition: all 100ms linear;
 }
 

@@ -372,7 +372,6 @@ hr {
 	
 	/* Gain the benefits from GPU acceleration */
 	-webkit-transform: translateZ(0);
-	/*-moz-transform: translateZ(0);*/
 	transform: translateZ(0);
 }
 
@@ -531,7 +530,7 @@ input[type=submit]:hover {
 	font-weight: bold;
 	letter-spacing: -1px;
 	-webkit-transition: color 150ms ease-in-out;
-	/*-moz-transition: color 150ms ease-in-out;*/
+	-moz-transition: color 150ms ease-in-out;
 	transition: color 150ms ease-in-out;
 }
 
@@ -607,7 +606,7 @@ figure {
 	padding: 10px;
 	text-align: center;
 	-webkit-transition: border 200ms ease;
-	/*-moz-transition: border 200ms ease;*/
+	-moz-transition: border 200ms ease;
 	transition: border 200ms ease;
 }
 
@@ -661,7 +660,7 @@ figcaption {
 	.widget li a { 
 		color: #333;
 		-webkit-transition: margin-left 300ms linear;
-		/*-moz-transition: margin-left 300ms linear;*/
+		-moz-transition: margin-left 300ms linear;
 		transition: margin-left 300ms linear;
 	}
 
