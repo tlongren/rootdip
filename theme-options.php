@@ -80,9 +80,9 @@ $html5press_theme_colors = array(
 		'value' => 'pink',
 		'label' => 'Pink'
 	),
-	'blue' => array(
-		'value' => 'blue',
-		'label' => 'Blue'
+	'bluishpurple' => array(
+		'value' => 'bluishpurple',
+		'label' => 'Bluish Purple'
 	),
 	'green' => array(
 		'value' => 'green',
@@ -99,7 +99,11 @@ $html5press_theme_colors = array(
 	'orange' => array(
 		'value' => 'orange',
 		'label' => 'Orange'
-	)
+	),
+	'blue' => array(
+		'value' => 'blue',
+		'label' => 'Blue'
+	),
 );
 
 function html5press_theme_options() {
