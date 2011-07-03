@@ -80,6 +80,14 @@ $html5press_theme_colors = array(
 		'value' => 'pink',
 		'label' => 'Pink'
 	),
+	'black' => array(
+		'value' => 'black',
+		'label' => 'Black'
+	),
+	'blue' => array(
+		'value' => 'blue',
+		'label' => 'Blue'
+	),
 	'bluishpurple' => array(
 		'value' => 'bluishpurple',
 		'label' => 'Bluish Purple'
@@ -88,22 +96,14 @@ $html5press_theme_colors = array(
 		'value' => 'green',
 		'label' => 'Green'
 	),
-	'red' => array(
-		'value' => 'red',
-		'label' => 'Red'
-	),
-	'black' => array(
-		'value' => 'black',
-		'label' => 'Black'
-	),
 	'orange' => array(
 		'value' => 'orange',
 		'label' => 'Orange'
 	),
-	'blue' => array(
-		'value' => 'blue',
-		'label' => 'Blue'
-	),
+	'red' => array(
+		'value' => 'red',
+		'label' => 'Red'
+	)
 );
 
 function html5press_theme_options() {
