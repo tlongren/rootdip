@@ -12,6 +12,7 @@
 			<a href="<?php echo wp_get_attachment_url($post->id); ?>" title="<?php the_title(); ?>" rel="attachment"><img src="<?php echo $att_image[0];?>" width="<?php echo $att_image[1];?>" height="<?php echo $att_image[2];?>"  class="attachment-medium" alt="<?php $post->post_excerpt; ?>" /></a>
 			<figcaption><?php if ( !empty($post->post_excerpt) ) echo "$post->post_excerpt" ?></figcaption>
 			</figure>
+			<p><a href="<?php echo get_permalink($post->post_parent); ?>">&laquo;<?php _e( 'Back to Post' ); ?></a></p>
 <?php else : ?>
 			<a href="<?php echo wp_get_attachment_url($post->ID) ?>" title="<?php echo esc_html( get_the_title($post->ID), 1 ) ?>" rel="attachment"><?php echo basename($post->guid) ?></a>
 			<div><?php if ( !empty($post->post_excerpt) ) echo "$post->post_excerpt" ?></div>
