@@ -220,6 +220,19 @@ function html5press_link_filter($link, $post) {
      return $link;
 }
 
+// Add featured post images to RSS feed
+add_filter('the_excerpt_rss', 'html5press_feed_thumbnail');
+add_filter('the_content_feed', 'html5press_feed_thumbnail');
+function html5press_feed_thumbnail($content) {
+    global $post;
+    if(has_post_thumbnail($post->ID)) {
+        $content = '<p>' . get_the_post_thumbnail($post->ID) .
+        '</p>' . get_the_content();
+    }
+
+    return $content;
+}
+
 // Setup featured posts slider
 function html5press_featured_posts() { ?>
 		<div id="slider-wrapper">
