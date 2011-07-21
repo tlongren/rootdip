@@ -169,6 +169,17 @@ function html5press_list_comments($comment, $args, $depth) {
 <?php
 }
 
+// Enable maintenance mode
+add_action('get_header', 'html5press_maintenance_mode');
+function html5press_maintenance_mode() {
+	global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options );
+	if ($html5press_settings['maintenance_mode'] == 1) {
+		if ( !current_user_can( 'edit_themes' ) || !is_user_logged_in() ) {
+			wp_die("Performing site maintenance, please check back soon.","Performing Site Maintenance");
+		}
+	}
+}
+
 // Style the "edit post" links
 add_filter( 'edit_post_link','html5press_edit_post_link' );
 function html5press_edit_post_link() {
