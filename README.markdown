@@ -25,6 +25,9 @@ Notes
 
 4. __Status Post Format__: Just put your status as the post title and publish (make sure you select the status format!). No post content is necessary.
 
+5. __Maintenance Mode__: This option lets you show a "maintenance" message to visitors who aren't logged in. This can be useful while making changes to your website or while tinkering with HTML5Press. Just don't forget to disable it when you're done or your visitors won't see your site!
+
+
 Other Considerations
 -----------------------------
 A majority of the images included in HTML5Press are from the [iconic icon set](http://somerandomdude.com/projects/iconic/ "Iconic Icons!") by [P.J. Onori](http://somerandomdude.com/ "Some Random Dude"). Images from Iconic are the tag, sticky post identifier, link post format identifier, status post format identifier, quote post format identifier and left and right arrows. I will likely use more images from Iconic as I add additional features/post formats to HTML5Press.
