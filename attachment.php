@@ -5,7 +5,7 @@
         <article <?php post_class(); ?>>
         
             <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-			<div class="alignleft"><?php previous_image_link(false,__('Previous Attachment','html5press')); ?></div><div class="alignright"><?php next_image_link(false,__('Next Attachment','html5press')); ?></div>
+			<div class="alignleft prev-post"><?php previous_image_link(false,__('Previous Attachment','html5press')); ?></div><div class="alignright next-post"><?php next_image_link(false,__('Next Attachment','html5press')); ?></div>
 			<div class="clear"></div>
 <?php if ( wp_attachment_is_image( $post->id ) ) : $att_image = wp_get_attachment_image_src( $post->id, "medium"); ?>
 			<figure>

@@ -6,8 +6,8 @@
         
             <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 			<div class="clear"></div>
-			<div class="alignleft"><?php previous_post_link(); ?></div>
-			<div class="alignright"><?php next_post_link(); ?></div>
+			<div class="alignleft prev-post"><?php previous_post_link(); ?></div>
+			<div class="alignright next-post"><?php next_post_link(); ?></div>
             <div class="clear"></div>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' ); ?>
 			<?php $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), $html5press_settings['featured_image_size'] ); ?>

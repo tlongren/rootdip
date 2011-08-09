@@ -534,6 +534,11 @@ input[type=submit]:hover {
 	transition: color 150ms ease-in-out;
 }
 
+.prev-post,.next-post {
+	font-size: 75%;
+	margin-bottom: 15px;
+}
+
 /* Post meta */
 .post-meta {
 	font: 14px 'Droid Serif', sans-serif;
