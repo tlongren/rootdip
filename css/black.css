@@ -6,7 +6,7 @@ a {
 	transition: all 100ms linear;
 }
 
-.post p a {
+.hentry p a {
 	text-decoration: underline;
 }
 
