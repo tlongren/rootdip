@@ -6,6 +6,10 @@ a {
 	transition: all 100ms linear;
 }
 
+#content a {
+	text-decoration: underline;
+}
+
 a:hover {
 	color: #333333;
 	text-shadow: 0 1px 0 #fff;
