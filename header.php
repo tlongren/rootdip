@@ -32,7 +32,7 @@
     <header id="header" class="clearfix" role="banner">
 	
 		<hgroup>
-			<h1 id="site-title"><a href="<?php echo home_url(); ?>"><?php if (!empty($html5press_settings['custom_logo_url'])) { bloginfo('name'); } else { ?><img src="<?php echo $html5press_settings['custom_logo_url']; ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" /><?php } ?></a></h1>
+			<h1 id="site-title"><a href="<?php echo home_url(); ?>"><?php if (empty($html5press_settings['custom_logo_url'])) { bloginfo('name'); } else { ?><img src="<?php echo $html5press_settings['custom_logo_url']; ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" /><?php } ?></a></h1>
 			<?php if ($html5press_settings['show_tagline'] == 1) { ?><h2 id="site-description"><?php bloginfo('description'); ?></h2><?php } ?>
 		</hgroup>
 		
