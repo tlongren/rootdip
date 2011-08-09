@@ -237,7 +237,7 @@ add_filter('the_content_feed', 'html5press_feed_thumbnail');
 function html5press_feed_thumbnail($content) {
     global $post;
     if(has_post_thumbnail($post->ID)) {
-        $content = '<p>' . get_the_post_thumbnail($post->ID) .
+        $content = '<p>' . get_the_post_thumbnail($post->ID,array(200,200)) .
         '</p>' . get_the_content();
     }
 
