@@ -934,6 +934,26 @@ a#toTop:hover {
 /* Comments */
 /* =Comments
 -------------------------------------------------------------- */
+/* Comments link */
+.hentry .comments-link a {
+	background: url(images/comment-bubble.png) no-repeat right top;
+	color: #666;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 35px;
+	margin-right: -38px;
+	margin-top: -75px;
+	float: right;
+	text-align: center;
+	text-decoration: none;
+	width: 43px;
+	height: 36px;
+}
+.hentry .comments-link a:hover,
+.hentry .comments-link a:focus,
+.hentry .comments-link a:active {
+	text-decoration: underline;
+}
 #comments {
 	clear: both;
 }
