@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <?php global $html5press_options; $html5press_settings = get_option( 'html5press_options', $html5press_options ); ?>
 <div id="content" role="main">
+		<?php if (is_paged()) { ?><h1 class="pagetitle"><?php $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1; _e( 'Page '.$pageNumber,'html5press' ); ?></h1><?php } ?>
 		<?php if (!empty($html5press_settings['featured_cat']) && is_front_page()) { html5press_featured_posts(); } ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>
