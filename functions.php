@@ -210,7 +210,7 @@ function html5press_admin_bar_link() {
 	$wp_admin_bar->add_menu( array(
 		'parent' => 'appearance',
 		'id' => 'html5press-options',
-		'title' => __('HTML5Press Options'),
+		'title' => __( 'HTML5Press Options','html5press' ),
 		'href' => admin_url( 'themes.php?page=theme_options'),
 		'meta' => false
 	));

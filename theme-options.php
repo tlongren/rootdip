@@ -124,7 +124,7 @@ function html5press_theme_options_page() {
 
 	<div class="wrap">
 
-	<?php screen_icon(); echo "<h2>" . get_current_theme() . __( ' Theme Options' ) . "</h2>"; ?>
+	<?php screen_icon(); echo "<h2>" . get_current_theme() . __( ' Theme Options','html5press' ) . "</h2>"; ?>
 
 	<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
 	<div class="updated fade"><p><strong><?php _e( 'Options saved', 'html5press' ); ?></strong></p></div>
