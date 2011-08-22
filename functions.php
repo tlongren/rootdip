@@ -244,6 +244,10 @@ function html5press_feed_thumbnail($content) {
     return $content;
 }
 
+// Generic login failure message to reduce details given on login failure.
+add_filter( 'login_errors', 'html5press_generic_login_failure' );
+function html5press_generic_login_failure() { return '<strong>ERROR</strong>: The login you provided is incorrect.'; }
+
 // Setup featured posts slider
 function html5press_featured_posts() { ?>
 		<div id="slider-wrapper">
