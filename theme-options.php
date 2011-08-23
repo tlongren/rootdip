@@ -4,6 +4,7 @@
 $html5press_options = array(
 	'back_to_top' => true,
 	'show_tagline' => true,
+	'enable_slimbox' => false,
 	'show_query_stats' => false,
 	'maintenance_mode' => false,
 	'custom_logo_url' => '',
@@ -150,13 +151,19 @@ function html5press_theme_options_page() {
 	<label for="show_tagline">Enabled</label>
 	</td>
 	</tr>
+	<tr valign="top"><th scope="row"><label for="enable_slimbox">Slimbox2 Image Overlay</label></th>
+	<td>
+	<input type="checkbox" id="enable_slimbox" name="html5press_options[enable_slimbox]" value="1" <?php checked( true, $settings['enable_slimbox'] ); ?> />
+	<label for="enable_slimbox">Enabled</label>
+	</td>
+	</tr>
 	<tr valign="top"><th scope="row"><label for="show_query_stats">Show Query Stats In Footer</label></th>
 	<td>
 	<input type="checkbox" id="show_query_stats" name="html5press_options[show_query_stats]" value="1" <?php checked( true, $settings['show_query_stats'] ); ?> />
 	<label for="show_query_stats">Enabled</label>
 	</td>
 	</tr>
-	<tr valign="top"><th scope="row"><label for="maintenance_mode">Enable Maintenance Mode</label></th>
+	<tr valign="top"><th scope="row"><label for="maintenance_mode">Maintenance Mode</label></th>
 	<td>
 	<input type="checkbox" id="maintenance_mode" name="html5press_options[maintenance_mode]" value="1" <?php checked( true, $settings['maintenance_mode'] ); ?> />
 	<label for="maintenance_mode">Enabled</label>
@@ -272,6 +279,12 @@ function html5press_validate_options( $input ) {
 		$input['show_tagline'] = null;
 	// We verify if the input is a boolean value
 	$input['show_tagline'] = ( $input['show_tagline'] == 1 ? 1 : 0 );
+	
+	// If the checkbox has not been checked, we void it
+	if ( ! isset( $input['enable_slimbox'] ) )
+		$input['enable_slimbox'] = null;
+	// We verify if the input is a boolean value
+	$input['enable_slimbox'] = ( $input['enable_slimbox'] == 1 ? 1 : 0 );
 	
 	// If the checkbox has not been checked, we void it
 	if ( ! isset( $input['show_query_stats'] ) )
