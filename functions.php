@@ -202,6 +202,13 @@ function html5press_read_more_link() {
 }
 */
 
+// Add class to style next/prev posts links
+add_filter('next_posts_link_attributes', 'html5press_posts_nav_attributes');
+add_filter('previous_posts_link_attributes', 'html5press_posts_nav_attributes');
+function html5press_posts_nav_attributes(){
+	return 'class="button"';
+}
+
 // Make page menus show correctly
 add_filter( 'wp_page_menu','html5press_page_menu' );
 function html5press_page_menu($menu) {
