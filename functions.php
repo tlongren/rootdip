@@ -254,6 +254,16 @@ function html5press_feed_thumbnail($content) {
 add_filter( 'login_errors', 'html5press_generic_login_failure' );
 function html5press_generic_login_failure() { return '<strong>ERROR</strong>: The login you provided is incorrect.'; }
 
+// Add rel="lightbox" to images embedded in a post for greater slimbox2 usage
+add_filter('the_content', 'html5press_addlightboxrel');
+function html5press_addlightboxrel($content) {
+	global $post;
+	$pattern = "/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/i";
+  	$replacement = '<a$1href=$2$3.$4$5 rel="lightbox" title="'.$post->post_title.'"$6>';
+    $content = preg_replace($pattern, $replacement, $content);
+    return $content;
+}
+
 // Setup featured posts slider
 function html5press_featured_posts() { ?>
 		<div id="slider-wrapper">
