@@ -1122,8 +1122,6 @@ a.button {
     background: -moz-linear-gradient(linear,0% 40%,0% 70%,from(#F5F5F5),to(#F1F1F1));
     border: solid 1px #dcdcdc;
     border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
     margin-right: 10px;
 }
 a.button:hover {
