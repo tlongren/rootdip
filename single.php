@@ -18,7 +18,7 @@
 			<footer class="post-meta">
 			<p>
 			<?php
-			printf( __( 'In %1$s by <span class="author vcard"><a class="url fn n" href="%2$s" title="%3$s">%4$s</a></span> on <time class="entry-date" datetime="%5$s" pubdate>%6$s</time></a>', 'html5press' ),
+			printf( __( 'In %1$s by <span class="author vcard"><a class="url fn n" href="%2$s" title="%3$s">%4$s</a></span> on <time class="entry-date" datetime="%5$s" pubdate>%6$s</time>', 'html5press' ),
 				get_the_category_list( ', ' ),
 				get_author_posts_url( get_the_author_meta( 'ID' ) ),
 				sprintf( esc_attr__( 'View all posts by %s', 'html5press' ), get_the_author() ),
