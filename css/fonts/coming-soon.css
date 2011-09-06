@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Coming Soon', cursive;
+}
+
+blockquote {
+	font: italic 18px/32px 'Coming Soon', cursive;
+}
+
+#site-title a {
+	font: bold 66px 'Coming Soon', cursive;
+}
+
+#site-description {
+	font: normal 18px 'Coming Soon', cursive;
+}
+
+#menu a {
+	font: 14px 'Coming Soon', cursive;
+}
+
+.post-meta {
+	font: 14px 'Coming Soon', cursive;
+}
+
+figcaption {
+	font: 14px 'Coming Soon', cursive;
+}
+
+#footer a {
+	font: 14px 'Coming Soon', cursive;
+}
+
+button, input, select, textarea, label {
+	font: 14px 'Coming Soon', cursive;	
+}
+
+legend {
+	font: bold 14px 'Coming Soon', cursive;
+}
+
+a.button {
+	font: bold 12px 'Coming Soon', cursive;
+}

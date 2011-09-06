@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Comfortaa', cursive;
+}
+
+blockquote {
+	font: italic 18px/32px 'Comfortaa', cursive;
+}
+
+#site-title a {
+	font: bold 66px 'Comfortaa', cursive;
+}
+
+#site-description {
+	font: normal 18px 'Comfortaa', cursive;
+}
+
+#menu a {
+	font: 14px 'Comfortaa', cursive;
+}
+
+.post-meta {
+	font: 14px 'Comfortaa', cursive;
+}
+
+figcaption {
+	font: 14px 'Comfortaa', cursive;
+}
+
+#footer a {
+	font: 14px 'Comfortaa', cursive;
+}
+
+button, input, select, textarea, label {
+	font: 14px 'Comfortaa', cursive;	
+}
+
+legend {
+	font: bold 14px 'Comfortaa', cursive;
+}
+
+a.button {
+	font: bold 12px 'Comfortaa', cursive;
+}

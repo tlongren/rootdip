@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Abel', sans-serif;
+}
+
+blockquote {
+	font: italic 18px/32px 'Abel', sans-serif;
+}
+
+#site-title a {
+	font: bold 66px 'Abel', sans-serif;
+}
+
+#site-description {
+	font: normal 18px 'Abel', sans-serif;
+}
+
+#menu a {
+	font: 14px 'Abel', sans-serif;
+}
+
+.post-meta {
+	font: 14px 'Abel', sans-serif;
+}
+
+figcaption {
+	font: 14px 'Abel', sans-serif;
+}
+
+#footer a {
+	font: 14px 'Abel', sans-serif;
+}
+
+button, input, select, textarea, label {
+	font: 14px 'Abel', sans-serif;	
+}
+
+legend {
+	font: bold 14px 'Abel', sans-serif;
+}
+
+a.button {
+	font: bold 12px 'Abel', sans-serif;
+}

@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Nothing You Could Do', cursive;
+}
+
+blockquote {
+	font: italic 18px/32px 'Nothing You Could Do', cursive;
+}
+
+#site-title a {
+	font: bold 66px 'Nothing You Could Do', cursive;
+}
+
+#site-description {
+	font: normal 18px 'Nothing You Could Do', cursive;
+}
+
+#menu a {
+	font: 14px 'Nothing You Could Do', cursive;
+}
+
+.post-meta {
+	font: 14px 'Nothing You Could Do', cursive;
+}
+
+figcaption {
+	font: 14px 'Nothing You Could Do', cursive;
+}
+
+#footer a {
+	font: 14px 'Nothing You Could Do', cursive;
+}
+
+button, input, select, textarea, label {
+	font: 14px 'Nothing You Could Do', cursive;	
+}
+
+legend {
+	font: bold 14px 'Nothing You Could Do', cursive;
+}
+
+a.button {
+	font: bold 12px 'Nothing You Could Do', cursive;
+}

@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
+blockquote {
+	font: italic 18px/32px 'PT Sans Narrow', sans-serif;
+}
+
+#site-title a {
+	font: bold 66px 'PT Sans Narrow', sans-serif;
+}
+
+#site-description {
+	font: normal 18px 'PT Sans Narrow', sans-serif;
+}
+
+#menu a {
+	font: 14px 'PT Sans Narrow', sans-serif;
+}
+
+.post-meta {
+	font: 14px 'PT Sans Narrow', sans-serif;
+}
+
+figcaption {
+	font: 14px 'PT Sans Narrow', sans-serif;
+}
+
+#footer a {
+	font: 14px 'PT Sans Narrow', sans-serif;
+}
+
+button, input, select, textarea, label {
+	font: 14px 'PT Sans Narrow', sans-serif;	
+}
+
+legend {
+	font: bold 14px 'PT Sans Narrow', sans-serif;
+}
+
+a.button {
+	font: bold 12px 'PT Sans Narrow', sans-serif;
+}

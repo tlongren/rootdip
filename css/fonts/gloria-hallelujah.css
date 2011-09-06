@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+blockquote {
+	font: italic 18px/32px 'Gloria Hallelujah', cursive;
+}
+
+#site-title a {
+	font: bold 66px 'Gloria Hallelujah', cursive;
+}
+
+#site-description {
+	font: normal 18px 'Gloria Hallelujah', cursive;
+}
+
+#menu a {
+	font: 14px 'Gloria Hallelujah', cursive;
+}
+
+.post-meta {
+	font: 14px 'Gloria Hallelujah', cursive;
+}
+
+figcaption {
+	font: 14px 'Gloria Hallelujah', cursive;
+}
+
+#footer a {
+	font: 14px 'Gloria Hallelujah', cursive;
+}
+
+button, input, select, textarea, label {
+	font: 14px 'Gloria Hallelujah', cursive;	
+}
+
+legend {
+	font: bold 14px 'Gloria Hallelujah', cursive;
+}
+
+a.button {
+	font: bold 12px 'Gloria Hallelujah', cursive;
+}

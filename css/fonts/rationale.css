@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Rationale', cursive;
+}
+
+blockquote {
+	font: italic 18px/32px 'Rationale', cursive;
+}
+
+#site-title a {
+	font: bold 66px 'Rationale', cursive;
+}
+
+#site-description {
+	font: normal 18px 'Rationale', cursive;
+}
+
+#menu a {
+	font: 14px 'Rationale', cursive;
+}
+
+.post-meta {
+	font: 14px 'Rationale', cursive;
+}
+
+figcaption {
+	font: 14px 'Rationale', cursive;
+}
+
+#footer a {
+	font: 14px 'Rationale', cursive;
+}
+
+button, input, select, textarea, label {
+	font: 14px 'Rationale', cursive;	
+}
+
+legend {
+	font: bold 14px 'Rationale', cursive;
+}
+
+a.button {
+	font: bold 12px 'Rationale', cursive;
+}

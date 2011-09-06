@@ -81,6 +81,7 @@ function html5press_register_styles() {
 	if ( $html5press_settings['enable_slimbox'] == 1 ) {
 		wp_enqueue_style( 'slimbox2-style', get_stylesheet_directory_uri().'/css/slimbox2.css');
 	}
+	wp_enqueue_style( 'fonts', get_stylesheet_directory_uri().'/css/fonts/'.$html5press_settings['theme_font'].'.css');
 }
 
 // Setup update checking

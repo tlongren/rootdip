@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Short Stack', cursive;
+}
+
+blockquote {
+	font: italic 18px/32px 'Short Stack', cursive;
+}
+
+#site-title a {
+	font: bold 66px 'Short Stack', cursive;
+}
+
+#site-description {
+	font: normal 18px 'Short Stack', cursive;
+}
+
+#menu a {
+	font: 14px 'Short Stack', cursive;
+}
+
+.post-meta {
+	font: 14px 'Short Stack', cursive;
+}
+
+figcaption {
+	font: 14px 'Short Stack', cursive;
+}
+
+#footer a {
+	font: 14px 'Short Stack', cursive;
+}
+
+button, input, select, textarea, label {
+	font: 14px 'Short Stack', cursive;	
+}
+
+legend {
+	font: bold 14px 'Short Stack', cursive;
+}
+
+a.button {
+	font: bold 12px 'Short Stack', cursive;
+}

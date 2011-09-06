@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Sue Ellen Francisco', cursive;
+}
+
+blockquote {
+	font: italic 18px/32px 'Sue Ellen Francisco', cursive;
+}
+
+#site-title a {
+	font: bold 66px 'Sue Ellen Francisco', cursive;
+}
+
+#site-description {
+	font: normal 18px 'Sue Ellen Francisco', cursive;
+}
+
+#menu a {
+	font: 14px 'Sue Ellen Francisco', cursive;
+}
+
+.post-meta {
+	font: 14px 'Sue Ellen Francisco', cursive;
+}
+
+figcaption {
+	font: 14px 'Sue Ellen Francisco', cursive;
+}
+
+#footer a {
+	font: 14px 'Sue Ellen Francisco', cursive;
+}
+
+button, input, select, textarea, label {
+	font: 14px 'Sue Ellen Francisco', cursive;	
+}
+
+legend {
+	font: bold 14px 'Sue Ellen Francisco', cursive;
+}
+
+a.button {
+	font: bold 12px 'Sue Ellen Francisco', cursive;
+}

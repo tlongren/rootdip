@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Walter Turncoat', cursive;
+}
+
+blockquote {
+	font: italic 18px/32px 'Walter Turncoat', cursive;
+}
+
+#site-title a {
+	font: bold 66px 'Walter Turncoat', cursive;
+}
+
+#site-description {
+	font: normal 18px 'Walter Turncoat', cursive;
+}
+
+#menu a {
+	font: 14px 'Walter Turncoat', cursive;
+}
+
+.post-meta {
+	font: 14px 'Walter Turncoat', cursive;
+}
+
+figcaption {
+	font: 14px 'Walter Turncoat', cursive;
+}
+
+#footer a {
+	font: 14px 'Walter Turncoat', cursive;
+}
+
+button, input, select, textarea, label {
+	font: 14px 'Walter Turncoat', cursive;	
+}
+
+legend {
+	font: bold 14px 'Walter Turncoat', cursive;
+}
+
+a.button {
+	font: bold 12px 'Walter Turncoat', cursive;
+}

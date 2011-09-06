@@ -128,7 +128,6 @@ ol, ul, dd, pre, table, fieldset {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Droid Serif', sans-serif;
 	text-shadow: 0 1px 0 #fff;
 }
 
@@ -243,7 +242,6 @@ pre code {
 blockquote {
 	background: url(images/quote.png) no-repeat left top;
 	color: #424242;
-	font: italic 18px/32px 'Droid Serif', Georgia, serif;
 	padding: 33px 30px 0;
 	margin: 40px 20px 20px;
 	text-shadow: 0 1px 0 #fff;
@@ -362,7 +360,6 @@ hr {
 
 #site-title a {
 	color: #1e1e1e;
-	font: bold 66px 'Droid Serif', sans-serif;
 	float: left;
 	letter-spacing: -3px;
 	text-shadow: 0 1px 0 #fff;
@@ -386,7 +383,6 @@ hr {
 }
 
 #site-description {
-	font: normal 18px 'Droid Serif', sans-serif;
 	float: right;
 	padding-top: 32px;
 }
@@ -451,7 +447,6 @@ hr {
 	border-color: #fff #c9c9c9 #c9c9c9 #fff;
 	border-radius: 5px;
 	display: block;
-	font: 14px 'Droid Serif', sans-serif;
 	padding: 14px 20px;
 	margin-bottom: 5px;
 	text-shadow: 0 1px 0 #fff;
@@ -541,7 +536,6 @@ input[type=submit]:hover {
 
 /* Post meta */
 .post-meta {
-	font: 14px 'Droid Serif', sans-serif;
 	margin: 40px 0 -20px;
 	
 	/* CSS3 Flexible Box Model */
@@ -630,7 +624,6 @@ figure {
 
 figcaption {
 	margin: 10px 0;
-	font: 14px 'Droid Serif', Georgia, serif;
 	color: #555;
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
@@ -679,10 +672,6 @@ figcaption {
 	text-shadow: 1px 1px 0px #fff;
 }
 
-#footer a {
-	font: 14px 'Droid Serif', Georgia, serif;
-}
-
 /**
  * Forms
  */
@@ -722,10 +711,6 @@ figcaption {
 		-webkit-box-sizing: content-box;
 		box-sizing: content-box;
 	}
-	
-button, input, select, textarea, label {
-	font: 14px 'Droid Serif', Georgia, serif;	
-}
 
 label {
 	display: block;
@@ -744,7 +729,6 @@ fieldset {
 }
 
 legend {
-	font: bold 14px 'Droid Serif', Georgia, serif;
 	padding: 10px 12px;	
 }
 
@@ -1107,7 +1091,6 @@ h3,
 /* Google Buttons CSS. From: http://pixify.com/blog/use-google-plus-to-improve-your-ui/ */
 a.button {
     color: #6e6e6e;
-    font: bold 12px 'Droid Serif', sans-serif;
     text-decoration: none;
     padding: 7px 12px;
     position: relative;

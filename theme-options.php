@@ -10,6 +10,7 @@ $html5press_options = array(
 	'custom_logo_url' => '',
 	'featured_image_size' => 'large',
 	'theme_color' => 'pink',
+	'theme_font' => 'droid-serif',
 	'featured_cat' => '',
 	'num_featured' => '5'
 );
@@ -109,6 +110,94 @@ $html5press_theme_colors = array(
 	)
 );
 
+// Store font choices in an array
+$html5press_theme_fonts = array(
+	'droid-serif' => array(
+		'value' => 'droid-serif',
+		'label' => 'Droid Serif'
+	),
+	'antic' => array(
+		'value' => 'antic',
+		'label' => 'Antic'
+	),
+	'volkhov' => array(
+		'value' => 'volkhov',
+		'label' => 'Volkhov'
+	),
+	'numans' => array(
+		'value' => 'numans',
+		'label' => 'Numans'
+	),
+	'voltaire' => array(
+		'value' => 'voltaire',
+		'label' => 'Voltaire'
+	),
+	'short-stack' => array(
+		'value' => 'short-stack',
+		'label' => 'Short Stack'
+	),
+	'questrial' => array(
+		'value' => 'questrial',
+		'label' => 'Questrial'
+	),
+	'comfortaa' => array(
+		'value' => 'comfortaa',
+		'label' => 'Comfortaa'
+	),
+	'rationale' => array(
+		'value' => 'rationale',
+		'label' => 'Rationale'
+	),
+	'varela-round' => array(
+		'value' => 'varela-round',
+		'label' => 'Varela Round'
+	),
+	'abel' => array(
+		'value' => 'abel',
+		'label' => 'Abel'
+	),
+	'gloria-hallelujah' => array(
+		'value' => 'gloria-hallelujah',
+		'label' => 'Gloria Hallelujah'
+	),
+	'sue-ellen-francisco' => array(
+		'value' => 'sue-ellen-francisco',
+		'label' => 'Sue Ellen Francisco'
+	),
+	'nothing-you-could-do' => array(
+		'value' => 'nothing-you-could-do',
+		'label' => 'Nothing You Could Do'
+	),
+	'amaranth' => array(
+		'value' => 'amaranth',
+		'label' => 'Amaranth'
+	),
+	'quattrocento-sans' => array(
+		'value' => 'quattrocento-sans',
+		'label' => 'Quattrocento Sans'
+	),
+	'im-fell-great-primer-sc' => array(
+		'value' => 'im-fell-great-primer-sc',
+		'label' => 'IM Fell Great Primer SC'
+	),
+	'pt-sans-narrow' => array(
+		'value' => 'pt-sans-narrow',
+		'label' => 'PT Sans Narrow'
+	),
+	'walter-turncoat' => array(
+		'value' => 'walter-turncoat',
+		'label' => 'Walter Turncoat'
+	),
+	'jura' => array(
+		'value' => 'jura',
+		'label' => 'Jura'
+	),
+	'coming-soon' => array(
+		'value' => 'coming-soon',
+		'label' => 'Coming Soon'
+	)
+);
+
 function html5press_theme_options() {
 	// Add theme options page to the addmin menu
 	add_theme_page( 'HTML5Press Options', 'HTML5Press Options', 'edit_theme_options', 'theme_options', 'html5press_theme_options_page' );
@@ -118,7 +207,7 @@ add_action( 'admin_menu', 'html5press_theme_options' );
 
 // Function to generate options page
 function html5press_theme_options_page() {
-	global $html5press_options, $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors;
+	global $html5press_options, $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors, $html5press_theme_fonts;
 
 	if ( ! isset( $_REQUEST['settings-updated'] ) )
 		$_REQUEST['settings-updated'] = false; ?>
@@ -204,6 +293,21 @@ function html5press_theme_options_page() {
 	</select>
 	</td>
 	</tr>
+	<tr valign="top"><th scope="row"><label for="theme_font">Theme Font</label></th>
+	<td>
+	<select id="theme_font" name="html5press_options[theme_font]">
+	<?php
+	foreach ( $html5press_theme_fonts as $fonts ) :
+		$label = $fonts['label'];
+		$selected = '';
+		if ( $fonts['value'] == $settings['theme_font'] )
+			$selected = 'selected="selected"';
+		echo '<option style="padding-right: 10px;" value="' . esc_attr( $fonts['value'] ) . '" ' . $selected . '>' . $label . '</option>';
+	endforeach;
+	?>
+	</select>
+	</td>
+	</tr>
 	<tr valign="top"><th scope="row"><label for="featured_cat">Featured Post Category</label></th>
 	<td>
 	<select id="featured_cat" name="html5press_options[featured_cat]">
@@ -246,7 +350,7 @@ function html5press_theme_options_page() {
 }
 
 function html5press_validate_options( $input ) {
-	global $html5press_options, $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors;
+	global $html5press_options, $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors, $html5press_theme_fonts;
 
 	$settings = get_option( 'html5press_options', $html5press_options );
 	
@@ -269,6 +373,11 @@ function html5press_validate_options( $input ) {
 	if ( !array_key_exists( $input['theme_color'], $html5press_theme_colors ) )
 		$input['theme_color'] = $prev;
 	
+	// We select the previous value of the field, to restore it in case an invalid entry has been given
+	$prev = $settings['theme_font'];
+	if ( !array_key_exists( $input['theme_font'], $html5press_theme_fonts ) )
+		$input['theme_font'] = $prev;
+
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
 	$prev = $settings['featured_image_size'];
 	if ( !array_key_exists( $input['featured_image_size'], $html5press_image_sizes ) )

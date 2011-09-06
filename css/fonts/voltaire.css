@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Voltaire', sans-serif;
+}
+
+blockquote {
+	font: italic 18px/32px 'Voltaire', sans-serif;
+}
+
+#site-title a {
+	font: bold 66px 'Voltaire', sans-serif;
+}
+
+#site-description {
+	font: normal 18px 'Voltaire', sans-serif;
+}
+
+#menu a {
+	font: 14px 'Voltaire', sans-serif;
+}
+
+.post-meta {
+	font: 14px 'Voltaire', sans-serif;
+}
+
+figcaption {
+	font: 14px 'Voltaire', sans-serif;
+}
+
+#footer a {
+	font: 14px 'Voltaire', sans-serif;
+}
+
+button, input, select, textarea, label {
+	font: 14px 'Voltaire', sans-serif;	
+}
+
+legend {
+	font: bold 14px 'Voltaire', sans-serif;
+}
+
+a.button {
+	font: bold 12px 'Voltaire', sans-serif;
+}

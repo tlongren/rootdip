@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Varela Round', sans-serif;
+}
+
+blockquote {
+	font: italic 18px/32px 'Varela Round', sans-serif;
+}
+
+#site-title a {
+	font: bold 66px 'Varela Round', sans-serif;
+}
+
+#site-description {
+	font: normal 18px 'Varela Round', sans-serif;
+}
+
+#menu a {
+	font: 14px 'Varela Round', sans-serif;
+}
+
+.post-meta {
+	font: 14px 'Varela Round', sans-serif;
+}
+
+figcaption {
+	font: 14px 'Varela Round', sans-serif;
+}
+
+#footer a {
+	font: 14px 'Varela Round', sans-serif;
+}
+
+button, input, select, textarea, label {
+	font: 14px 'Varela Round', sans-serif;	
+}
+
+legend {
+	font: bold 14px 'Varela Round', sans-serif;
+}
+
+a.button {
+	font: bold 12px 'Varela Round', sans-serif;
+}
