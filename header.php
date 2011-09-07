@@ -19,7 +19,6 @@
  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" />
 	<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/<?php echo esc_attr( $html5press_settings['theme_color'] ); ?>.css" rel="stylesheet" />
-	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold|Antic|Volkhov|Numans|Voltaire|Short+Stack|Questrial|Comfortaa|Rationale|Varela+Round|Abel|Gloria+Hallelujah|Sue+Ellen+Francisco|Nothing+You+Could+Do|Amaranth|Quattrocento+Sans|IM+Fell+Great+Primer+SC|PT+Sans+Narrow|Walter+Turncoat|Jura|Coming+Soon' rel='stylesheet' type='text/css' />
     
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 <?php wp_head(); ?>
