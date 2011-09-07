@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Reenie+Beanie);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Reenie Beanie', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Reenie Beanie', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Reenie Beanie', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Reenie Beanie', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Reenie Beanie', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Reenie Beanie', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Reenie Beanie', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Reenie Beanie', cursive;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Reenie Beanie', cursive;  
+}
+ 
+legend {
+    font: bold 14px 'Reenie Beanie', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Reenie Beanie', cursive;
+}

@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Cherry+Cream+Soda);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cherry Cream Soda', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Cherry Cream Soda', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Cherry Cream Soda', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Cherry Cream Soda', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Cherry Cream Soda', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Cherry Cream Soda', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Cherry Cream Soda', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Cherry Cream Soda', cursive;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Cherry Cream Soda', cursive;  
+}
+ 
+legend {
+    font: bold 14px 'Cherry Cream Soda', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Cherry Cream Soda', cursive;
+}

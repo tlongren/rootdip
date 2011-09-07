@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=News+Cycle);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'News Cycle', sans-serif;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'News Cycle', sans-serif;
+}
+ 
+#site-title a {
+    font: bold 66px 'News Cycle', sans-serif;
+}
+ 
+#site-description {
+    font: normal 18px 'News Cycle', sans-serif;
+}
+ 
+#menu a {
+    font: 14px 'News Cycle', sans-serif;
+}
+ 
+.post-meta {
+    font: 14px 'News Cycle', sans-serif;
+}
+ 
+figcaption {
+    font: 14px 'News Cycle', sans-serif;
+}
+ 
+#footer a {
+    font: 14px 'News Cycle', sans-serif;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'News Cycle', sans-serif;  
+}
+ 
+legend {
+    font: bold 14px 'News Cycle', sans-serif;
+}
+ 
+a.button {
+    font: bold 12px 'News Cycle', sans-serif;
+}

@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Nunito);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Nunito', sans-serif;
+}
+ 
+#site-title a {
+    font: bold 66px 'Nunito', sans-serif;
+}
+ 
+#site-description {
+    font: normal 18px 'Nunito', sans-serif;
+}
+ 
+#menu a {
+    font: 14px 'Nunito', sans-serif;
+}
+ 
+.post-meta {
+    font: 14px 'Nunito', sans-serif;
+}
+ 
+figcaption {
+    font: 14px 'Nunito', sans-serif;
+}
+ 
+#footer a {
+    font: 14px 'Nunito', sans-serif;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Nunito', sans-serif;  
+}
+ 
+legend {
+    font: bold 14px 'Nunito', sans-serif;
+}
+ 
+a.button {
+    font: bold 12px 'Nunito', sans-serif;
+}

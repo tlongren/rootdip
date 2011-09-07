@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Calligraffitti);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Calligraffitti', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Calligraffitti', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Calligraffitti', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Calligraffitti', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Calligraffitti', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Calligraffitti', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Calligraffitti', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Calligraffitti', cursive;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Calligraffitti', cursive;  
+}
+ 
+legend {
+    font: bold 14px 'Calligraffitti', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Calligraffitti', cursive;
+}

@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Architects Daughter', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Architects Daughter', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Architects Daughter', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Architects Daughter', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Architects Daughter', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Architects Daughter', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Architects Daughter', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Architects Daughter', cursive;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Architects Daughter', cursive;  
+}
+ 
+legend {
+    font: bold 14px 'Architects Daughter', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Architects Daughter', cursive;
+}

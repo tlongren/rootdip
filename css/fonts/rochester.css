@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Rochester);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rochester', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Rochester', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Rochester', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Rochester', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Rochester', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Rochester', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Rochester', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Rochester', cursive;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Rochester', cursive; 
+}
+ 
+legend {
+    font: bold 14px 'Rochester', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Rochester', cursive;
+}

@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Vibur);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Vibur', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Vibur', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Vibur', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Vibur', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Vibur', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Vibur', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Vibur', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Vibur', cursive;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Vibur', cursive;
+}
+ 
+legend {
+    font: bold 14px 'Vibur', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Vibur', cursive;
+}

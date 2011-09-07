@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Patrick+Hand);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Patrick Hand', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Patrick Hand', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Patrick Hand', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Patrick Hand', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Patrick Hand', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Patrick Hand', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Patrick Hand', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Patrick Hand', cursive;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Patrick Hand', cursive;  
+}
+ 
+legend {
+    font: bold 14px 'Patrick Hand', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Patrick Hand', cursive;
+}

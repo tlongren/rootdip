@@ -116,85 +116,185 @@ $html5press_theme_fonts = array(
 		'value' => 'droid-serif',
 		'label' => 'Droid Serif'
 	),
-	'antic' => array(
-		'value' => 'antic',
-		'label' => 'Antic'
-	),
-	'volkhov' => array(
-		'value' => 'volkhov',
-		'label' => 'Volkhov'
-	),
-	'numans' => array(
-		'value' => 'numans',
-		'label' => 'Numans'
-	),
-	'voltaire' => array(
-		'value' => 'voltaire',
-		'label' => 'Voltaire'
-	),
-	'short-stack' => array(
-		'value' => 'short-stack',
-		'label' => 'Short Stack'
-	),
-	'questrial' => array(
-		'value' => 'questrial',
-		'label' => 'Questrial'
-	),
-	'comfortaa' => array(
-		'value' => 'comfortaa',
-		'label' => 'Comfortaa'
-	),
-	'rationale' => array(
-		'value' => 'rationale',
-		'label' => 'Rationale'
-	),
-	'varela-round' => array(
-		'value' => 'varela-round',
-		'label' => 'Varela Round'
-	),
 	'abel' => array(
 		'value' => 'abel',
 		'label' => 'Abel'
 	),
-	'gloria-hallelujah' => array(
-		'value' => 'gloria-hallelujah',
-		'label' => 'Gloria Hallelujah'
+	'aclonica' => array(
+		'value' => 'aclonica',
+		'label' => 'Aclonica'
 	),
-	'sue-ellen-francisco' => array(
-		'value' => 'sue-ellen-francisco',
-		'label' => 'Sue Ellen Francisco'
-	),
-	'nothing-you-could-do' => array(
-		'value' => 'nothing-you-could-do',
-		'label' => 'Nothing You Could Do'
+	'allerta' => array(
+		'value' => 'allerta',
+		'label' => 'Allerta'
 	),
 	'amaranth' => array(
 		'value' => 'amaranth',
 		'label' => 'Amaranth'
 	),
-	'quattrocento-sans' => array(
-		'value' => 'quattrocento-sans',
-		'label' => 'Quattrocento Sans'
+	'antic' => array(
+		'value' => 'antic',
+		'label' => 'Antic'
+	),
+	'architects-daughter' => array(
+		'value' => 'architects-daughter',
+		'label' => 'Architects Daughter'
+	),
+	'cabin' => array(
+		'value' => 'cabin',
+		'label' => 'Cabin'
+	),
+	'calligraffitti' => array(
+		'value' => 'calligraffitti',
+		'label' => 'Calligraffitti'
+	),
+	'carter-one' => array(
+		'value' => 'carter-one',
+		'label' => 'Carter One'
+	),
+	'cherry-cream-soda' => array(
+		'value' => 'cherry-cream-soda',
+		'label' => 'Cherry Cream Soda'
+	),
+	'comfortaa' => array(
+		'value' => 'comfortaa',
+		'label' => 'Comfortaa'
+	),
+	'coming-soon' => array(
+		'value' => 'coming-soon',
+		'label' => 'Coming Soon'
+	),
+	'days-one' => array(
+		'value' => 'days-one',
+		'label' => 'Days One'
+	),
+	'give-you-glory' => array(
+		'value' => 'give-you-glory',
+		'label' => 'Give You Glory'
+	),
+	'gloria-hallelujah' => array(
+		'value' => 'gloria-hallelujah',
+		'label' => 'Gloria Hallelujah'
+	),
+	'hammersmith-one' => array(
+		'value' => 'hammersmith-one',
+		'label' => 'Hammersmith One'
 	),
 	'im-fell-great-primer-sc' => array(
 		'value' => 'im-fell-great-primer-sc',
 		'label' => 'IM Fell Great Primer SC'
 	),
-	'pt-sans-narrow' => array(
-		'value' => 'pt-sans-narrow',
-		'label' => 'PT Sans Narrow'
+	'istok-web' => array(
+		'value' => 'istok-web',
+		'label' => 'Istok Web'
 	),
-	'walter-turncoat' => array(
-		'value' => 'walter-turncoat',
-		'label' => 'Walter Turncoat'
+	'julee' => array(
+		'value' => 'julee',
+		'label' => 'Julee'
 	),
 	'jura' => array(
 		'value' => 'jura',
 		'label' => 'Jura'
 	),
-	'coming-soon' => array(
-		'value' => 'coming-soon',
-		'label' => 'Coming Soon'
+	'just-another-hand' => array(
+		'value' => 'just-another-hand',
+		'label' => 'Just Another Hand'
+	),
+	'lobster-two' => array(
+		'value' => 'lobster-two',
+		'label' => 'Lobster Two'
+	),
+	'neucha' => array(
+		'value' => 'neucha',
+		'label' => 'Neucha'
+	),
+	'news-cycle' => array(
+		'value' => 'news-cycle',
+		'label' => 'News Cycle'
+	),
+	'nothing-you-could-do' => array(
+		'value' => 'nothing-you-could-do',
+		'label' => 'Nothing You Could Do'
+	),
+	'numans' => array(
+		'value' => 'numans',
+		'label' => 'Numans'
+	),
+	'nunito' => array(
+		'value' => 'nunito',
+		'label' => 'Nunito'
+	),
+	'patrick-hand' => array(
+		'value' => 'patrick-hand',
+		'label' => 'Patrick Hand'
+	),
+	'pt-sans-narrow' => array(
+		'value' => 'pt-sans-narrow',
+		'label' => 'PT Sans Narrow'
+	),
+	'quattrocento-sans' => array(
+		'value' => 'quattrocento-sans',
+		'label' => 'Quattrocento Sans'
+	),
+	'questrial' => array(
+		'value' => 'questrial',
+		'label' => 'Questrial'
+	),
+	'rationale' => array(
+		'value' => 'rationale',
+		'label' => 'Rationale'
+	),
+	'redressed' => array(
+		'value' => 'redressed',
+		'label' => 'Redressed'
+	),
+	'reenie-beanie' => array(
+		'value' => 'reenie-beanie',
+		'label' => 'Reenie Beanie'
+	),
+	'rochester' => array(
+		'value' => 'rochester',
+		'label' => 'Rochester'
+	),
+	'rock-salt' => array(
+		'value' => 'rock-salt',
+		'label' => 'Rock Salt'
+	),
+	'short-stack' => array(
+		'value' => 'short-stack',
+		'label' => 'Short Stack'
+	),
+	'smythe' => array(
+		'value' => 'smythe',
+		'label' => 'Smythe'
+	),
+	'sue-ellen-francisco' => array(
+		'value' => 'sue-ellen-francisco',
+		'label' => 'Sue Ellen Francisco'
+	),
+	'varela-round' => array(
+		'value' => 'varela-round',
+		'label' => 'Varela Round'
+	),
+	'vibur' => array(
+		'value' => 'vibur',
+		'label' => 'Vibur'
+	),
+	'volkhov' => array(
+		'value' => 'volkhov',
+		'label' => 'Volkhov'
+	),
+	'voltaire' => array(
+		'value' => 'voltaire',
+		'label' => 'Voltaire'
+	),
+	'walter-turncoat' => array(
+		'value' => 'walter-turncoat',
+		'label' => 'Walter Turncoat'
+	),
+	'yellowtail' => array(
+		'value' => 'yellowtail',
+		'label' => 'Yellowtail'
 	)
 );
 

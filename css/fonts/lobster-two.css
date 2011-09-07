@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lobster Two', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Lobster Two', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Lobster Two', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Lobster Two', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Lobster Two', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Lobster Two', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Lobster Two', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Lobster Two', cursive;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Lobster Two', cursive;  
+}
+ 
+legend {
+    font: bold 14px 'Lobster Two', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Lobster Two', cursive;
+}

@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Istok+Web);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Istok Web', sans-serif;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Istok Web', sans-serif;
+}
+ 
+#site-title a {
+    font: bold 66px 'Istok Web', sans-serif;
+}
+ 
+#site-description {
+    font: normal 18px 'Istok Web', sans-serif;
+}
+ 
+#menu a {
+    font: 14px 'Istok Web', sans-serif;
+}
+ 
+.post-meta {
+    font: 14px 'Istok Web', sans-serif;
+}
+ 
+figcaption {
+    font: 14px 'Istok Web', sans-serif;
+}
+ 
+#footer a {
+    font: 14px 'Istok Web', sans-serif;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Istok Web', sans-serif;  
+}
+ 
+legend {
+    font: bold 14px 'Istok Web', sans-serif;
+}
+ 
+a.button {
+    font: bold 12px 'Istok Web', sans-serif;
+}

@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rock Salt', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Rock Salt', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Rock Salt', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Rock Salt', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Rock Salt', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Rock Salt', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Rock Salt', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Rock Salt', cursive;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Rock Salt', cursive;
+}
+ 
+legend {
+    font: bold 14px 'Rock Salt', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Rock Salt', cursive;
+}

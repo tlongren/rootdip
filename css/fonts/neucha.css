@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Neucha);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Neucha', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Neucha', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Neucha', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Neucha', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Neucha', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Neucha', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Neucha', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Neucha', cursive;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Neucha', cursive;  
+}
+ 
+legend {
+    font: bold 14px 'Neucha', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Neucha', cursive;
+}

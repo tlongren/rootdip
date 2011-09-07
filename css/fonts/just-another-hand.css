@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Just+Another+Hand);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Just Another Hand', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Just Another Hand', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Just Another Hand', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Just Another Hand', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Just Another Hand', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Just Another Hand', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Just Another Hand', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Just Another Hand', cursive;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Just Another Hand', cursive;  
+}
+ 
+legend {
+    font: bold 14px 'Just Another Hand', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Just Another Hand', cursive;
+}

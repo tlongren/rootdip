@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Hammersmith+One);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Hammersmith One', sans-serif;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Hammersmith One', sans-serif;
+}
+ 
+#site-title a {
+    font: bold 66px 'Hammersmith One', sans-serif;
+}
+ 
+#site-description {
+    font: normal 18px 'Hammersmith One', sans-serif;
+}
+ 
+#menu a {
+    font: 14px 'Hammersmith One', sans-serif;
+}
+ 
+.post-meta {
+    font: 14px 'Hammersmith One', sans-serif;
+}
+ 
+figcaption {
+    font: 14px 'Hammersmith One', sans-serif;
+}
+ 
+#footer a {
+    font: 14px 'Hammersmith One', sans-serif;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Hammersmith One', sans-serif;  
+}
+ 
+legend {
+    font: bold 14px 'Hammersmith One', sans-serif;
+}
+ 
+a.button {
+    font: bold 12px 'Hammersmith One', sans-serif;
+}

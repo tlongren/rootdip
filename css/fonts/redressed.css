@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Redressed);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Redressed', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Redressed', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Redressed', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Redressed', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Redressed', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Redressed', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Redressed', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Redressed', cursive;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Redressed', cursive;  
+}
+ 
+legend {
+    font: bold 14px 'Redressed', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Redressed', cursive;
+}

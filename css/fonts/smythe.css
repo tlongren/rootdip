@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Smythe);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Smythe', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Smythe', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Smythe', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Smythe', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Smythe', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Smythe', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Smythe', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Smythe', cursive;
+}
+ 
+button, input, select, textarea, label {
+    font: 14px 'Smythe', cursive;
+}
+ 
+legend {
+    font: bold 14px 'Smythe', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Smythe', cursive;
+}
