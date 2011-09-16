@@ -300,10 +300,24 @@ $html5press_theme_fonts = array(
 
 function html5press_theme_options() {
 	// Add theme options page to the addmin menu
-	add_theme_page( 'HTML5Press Options', 'HTML5Press Options', 'edit_theme_options', 'theme_options', 'html5press_theme_options_page' );
+	add_menu_page( 'HTML5Press', 'HTML5Press', 'edit_theme_options', 'theme_options', 'html5press_theme_options_page' );
+	add_submenu_page( 'theme_options', 'HTML5Press Notes', 'Notes', 'edit_theme_options', 'theme_options_notes', 'html5press_theme_notes_page');
 }
 
 add_action( 'admin_menu', 'html5press_theme_options' );
+
+// Function for notes page
+function html5press_theme_notes_page() {
+	echo '<div class="wrap">';
+	screen_icon();
+	echo '<h2>HTML5Press Notes</h2><ol>
+	<li><strong>Archive Page:</strong> There\'s a page template called Archives. Don\'t enter any page content, just title the page and select Archives for the page template. The archives will be generated automatically. See <a href="http://html5press.com/archives/">here for an example</a>.</li>
+	<li><strong>Link Post Format:</strong> To utilize the link Post Format, simply write a new post and select "Link" for the format. You\'ll also need to add a custom field with the URL you want to link to. The custom field name should be LinkFormatURL and the custom field value should be the URL you want to link to.</li>
+	<li><strong>Quote Post Format:</strong> When using this post format, I usually use the author or source as the post title, and then put the quote inside a blockquote for the actual post content.</li>
+	<li><strong>Status Post Format:</strong> Just put your status as the post title and publish (make sure you select the status format!). No post content is necessary.</li>
+	<li><strong>Maintenance Mode:</strong> This option lets you show a "maintenance" message to visitors who aren\'t logged in. This can be useful while making changes to your website or while tinkering with HTML5Press. Just don\'t forget to disable it when you\'re done or your visitors won\'t see your site!</li>
+</ol></div>';
+}
 
 // Function to generate options page
 function html5press_theme_options_page() {

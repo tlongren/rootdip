@@ -222,10 +222,17 @@ add_action( 'wp_before_admin_bar_render', 'html5press_admin_bar_link' );
 function html5press_admin_bar_link() {
 	global $wp_admin_bar;
 	$wp_admin_bar->add_menu( array(
-		'parent' => 'appearance',
+		'parent' => '',
 		'id' => 'html5press-options',
 		'title' => __( 'HTML5Press Options','html5press' ),
-		'href' => admin_url( 'themes.php?page=theme_options'),
+		'href' => admin_url( 'admin.php?page=theme_options'),
+		'meta' => false
+	));
+	$wp_admin_bar->add_menu( array(
+		'parent' => 'html5press-options',
+		'id' => 'html5press-notes',
+		'title' => __( 'HTML5Press Notes','html5press' ),
+		'href' => admin_url( 'admin.php?page=theme_options_notes'),
 		'meta' => false
 	));
 }
