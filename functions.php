@@ -275,6 +275,16 @@ function html5press_addlightboxrel($content) {
     return $content;
 }
 
+// Add rel="lightbox" to gallery images and make a set out of them for next/prev functionality
+add_filter( 'wp_get_attachment_link' , 'html5press_addlightboxrel_to_gallery' );
+function html5press_addlightboxrel_to_gallery( $attachment_link ) {
+	global $post;
+	$pattern = "/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/i";
+  	$replacement = '<a$1href=$2$3.$4$5 rel="lightbox-gallery" title="'.$post->post_title.'"$6>';
+	$content = preg_replace($pattern, $replacement, $attachment_link);
+	return $content;
+}
+
 // Setup featured posts slider
 function html5press_featured_posts() { ?>
 		<div id="slider-wrapper">
