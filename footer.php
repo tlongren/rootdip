@@ -29,6 +29,13 @@
 	});
 	</script>
 	<?php } ?>
+	<?php if ($html5press_settings['fuzzy_timestamps'] == 1) { ?>
+	<script type="text/javascript">
+	jQuery(document).ready(function() {
+  		jQuery("time.timeago").timeago();
+	});
+	</script>
+	<?php } ?>
 	<?php wp_footer(); ?>
 </body>
 </html>

@@ -17,23 +17,17 @@
 			
 			<footer class="post-meta">
 			<p>
-			<?php
-			printf( __( 'In %1$s by <span class="author vcard"><a class="url fn n" href="%2$s" title="%3$s">%4$s</a></span> on <time class="entry-date" datetime="%5$s" pubdate>%6$s</time>', 'html5press' ),
-				get_the_category_list( ', ' ),
-				get_author_posts_url( get_the_author_meta( 'ID' ) ),
-				sprintf( esc_attr__( 'View all posts by %s', 'html5press' ), get_the_author() ),
-				get_the_author(),
-				get_the_date( 'c' ),
-				get_the_date()
-			);
-			
-			wp_link_pages( array( 'before' => __( '<span class="alignright">Pages:', 'html5press' ), 'after' => '</span>' ) );
-			
-			the_tags( '<span class="post-tags">' . __( 'Tagged with: ','html5press' ), ', ', '</span>' );
-		?>
-	</p>
-	<?php edit_post_link(); ?>
-</footer> <!-- .post meta -->
+				<?php _e( 'In ','html5press'); ?><?php the_category(', '); ?>
+				<?php _e( 'by ','html5press'); ?> <span class="author vcard"><?php the_author_posts_link(); ?></span>
+				<?php if ($html5press_settings['fuzzy_timestamps'] == 0) { _e( 'on ','html5press'); } ?> <time datetime="<?php echo get_the_time('Y-m-d'); ?>" class="timeago" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time>
+				<?php wp_link_pages( array( 'before' => __( '<span class="alignright">Pages:', 'html5press' ), 'after' => '</span>' ) ); ?>
+				<?php			
+				wp_link_pages( array( 'before' => __( '<span class="alignright">Pages:', 'html5press' ), 'after' => '</span>' ) );
+				the_tags( '<span class="post-tags">' . __( 'Tagged with: ','html5press' ), ', ', '</span>' );
+				?>
+			</p>
+			<?php edit_post_link(); ?>
+			</footer> <!-- .post meta -->
 			
 			<article class="comments">
 				<?php comments_template(); ?>

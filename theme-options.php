@@ -6,6 +6,7 @@ $html5press_options = array(
 	'show_tagline' => true,
 	'enable_slimbox' => false,
 	'show_query_stats' => false,
+	'fuzzy_timestamps' => false,
 	'maintenance_mode' => false,
 	'custom_logo_url' => '',
 	'featured_image_size' => 'large',
@@ -366,6 +367,12 @@ function html5press_theme_options_page() {
 	<label for="show_query_stats">Enabled</label>
 	</td>
 	</tr>
+	<tr valign="top"><th scope="row"><label for="fuzzy_timestamps">Fuzzy Timestamps</label></th>
+	<td>
+	<input type="checkbox" id="fuzzy_timestamps" name="html5press_options[fuzzy_timestamps]" value="1" <?php checked( true, $settings['fuzzy_timestamps'] ); ?> />
+	<label for="fuzzy_timestamps">Enabled</label>
+	</td>
+	</tr>
 	<tr valign="top"><th scope="row"><label for="maintenance_mode">Maintenance Mode</label></th>
 	<td>
 	<input type="checkbox" id="maintenance_mode" name="html5press_options[maintenance_mode]" value="1" <?php checked( true, $settings['maintenance_mode'] ); ?> />
@@ -515,6 +522,13 @@ function html5press_validate_options( $input ) {
 	// We verify if the input is a boolean value
 	$input['show_query_stats'] = ( $input['show_query_stats'] == 1 ? 1 : 0 );
 	
+	// If the checkbox has not been checked, we void it
+	if ( ! isset( $input['fuzzy_timestamps'] ) )
+		$input['fuzzy_timestamps'] = null;
+	// We verify if the input is a boolean value
+	$input['fuzzy_timestamps'] = ( $input['fuzzy_timestamps'] == 1 ? 1 : 0 );
+	
+
 	// If the checkbox has not been checked, we void it
 	if ( ! isset( $input['maintenance_mode'] ) )
 		$input['maintenance_mode'] = null;
