@@ -35,7 +35,7 @@ endif;
 				<p>
 					<?php _e( 'In ','html5press'); ?><?php the_category(', '); ?>
 					<?php _e( 'by ','html5press'); ?> <span class="author vcard"><?php the_author_posts_link(); ?></span>
-					<?php if ($html5press_settings['fuzzy_timestamps'] == 0) { _e( 'on ','html5press'); } ?> <time datetime="<?php echo get_the_time('Y-m-d H:i:s'); ?>" class="timeago" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time>
+					<?php if ($html5press_settings['fuzzy_timestamps'] == 0) { _e( 'on ','html5press'); } ?> <time datetime="<?php echo get_the_time('c'); ?>" class="timeago" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time>
 					<?php wp_link_pages( array( 'before' => __( '<span class="alignright">Pages:', 'html5press' ), 'after' => '</span>' ) ); ?>
 				</p>
 				<?php /* Edit Link */ edit_post_link(); ?>
