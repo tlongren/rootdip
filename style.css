@@ -991,21 +991,6 @@ a#toTop:hover {
 }
 .commentlist .bypostauthor {
 }
-.authortag {
-	display: none;
-}
-.commentlist .bypostauthor .authortag {
-	position:absolute;
-	top:20px;
-	right:3px;
-	font-weight: bold;
-	-webkit-transform: rotate(60deg);
-	-moz-transform: rotate(60deg);
-	-o-transform: rotate(60deg);
-	transform: rotate(60deg);
-	writing-mode: lr-tb;
-	display: inline;
-}
 .commentlist .children {
 	list-style: none;
 	margin: 0;
