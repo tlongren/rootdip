@@ -301,7 +301,7 @@ $html5press_theme_fonts = array(
 
 function html5press_theme_options() {
 	// Add theme options page to the addmin menu
-	add_menu_page( 'HTML5Press', 'HTML5Press', 'edit_theme_options', 'theme_options', 'html5press_theme_options_page' );
+	add_menu_page( 'HTML5Press', 'HTML5Press', 'edit_theme_options', 'theme_options', 'html5press_theme_options_page',get_stylesheet_directory_uri() . '/images/html5.png' );
 	add_submenu_page( 'theme_options', 'HTML5Press Notes', 'Notes', 'edit_theme_options', 'theme_options_notes', 'html5press_theme_notes_page');
 }
 
