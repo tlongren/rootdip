@@ -41,7 +41,7 @@ function html5press_theme_setup() {
 	register_nav_menu( 'main-menu', __('Main Menu','html5press') ); // navigation menus
 	add_theme_support( 'automatic-feed-links' ); // automatic feeds
 	add_image_size('bxthumb', 200, 200, true); // featured post slider image size
-	add_custom_background(); // enable custom backgrounds
+	add_custom_background( 'html5press_custom_background_callback' ); // enable custom backgrounds
 }
 
 // Register all the javascript
@@ -317,6 +317,28 @@ function html5press_featured_posts() { ?>
 			<nav class="bx-pager"></nav>
 		</div><!-- close #slider-wrapper -->
 <?php
+}
+// Custom callback function for add_custom_background
+function html5press_custom_background_callback() {
+
+	/* Get the background image. */
+	$image = get_background_image();
+	/* If there's an image, call normal callback function and set background-size to auto. */
+	if ( !empty( $image ) ) {
+		_custom_background_cb();
+		$style = 'background-size: auto;';
+	}
+
+	/* Get the background color. */
+	$color = get_background_color();
+	/* If a background color is set, set that as the background color. */
+	if ( !empty( $color ) && empty($image) ) {
+		$style .= "background: #{$color};";
+	}
+?>
+<style type="text/css">body { <?php echo trim( $style ); ?> }</style>
+<?php
+
 }
 if (!class_exists('html5press_twitter_widget')) :
 
