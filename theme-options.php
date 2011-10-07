@@ -317,6 +317,8 @@ function html5press_theme_notes_page() {
 	<li><strong>Quote Post Format:</strong> When using this post format, I usually use the author or source as the post title, and then put the quote inside a blockquote for the actual post content.</li>
 	<li><strong>Status Post Format:</strong> Just put your status as the post title and publish (make sure you select the status format!). No post content is necessary.</li>
 	<li><strong>Maintenance Mode:</strong> This option lets you show a "maintenance" message to visitors who aren\'t logged in. This can be useful while making changes to your website or while tinkering with HTML5Press. Just don\'t forget to disable it when you\'re done or your visitors won\'t see your site!</li>
+	<li><strong>Fuzzy Timestamps:</strong> Enabling fuzzy timestamps on the options page will cause dates/times to display like "two days ago" or "4 hours ago", instead of dates showing "10/07/2011 11:23:34".</li>
+	<li><strong>Twitter Widget:</strong> A custom twitter widget is included with HTML5Press as of version 2.1. This widget is based on the <a href="https://github.com/matthiassiegel/Simple-Twitter-Widget" target="_blank">Simple Twitter Widget</a> by <a href="http://chipsandtv.com" target="_blank">Matthias Siegel</a>. Matthias graciously allowed me to include his code in HTML5Press.</li>
 </ol></div>';
 }
 
