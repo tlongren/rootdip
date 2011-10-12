@@ -13,7 +13,8 @@ $html5press_options = array(
 	'theme_color' => 'pink',
 	'theme_font' => 'droid-serif',
 	'featured_cat' => '',
-	'num_featured' => '5'
+	'num_featured' => '5',
+	'custom_css' => 'custom_css'
 );
 
 if ( is_admin() ) : // Load only if we are viewing an admin page
@@ -459,6 +460,11 @@ function html5press_theme_options_page() {
 	endforeach;
 	?>
 	</select>
+	</td>
+	</tr>
+	<tr valign="top"><th scope="row"><label for="custom_css">Custom CSS</label></th>
+	<td>
+	<textarea name="html5press_options[custom_css]" style="width:350px; height:200px;" cols="" rows=""><?php echo esc_attr($settings['custom_css']); ?></textarea>
 	</td>
 	</tr>
 	</table>

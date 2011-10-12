@@ -20,6 +20,7 @@
     
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 <?php wp_head(); ?>
+<?php if ( !empty($html5press_settings['custom_css']) ) { ?><style type="text/css"><?php echo $html5press_settings['custom_css']; ?></style><?php } ?>
 </head>
 
 <body <?php body_class(); ?>>
