@@ -11,7 +11,7 @@ function html5press_layout_view() {
 if ( ! isset( $content_width ) ) $content_width = 580;
 
 // Set html5press version
-define( 'html5press_version', '2.1' );
+define( 'html5press_version', '2.2-rc1' );
 function html5press_getinfo( $show = '' ) {
         $output = '';
 
