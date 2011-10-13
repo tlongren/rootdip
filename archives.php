@@ -52,7 +52,7 @@ $count_tags         = wp_count_terms( 'post_tag', array( 'hide_empty' => true ) 
 			
 			<footer class="post-meta">
                 <p>
-                	<?php _e( 'Created ','html5press'); ?><time datetime="<?php echo get_the_time('Y-m-d'); ?>" pubdate><?php echo get_the_time( get_option( 'date_format' ) ); ?></time>
+                	<?php _e( 'Created ','html5press'); ?><time datetime="<?php the_time('Y-m-d\TH:i:sO'); ?>" class="timeago" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time>
 				</p>
 				<?php /* Edit Link */ edit_post_link(); ?>
             </footer><!-- end post meta -->
