@@ -59,6 +59,10 @@ foreach( $html5press_cats as $html5press_cat ) :
 	);
 	$i++;
 endforeach;
+$html5press_categories[10000] = array(
+	'value' => 10000,
+	'label' => 'All Categories'
+);
 
 // Store number of featured posts to show options
 $html5press_num_featured_options = array(

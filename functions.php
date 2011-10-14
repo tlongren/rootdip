@@ -297,6 +297,7 @@ function html5press_featured_posts() { ?>
 				global $wp_query, $html5press_options;
 				$settings = get_option( 'html5press_options', $html5press_options );
 				$tmp = $wp_query;
+				if ($settings['featured_cat'] == 10000) { $settings['featured_cat'] = "-1"; }
 				$wp_query = new WP_Query('posts_per_page='.esc_attr( $settings['num_featured'] ).'&cat='.esc_attr( $settings['featured_cat']));
 				if(have_posts()) :
 					while(have_posts()) :
