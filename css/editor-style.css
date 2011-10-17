@@ -1,0 +1,256 @@
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 1px 0 #fff;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 26px;
+	letter-spacing: -1px;
+}
+
+.post h3 {
+	margin: 30px 0 20px;
+}
+
+h4 {
+	font-size: 21px;
+	margin-bottom: 15px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-weight: normal;
+	font-size: 16px;
+}
+
+/* Lists */
+ol, ul {
+	margin-left: 40px;	
+}
+
+ol {
+	list-style: decimal;
+}
+
+ul {
+	list-style: square;
+}
+
+ol ol {
+	list-style: upper-alpha;
+}
+ol ol ol {
+	list-style: lower-roman;
+}
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom: 0;
+}
+
+dl {
+	margin: 0 20px;
+}
+
+dt {
+	font-weight: bold;
+}
+
+	/* Remove margins for navigation lists */
+	nav ul, nav li { margin: 0; list-style: none; list-style-image: none; }
+
+/* Code */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+pre {
+	background: #464646;
+	border: solid #121212;
+	border-width: 2px 0 2px 0;
+	border-radius: 5px;
+	color: #fff;
+	padding: 20px;
+	white-space: pre; white-space: pre-wrap; word-wrap: break-word;
+	/*position: relative;*/
+	/*text-shadow: 0px 1px 0px #333;*/
+
+}
+
+	/* This is removed for now because of a strange Chrome bug with text-shadow and position: relative; */
+	/* Usage: <pre rel="CSS">...</pre>, <pre rel="PHP">...</pre> */
+	/*pre:after {
+		content: attr(rel);
+		color: #F83D87;
+		font: bold 16px 'Droid Serif', Georgia, serif;
+		position: absolute;
+		bottom: 10px; right: 15px;
+	}*/
+
+code {
+	background: #cecece;
+	font-size: 14px;
+	padding: 3px;
+	border-radius: 3px;
+}
+
+pre code {
+	background: none;
+	font-size: 16px;
+}
+
+/* Quotes */
+blockquote {
+	background: url(images/quote.png) no-repeat left top;
+	color: #424242;
+	padding: 33px 30px 0;
+	margin: 40px 20px 20px;
+	text-shadow: 0 1px 0 #fff;
+}
+
+blockquote p { margin: 0; }
+
+q { font-style: italic; }
+
+	/* Cite after <blockquote> */
+	blockquote + p {
+		margin-left: 20px;	
+	}
+
+	blockquote + p,
+	blockquote + cite,
+	blockquote + p cite {
+		font: 18px Garamond, 'Droid Serif', Georgia, serif;
+	}
+
+/* Tables */
+table {
+	border: 1px solid #e7e7e7;
+	border-collapse: collapse; border-spacing: 0;
+	font-size: 14px;
+	width: 100%;
+	text-align: left;
+}
+
+	/* th */
+	tr th,
+	thead th {
+		background: #f3f9fc;
+		border-left: 1px solid #e9f2f7;
+		color: #444;
+		font-size: 15px;
+		font-weight: bold;
+		padding: 9px 24px;
+		-webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, .04);
+		-moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, .04);
+		box-shadow: inset 0 0 10px rgba(0, 0, 0, .04);
+	}
+
+	/* td */
+	tr td {
+		background: #fafafa;
+		border: 1px solid #e7e7e7;
+		padding: 6px 24px;
+	}
+
+	td { vertical-align: top; }
+
+	tr:nth-child(2n) td {
+		background: #f7f7f7;
+	}
+
+	tr:hover td {
+		background: #fff;
+	}
+
+	td, td img { vertical-align: top; }
+
+	/* tfoot */
+	tfoot td {
+		color: #777;
+		font-size: 11px;
+		text-transform: uppercase;	
+	}
+
+	tfoot th {
+		color: #444;
+		font-size: 12px;
+		text-transform: uppercase;	
+	}
+
+	/* Table caption */
+	table caption {
+		background: #ffffee;
+		border: 1px solid #ffffc6;
+		font-size: 16px;
+		margin-bottom: 5px;
+		padding: 10px;
+		border-radius: 5px;
+	}
+
+/* Other elements */
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+small { font-size: 85%; }
+b, strong, th { font-weight: bold; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+hr {
+	display: block;
+	height: 0px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+	margin: 20px 0 40px;
+	padding: 0;
+}
+
+/* Post thumbnail and images */
+figure { 
+	background: #f4f4f4;
+	border: 2px solid #cecdcd;
+	border-radius: 3px 5px 5px 5px;
+	float: left;
+	padding: 10px;
+	text-align: center;
+	-webkit-transition: border 200ms ease;
+	-moz-transition: border 200ms ease;
+	transition: border 200ms ease;
+}
+
+figure,
+figure.alignleft  {
+	margin: 0 20px 20px 0;
+}
+
+figure.alignright {
+	margin: 0 0 20px 20px;
+}
+
+figure {
+	margin-left: -40px;	
+}
+
+figcaption {
+	margin: 10px 0;
+	color: #555;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+}
