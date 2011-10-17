@@ -14,7 +14,7 @@ $html5press_options = array(
 	'theme_font' => 'droid-serif',
 	'featured_cat' => '',
 	'num_featured' => '5',
-	'custom_css' => 'custom_css'
+	'custom_css' => ''
 );
 
 if ( is_admin() ) : // Load only if we are viewing an admin page
