@@ -368,6 +368,7 @@ if (!class_exists('html5press_twitter_widget')) :
 			$username = $instance['username'];
 			$posts = $instance['posts'];
 			$interval = $instance['interval'];
+			$followmebutton = $instance['followmebutton'];
 			$datedisplay = $instance['datedisplay'];
 			$datebreak = $instance['datebreak'];
 			$clickable = $instance['clickable'];
@@ -397,8 +398,11 @@ if (!class_exists('html5press_twitter_widget')) :
 				if (method_exists($feed, 'get_items')) :
 
 					$tweets = $feed->get_items(0, $posts);
-
-					$result = '
+					if ($followmebutton) {
+						$result .= '<div class="textwidget"><a href="http://twitter.com/'.$username.'" class="twitter-follow-button">Follow @'.$username.'</a>
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script></div>';
+					}
+					$result .= '
 						<ul>';
 
 					foreach	($tweets as $t) :
@@ -503,6 +507,7 @@ if (!class_exists('html5press_twitter_widget')) :
 			$instance['username'] = $new_instance['username'];
 			$instance['posts'] = $new_instance['posts'];
 			$instance['interval'] = $new_instance['interval'];
+			$instance['followmebutton'] = $new_instance['followmebutton'];
 			$instance['datedisplay'] = $new_instance['datedisplay'];
 			$instance['datebreak'] = $new_instance['datebreak'];
 			$instance['clickable'] = $new_instance['clickable'];
@@ -521,7 +526,7 @@ if (!class_exists('html5press_twitter_widget')) :
 		function form($instance) {
 
 			// Set up some default widget settings
-			$defaults = array('title' => 'Latest Tweets', 'username' => '', 'posts' => 5, 'interval' => 1800, 'datedisplay' => true, 'datebreak' => false, 'clickable' => true, 'hideerrors' => true, 'encodespecial' => false);
+			$defaults = array('title' => 'Latest Tweets', 'username' => '', 'posts' => 5, 'interval' => 1800, 'followmebutton' => true, 'datedisplay' => true, 'datebreak' => false, 'clickable' => true, 'hideerrors' => true, 'encodespecial' => false);
 			$instance = wp_parse_args((array) $instance, $defaults);
 ?>
 				
@@ -546,6 +551,11 @@ if (!class_exists('html5press_twitter_widget')) :
 			</p>
 								
 			<p>
+				<input class="checkbox" type="checkbox" <?php if ($instance['followmebutton']) echo 'checked="checked" '; ?>id="<?php echo $this->get_field_id('followmebutton'); ?>" name="<?php echo $this->get_field_name('followmebutton'); ?>">
+				<label for="<?php echo $this->get_field_id('followmebutton'); ?>">Display "Follow Me" button?</label>
+				
+				<br>
+
 				<input class="checkbox" type="checkbox" <?php if ($instance['datedisplay']) echo 'checked="checked" '; ?>id="<?php echo $this->get_field_id('datedisplay'); ?>" name="<?php echo $this->get_field_name('datedisplay'); ?>">
 				<label for="<?php echo $this->get_field_id('datedisplay'); ?>">Display date?</label>
 				
