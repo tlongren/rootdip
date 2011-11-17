@@ -432,6 +432,9 @@ if (!class_exists('html5press_twitter_widget')) :
 
 				    	// Match @name
 				    	$text = preg_replace('/(@)([a-zA-Z0-9\_]+)/', '@<a href="http://twitter.com/$2">$2</a>', $text);
+				    	
+				    	// Match #hashtags
+				    	$text = preg_replace('/(#)([a-zA-Z0-9\_]+)/', '#<a href="http://twitter.com/search/%23$2">$2</a>', $text);
 						endif;
 
 					// Display date/time
