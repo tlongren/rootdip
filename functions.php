@@ -11,7 +11,7 @@ function html5press_layout_view() {
 if ( ! isset( $content_width ) ) $content_width = 580;
 
 // Set html5press version
-define( 'html5press_version', '2.2' );
+define( 'html5press_version', '2.3-rc1' );
 function html5press_getinfo( $show = '' ) {
         $output = '';
 
@@ -431,7 +431,7 @@ if (!class_exists('html5press_twitter_widget')) :
 				    	$text = preg_replace('`\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))`', '<a href="$0">$0</a>', $text);
 
 				    	// Match @name
-				    	$text = preg_replace('/(@)([a-zA-Z0-9\_]+)/', '@<a href="http://twitter.com/$2">$2</a>', $text);
+				    	$text = preg_replace('/(@)([a-zA-Z0-9\_]+)/', '@<a href="https://twitter.com/$2">$2</a>', $text);
 				    	
 				    	// Match #hashtags
 				    	$text = preg_replace('/(#)([a-zA-Z0-9\_]+)/', '#<a href="http://twitter.com/search/%23$2">$2</a>', $text);
@@ -544,7 +544,7 @@ if (!class_exists('html5press_twitter_widget')) :
 			</p>
 
 			<p>
-				<label for="<?php echo $this->get_field_id('posts'); ?>">Display how many posts?</label>
+				<label for="<?php echo $this->get_field_id('posts'); ?>">Number of posts to display</label>
 				<input class="widefat" type="text" id="<?php echo $this->get_field_id('posts'); ?>" name="<?php echo $this->get_field_name('posts'); ?>" value="<?php echo $instance['posts']; ?>">
 			</p>
 
@@ -560,27 +560,27 @@ if (!class_exists('html5press_twitter_widget')) :
 				<br>
 
 				<input class="checkbox" type="checkbox" <?php if ($instance['datedisplay']) echo 'checked="checked" '; ?>id="<?php echo $this->get_field_id('datedisplay'); ?>" name="<?php echo $this->get_field_name('datedisplay'); ?>">
-				<label for="<?php echo $this->get_field_id('datedisplay'); ?>">Display date?</label>
+				<label for="<?php echo $this->get_field_id('datedisplay'); ?>">Display date</label>
 				
 				<br>
 				
 				<input class="checkbox" type="checkbox" <?php if ($instance['datebreak']) echo 'checked="checked" '; ?>id="<?php echo $this->get_field_id('datebreak'); ?>" name="<?php echo $this->get_field_name('datebreak'); ?>">
-				<label for="<?php echo $this->get_field_id('datebreak'); ?>">Add linebreak after date?</label>
+				<label for="<?php echo $this->get_field_id('datebreak'); ?>">Add linebreak after date</label>
 				
 				<br>
 
 				<input class="checkbox" type="checkbox" <?php if ($instance['clickable']) echo 'checked="checked" '; ?>id="<?php echo $this->get_field_id('clickable'); ?>" name="<?php echo $this->get_field_name('clickable'); ?>">
-				<label for="<?php echo $this->get_field_id('clickable'); ?>">Make URLs &amp; usernames clickable?</label>
+				<label for="<?php echo $this->get_field_id('clickable'); ?>">Clickable URLs, names &amp; hashtags</label>
 				
 				<br>
 
 				<input class="checkbox" type="checkbox" <?php if ($instance['hideerrors']) echo 'checked="checked" '; ?>id="<?php echo $this->get_field_id('hideerrors'); ?>" name="<?php echo $this->get_field_name('hideerrors'); ?>">
-				<label for="<?php echo $this->get_field_id('hideerrors'); ?>">Hide error message if update fails?</label>
+				<label for="<?php echo $this->get_field_id('hideerrors'); ?>">Hide error message if update fails</label>
 
 				<br>
 
 				<input class="checkbox" type="checkbox" <?php if ($instance['encodespecial']) echo 'checked="checked" '; ?>id="<?php echo $this->get_field_id('encodespecial'); ?>" name="<?php echo $this->get_field_name('encodespecial'); ?>">
-				<label for="<?php echo $this->get_field_id('encodespecial'); ?>">HTML-encode special characters?</label>
+				<label for="<?php echo $this->get_field_id('encodespecial'); ?>">HTML-encode special characters</label>
 			</p>
 			
 <?php
