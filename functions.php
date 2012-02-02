@@ -11,7 +11,7 @@ function html5press_layout_view() {
 if ( ! isset( $content_width ) ) $content_width = 580;
 
 // Set html5press version
-define( 'html5press_version', '2.3-rc1' );
+define( 'html5press_version', '2.3-rc2' );
 function html5press_getinfo( $show = '' ) {
         $output = '';
 
@@ -289,6 +289,13 @@ function html5press_addlightboxrel_to_gallery( $attachment_link ) {
 	$content = preg_replace($pattern, $replacement, $attachment_link);
 	return $content;
 }
+
+function html5press_excerpt_more($more) {
+	global $post;
+	$content = ' <a href="'. get_permalink($post->ID) . '">' . __( 'Read the Rest...','html5press' ) . '</a>';
+	return $content;
+}
+add_filter('excerpt_more', 'html5press_excerpt_more');
 
 // Setup featured posts slider
 function html5press_featured_posts() { ?>

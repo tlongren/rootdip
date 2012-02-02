@@ -14,7 +14,8 @@ $html5press_options = array(
 	'theme_font' => 'droid-serif',
 	'featured_cat' => '',
 	'num_featured' => '5',
-	'custom_css' => ''
+	'custom_css' => '',
+	'homepage_article_summary' => false
 );
 
 if ( is_admin() ) : // Load only if we are viewing an admin page
@@ -380,6 +381,12 @@ function html5press_theme_options_page() {
 	<label for="fuzzy_timestamps">Enabled</label>
 	</td>
 	</tr>
+	<tr valign="top"><th scope="row"><label for="homepage_article_summary">Article Summaries on Home Page</label></th>
+	<td>
+	<input type="checkbox" id="homepage_article_summary" name="html5press_options[homepage_article_summary]" value="1" <?php checked( true, $settings['homepage_article_summary'] ); ?> />
+	<label for="homepage_article_summary">Enabled</label>
+	</td>
+	</tr>
 	<tr valign="top"><th scope="row"><label for="maintenance_mode">Maintenance Mode</label></th>
 	<td>
 	<input type="checkbox" id="maintenance_mode" name="html5press_options[maintenance_mode]" value="1" <?php checked( true, $settings['maintenance_mode'] ); ?> />
@@ -540,6 +547,11 @@ function html5press_validate_options( $input ) {
 	// We verify if the input is a boolean value
 	$input['fuzzy_timestamps'] = ( $input['fuzzy_timestamps'] == 1 ? 1 : 0 );
 	
+	// If the checkbox has not been checked, we void it
+	if ( ! isset( $input['homepage_article_summary'] ) )
+		$input['homepage_article_summary'] = null;
+	// We verify if the input is a boolean value
+	$input['homepage_article_summary'] = ( $input['homepage_article_summary'] == 1 ? 1 : 0 );	
 
 	// If the checkbox has not been checked, we void it
 	if ( ! isset( $input['maintenance_mode'] ) )
