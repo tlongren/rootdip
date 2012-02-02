@@ -292,7 +292,7 @@ function html5press_addlightboxrel_to_gallery( $attachment_link ) {
 
 function html5press_excerpt_more($more) {
 	global $post;
-	$content = ' <a href="'. get_permalink($post->ID) . '" class="button">' . __( 'Read the Rest...','html5press' ) . '</a>';
+	$content = ' <a href="'. get_permalink($post->ID) . '" class="button">' . __( 'Continue reading...','html5press' ) . '</a>';
 	return $content;
 }
 add_filter('excerpt_more', 'html5press_excerpt_more');
