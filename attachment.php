@@ -17,12 +17,12 @@
 			<a href="<?php echo wp_get_attachment_url($post->ID) ?>" title="<?php echo esc_html( get_the_title($post->ID), 1 ) ?>" rel="attachment"><?php echo basename($post->guid) ?></a>
 			<div><?php if ( !empty($post->post_excerpt) ) echo "$post->post_excerpt" ?></div>
 <?php endif; ?>
-			
+			<?php /* Edit Link */ edit_post_link(); ?>
 			<footer class="post-meta">
                 <p>
                 	<?php _e( 'Created ','html5press'); ?><time datetime="<?php the_time('Y-m-d\TH:i:sO'); ?>" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time>
 				</p>
-				<?php /* Edit Link */ edit_post_link(); ?>
+				
             </footer> <!-- end post meta -->
 			<article class="comments">
 				<?php comments_template(); ?>
