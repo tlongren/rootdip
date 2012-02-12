@@ -13,12 +13,12 @@
 			<?php $large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), $html5press_settings['featured_image_size'] ); ?>
             <?php if ( has_post_thumbnail() ) { ?><figure><a href="<?php echo "$large_image[0]"; ?>" rel="thumbnail"><img src="<?php echo "$image[0]"; ?>" alt="" class="thumbnail alignleft" /></a></figure><?php } ?>
             <?php the_content(__( 'Read more','html5press' )); ?>
-			
+			<?php /* Edit Link */ edit_post_link(); ?>
 			<footer class="post-meta">
                 <p>
                 	<?php _e( 'Created ','html5press'); ?><time datetime="<?php the_time('Y-m-d\TH:i:sO'); ?>" class="timeago" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time><?php if (get_the_modified_time() != get_the_time()) { ?>, updated <time datetime="<?php the_modified_time('Y-m-d\TH:i:sO'); ?>"><?php the_modified_date(); ?></time><?php } ?>
 				</p>
-				<?php /* Edit Link */ edit_post_link(); ?>
+				
             </footer> <!-- end post meta -->
         </article> <!-- end post 1 -->
 		<?php endwhile; endif; ?>
