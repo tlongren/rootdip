@@ -195,7 +195,7 @@ function html5press_maintenance_mode() {
 // Style the "edit post" links
 add_filter( 'edit_post_link','html5press_edit_post_link' );
 function html5press_edit_post_link() {
-	$link = '<a class="more-link" href="'.get_edit_post_link().'">'.__( 'Edit This','html5press' ).'</a>';
+	$link = '<p><a class="more-link" href="'.get_edit_post_link().'">'.__( 'Edit This','html5press' ).'</a></p>';
 	return $link;
 }
 
