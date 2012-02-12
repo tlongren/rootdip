@@ -1,4 +1,3 @@
-
 <?php get_header(); ?>
 <?php
 if(isset($_GET['author_name'])) :
