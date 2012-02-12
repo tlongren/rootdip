@@ -14,7 +14,7 @@
 			<?php if ( has_post_thumbnail() ) { ?><figure><a href="<?php echo "$large_image[0]"; ?>" rel="lightbox" title="<?php echo the_title_attribute(); ?>"><img src="<?php echo "$image[0]"; ?>" alt="" class="thumbnail alignleft" /></a></figure><?php } ?>
             
             <?php the_content(__( 'Read more','html5press' )); ?>
-			
+			<?php edit_post_link(); ?>
 			<footer class="post-meta">
 			<p>
 				<?php _e( 'In ','html5press'); ?><?php the_category(', '); ?>
@@ -23,7 +23,7 @@
 				<?php wp_link_pages( array( 'before' => __( '<span class="alignright">Pages:', 'html5press' ), 'after' => '</span>' ) ); ?>
 				<?php the_tags( '<span class="post-tags">' . __( 'Tagged with: ','html5press' ), ', ', '</span>' );	?>
 			</p>
-			<?php edit_post_link(); ?>
+			
 			</footer> <!-- .post meta -->
 			
 			<article class="comments">
