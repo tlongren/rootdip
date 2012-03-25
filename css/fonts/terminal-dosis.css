@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Terminal+Dosis);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Terminal Dosis', cursive;
+}
+ 
+blockquote {
+    font: italic 18px/32px 'Terminal Dosis', cursive;
+}
+ 
+#site-title a {
+    font: bold 66px 'Terminal Dosis', cursive;
+}
+ 
+#site-description {
+    font: normal 18px 'Terminal Dosis', cursive;
+}
+ 
+#menu a {
+    font: 14px 'Terminal Dosis', cursive;
+}
+ 
+.post-meta {
+    font: 14px 'Terminal Dosis', cursive;
+}
+ 
+figcaption {
+    font: 14px 'Terminal Dosis', cursive;
+}
+ 
+#footer a {
+    font: 14px 'Terminal Dosis', cursive;
+}
+ 
+button, input, select, textarea, form label {
+    font: 14px 'Terminal Dosis', cursive;  
+}
+ 
+legend {
+    font: bold 14px 'Terminal Dosis', cursive;
+}
+ 
+a.button {
+    font: bold 12px 'Terminal Dosis', cursive;
+}

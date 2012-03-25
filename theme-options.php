@@ -279,6 +279,10 @@ $html5press_theme_fonts = array(
 		'value' => 'sue-ellen-francisco',
 		'label' => 'Sue Ellen Francisco'
 	),
+	'terminal-dosis' => array(
+		'value' => 'terminal-dosis',
+		'label' => 'Terminal Dosis'
+	),
 	'varela-round' => array(
 		'value' => 'varela-round',
 		'label' => 'Varela Round'
