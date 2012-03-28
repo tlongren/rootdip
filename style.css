@@ -1204,6 +1204,14 @@ a.download-big {
     font-size: 16px;
     padding: 10px 15px 10px 35px;
 }
+
+/* Infinite Scroll Loader */
+div#inifiniteLoader{
+  position: relative;
+  z-index: 2;
+  text-align:center;
+  display:none;
+}
 /**
  * Media queries for responsive design.
  * These follow after, and will override, the primary styles
