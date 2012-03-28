@@ -11,9 +11,9 @@ License URI: license.txt
 */
 
 /**
- * HTML5 And CSS3 Theme version 2.0
+ * Jayj HTML5 theme 2.0
  * By Jayj.dk 
- * Download for free at http://jayj.dk/a-free-html5-and-css3-theme/
+ * Download for free at http://jayj.dk/free-html5-css3-theme/
  
 	Released under New BSD License
 	http://www.opensource.org/licenses/bsd-license.php
@@ -81,13 +81,12 @@ q:before, q:after { content: ""; content: none; }
  
 body { 
     color: #333;
-    font: 16px/28px Georgia, 'Times New Roman', Times, serif;
+    font: 16px/28px Georgia, serif;
     
     /* CSS3 gradient background pattern @credits http://leaverou.me/demos/css3-patterns.html */
     background: url(images/bg.png) repeat fixed; /* Image fallback for Firefox and browsers who don't support gradients */ 
 
     background-color: #eee; /* Change this to change both stribe colors */
-
 
     background-image: -webkit-gradient(linear, 0 100%, 100% 0,
                             color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent),
@@ -915,9 +914,11 @@ a#toTop:hover {
 	padding: 0 4px 5px;
 }
 #main #gallery-1 .gallery-item {width:auto !important;}
-/* Comments */
+
+
 /* =Comments
 -------------------------------------------------------------- */
+
 /* Comments link */
 .hentry .comments-link a {
 	background: url(images/comment-bubble.png) no-repeat right top;
@@ -946,10 +947,9 @@ a#toTop:hover {
 	margin: 0;
 }
 .commentlist li.comment {
-	border-bottom:thin solid #464646;
-	line-height: 24px;
+	border-bottom: 1px solid #464646;
 	margin: 0 0 24px 0;
-	padding: 0 0 0 56px;
+	padding: 10px 0 10px 56px;
 	position: relative;
 }
 /*
@@ -973,9 +973,20 @@ a#toTop:hover {
 }
 .commentlist .avatar {
 	position: absolute;
-	top: 4px;
-	left: 0;
+	top: 7px;
+	left: 5px;
 }
+
+.comment-meta {
+	font-size: 14px;
+	line-height: 1.6;
+	margin: 0 0 15px 10px;
+}
+
+.reply {
+	font-size: 14px;
+}
+
 .comment-author {
 }
 .comment-author cite {
@@ -1033,10 +1044,10 @@ h3#reply-title {
 }
 #respond label {
 	color: #333;
-	font-size: 12px;
+	font-size: 13px;
 }
 #respond input {
-	margin: 0 0 9px;
+	margin: 0 0 20px;
 	width: 95%;
 }
 #respond textarea {
