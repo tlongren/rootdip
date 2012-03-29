@@ -13,7 +13,8 @@
  */
 ?>
 
-			<div id="comments">
+<div id="comments">
+
 <?php if ( post_password_required() ) : ?>
 				<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.','html5press' ); ?></p>
 			</div><!-- #comments -->
@@ -37,15 +38,14 @@
 			?></h3>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<div class="navigation">
+			<nav class="navigation clearfix">
+				<h2 class="assistive-text"><?php _e( 'Comment navigation', 'html5press' ); ?></h2> 
 				<div class="nav-previous alignleft"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments','html5press' ) ); ?></div>
 				<div class="nav-next alignright"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>','html5press' ) ); ?></div>
-			</div> <!-- .navigation -->
-			<div class="clear"></div>
+			</nav> <!-- .navigation -->
 <?php endif; // check for comment navigation ?>
 
 			<ol class="commentlist">
-			
 				<?php
 					/* Loop through and list the comments. Tell wp_list_comments()
 					 * to use html5press_list_comments() to format the comments.
@@ -55,13 +55,12 @@
 				?>
 			</ol>
 
-<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<h2 class="assistive-text"><?php _e( 'Comment navigation', 'html5press' ); ?></h2> 
-			<nav class="navigation">
+<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?> 
+			<nav class="navigation clearfix">
+				<h2 class="assistive-text"><?php _e( 'Comment navigation', 'html5press' ); ?></h2> 
 				<div class="nav-previous alignleft"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments','html5press' ) ); ?></div>
 				<div class="nav-next alignright"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>','html5press' ) ); ?></div>
 			</nav> <!-- .navigation -->
-			<div class="clear"></div>
 <?php endif; // check for comment navigation ?>
 
 <?php else : // or, if we don't have comments:
