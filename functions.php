@@ -13,7 +13,7 @@ if ( ! isset( $content_width ) ) $content_width = 580;
 // Set html5press version
 define( 'html5press_version', '2.3-rc3' );
 function html5press_getinfo( $show = '' ) {
-        $output = '';
+		$output = '';
 
 		switch ( $show ) {
 			case 'version' :
@@ -132,52 +132,66 @@ function html5press_sidebars() {
 }
 
 // Setup comments form
-add_filter('comment_form_default_fields', 'html5press_comments');
+add_filter( 'comment_form_default_fields', 'html5press_comments' );
+
 function html5press_comments() {
-	$req = get_option('require_name_email');
-	$fields =  array(
-'author' => '<p><label for="author">' . __( 'Name','html5press' ) . '' . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . 
-'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' placeholder = "What should we call you?"' . ( $req ? ' required' : '' ) . '/></p>',
+	$commenter = wp_get_current_commenter();
+	$req       = get_option( 'require_name_email' );
+	$aria_req  = ( $req ? " aria-required='true'" : '' );
 
-'email'  => '<p><label for="email">' . __( 'Email','html5press' ) . '' . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . 
-'<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' placeholder="How can we reach you?"' . ( $req ? ' required' : '' ) . ' /></p>',
+	$fields = array(
+		'author' => '<p><label for="author">' . __( 'Name','html5press' ) . '' . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . 
+		'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ( $req ? ' required' : '' ) . '/></p>',
 
-'url'    => '<p><label for="url">' . __( 'Website','html5press' ) . '</label>' .
-'<input id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" placeholder="Have you got a website?" /></p>'
-);
+		'email' => '<p><label for="email">' . __( 'Email','html5press' ) . '' . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . 
+		'<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ( $req ? ' required' : '' ) . ' /></p>',
+
+		'url' => '<p><label for="url">' . __( 'Website','html5press' ) . '</label>' .
+		'<input id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>'
+	);
+
 	return $fields;
 }
 
 // Setup actual comment form field
 add_filter('comment_form_field_comment', 'html5press_commentfield');
+
 function html5press_commentfield() {
-	$commentArea = '<p><label for="comment">' . _x( 'Comment','noun','html5press' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required placeholder="What\'s on your mind?"></textarea></p>';
-	return $commentArea;
+	return '<p><label for="comment">' . _x( 'Comment','noun','html5press' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required></textarea></p>';
 }
 
 // Show comments the HTML5Press way
-function html5press_list_comments($comment, $args, $depth) {
+function html5press_list_comments( $comment, $args, $depth ) {
+
 	$GLOBALS['comment'] = $comment; ?>
-   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
-     <div id="comment-<?php comment_ID(); ?>">
-      <div class="comment-author vcard">
-         <?php echo get_avatar($comment,$size='48',$default='<path_to_url>' ); ?>
 
-         <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>','html5press'), get_comment_author_link()) ?>
-      </div>
-      <?php if ($comment->comment_approved == '0') : ?>
-         <em><?php _e( 'Your comment is awaiting moderation.','html5press' ) ?></em>
-         <br />
-      <?php endif; ?>
+	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+		<div id="comment-<?php comment_ID(); ?>">
 
-      <div class="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'Y-m-d\TH:i:s' ); ?>" class="timeago"><?php printf( '%1$s at %2$s', get_comment_date(),  get_comment_time() ); ?></time></a><?php edit_comment_link(__('(Edit)','html5press'),'  ','') ?></div>
-		
-      <?php comment_text() ?>
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<?php echo get_avatar( $comment, 48 ); ?>
 
-      <div class="reply">
-         <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-      </div>
-     </div>
+					<?php printf( __( '<cite class="fn">%s</cite> <span class="says">says:</span>', 'html5press' ), get_comment_author_link() ); ?>
+				</div> <!-- .comment-author.vcard -->
+
+				<?php if ($comment->comment_approved == '0') : ?>
+					<em><?php _e( 'Your comment is awaiting moderation.', 'html5press' ) ?></em>
+					<br />
+				<?php endif; ?>
+
+				<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+					<time pubdate datetime="<?php comment_time( 'Y-m-d\TH:i:s' ); ?>" class="timeago"><?php printf( '%1$s at %2$s', get_comment_date(),  get_comment_time() ); ?></time>
+				</a>
+				<?php edit_comment_link( __( '(Edit)', 'html5press' ), '', '' ); ?>
+			</footer> <!-- .comment-meta -->
+
+			<div class="comment-content"><?php comment_text(); ?></div>
+
+			<div class="reply">
+				<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+			</div> <!-- .reply -->
+		</div> <!-- #comment-<?php comment_ID() ?> -->
 <?php
 }
 
@@ -251,23 +265,23 @@ function html5press_excerpt_length($length) {
 // Link post titles to the link for link post formats
 add_filter('post_link', 'html5press_link_filter', 10, 2);
 function html5press_link_filter($link, $post) {
-     if (has_post_format('link', $post) && get_post_meta($post->ID, 'LinkFormatURL', true)) {
-          $link = get_post_meta($post->ID, 'LinkFormatURL', true);
-     }
-     return $link;
+	 if (has_post_format('link', $post) && get_post_meta($post->ID, 'LinkFormatURL', true)) {
+		  $link = get_post_meta($post->ID, 'LinkFormatURL', true);
+	 }
+	 return $link;
 }
 
 // Add featured post images to RSS feed
 add_filter('the_excerpt_rss', 'html5press_feed_thumbnail');
 add_filter('the_content_feed', 'html5press_feed_thumbnail');
 function html5press_feed_thumbnail($content) {
-    global $post;
-    if(has_post_thumbnail($post->ID)) {
-        $content = '<p>' . get_the_post_thumbnail($post->ID,array(200,200)) .
-        '</p>' . get_the_content();
-    }
+	global $post;
+	if(has_post_thumbnail($post->ID)) {
+		$content = '<p>' . get_the_post_thumbnail($post->ID,array(200,200)) .
+		'</p>' . get_the_content();
+	}
 
-    return $content;
+	return $content;
 }
 
 // Add rel="lightbox" to images embedded in a post for greater slimbox2 usage
@@ -275,9 +289,9 @@ add_filter('the_content', 'html5press_addlightboxrel');
 function html5press_addlightboxrel($content) {
 	global $post;
 	$pattern = "/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/i";
-  	$replacement = '<a$1href=$2$3.$4$5 rel="lightbox" title="'.$post->post_title.'"$6>';
-    $content = preg_replace($pattern, $replacement, $content);
-    return $content;
+	$replacement = '<a$1href=$2$3.$4$5 rel="lightbox" title="'.$post->post_title.'"$6>';
+	$content = preg_replace($pattern, $replacement, $content);
+	return $content;
 }
 
 // Add rel="lightbox" to gallery images and make a set out of them for next/prev functionality
@@ -285,7 +299,7 @@ add_filter( 'wp_get_attachment_link' , 'html5press_addlightboxrel_to_gallery' );
 function html5press_addlightboxrel_to_gallery( $attachment_link ) {
 	global $post;
 	$pattern = "/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/i";
-  	$replacement = '<a$1href=$2$3.$4$5 rel="lightbox-gallery" title="'.$post->post_title.'"$6>';
+	$replacement = '<a$1href=$2$3.$4$5 rel="lightbox-gallery" title="'.$post->post_title.'"$6>';
 	$content = preg_replace($pattern, $replacement, $attachment_link);
 	return $content;
 }
@@ -449,19 +463,19 @@ if (!class_exists('html5press_twitter_widget')) :
 						// Make links and Twitter names clickable
 						if ($clickable) :
 							// Match URLs
-				    	$text = preg_replace('`\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))`', '<a href="$0">$0</a>', $text);
+						$text = preg_replace('`\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))`', '<a href="$0">$0</a>', $text);
 
-				    	// Match @name
-				    	$text = preg_replace('/(@)([a-zA-Z0-9\_]+)/', '@<a href="https://twitter.com/$2">$2</a>', $text);
-				    	
-				    	// Match #hashtags
-				    	$text = preg_replace('/(#)([a-zA-Z0-9\_]+)/', '#<a href="http://twitter.com/search/%23$2">$2</a>', $text);
+						// Match @name
+						$text = preg_replace('/(@)([a-zA-Z0-9\_]+)/', '@<a href="https://twitter.com/$2">$2</a>', $text);
+						
+						// Match #hashtags
+						$text = preg_replace('/(#)([a-zA-Z0-9\_]+)/', '#<a href="http://twitter.com/search/%23$2">$2</a>', $text);
 						endif;
 
 					// Display date/time
 						if ($datedisplay) $result .= '
 								<span class="twitter-date"><a href="'. $t->get_permalink() .'"><time datetime="'.$html5time.'" class="timeago" pubdate>' . $time . '</time></a></span>' . ($datebreak ? '<br />' : ' - ');
-			    	// Display message without username prefix
+					// Display message without username prefix
 						$prefixlen = strlen($username . ": ");
 						$result .= '
 								<span class="twitter-text">' . substr($text, $prefixlen, strlen($text) - $prefixlen) . '</span>';
