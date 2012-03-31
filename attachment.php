@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
-<?php
-	$options = html5press_get_options();
-?>
+<?php $options = html5press_get_options(); ?>
 
 <div id="content" role="main">
 

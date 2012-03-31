@@ -1,6 +1,4 @@
-<?php
-	$options = html5press_get_options();
-?>
+<?php $options = html5press_get_options(); ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js ie6" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7" <?php language_attributes(); ?>> <![endif]-->
@@ -22,7 +20,7 @@
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	
 	<?php wp_head(); ?>
-	<?php if (($html5press_settings['infinite_scroll'] == 1) && (!is_singular())) { ?>
+	<?php if (($options['infinite_scroll'] == 1) && (!is_singular())) { ?>
 <script type="text/javascript">
 jQuery(document).ready(function($) {
         var count = 2;

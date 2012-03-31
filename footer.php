@@ -1,6 +1,4 @@
-<?php
-	$options = html5press_get_options();
-?>
+<?php $options = html5press_get_options(); ?>
 
 	<footer id="footer" role="contentinfo">
 		<!-- You're free to remove the credit links in the footer, but please, please leave it there. -->
