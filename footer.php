@@ -28,8 +28,8 @@
 			?>
 
 			<?php
-				if ( $options['show_query_stats'] == 1) {
-					printf( __( '- %1$s queries in %2$s seconds','html5press' ), get_num_queries(), timer_stop(1) );
+				if ( $options['show_query_stats'] == 1) { ?>
+					- <?php echo get_num_queries(); _e( ' queries in ','html5press' ); timer_stop(1); _e( ' seconds','html5press' );
 				}
 			?>
 		</p>
