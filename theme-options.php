@@ -1,25 +1,4 @@
 <?php
-
-// Default options values
-// Kept for back-compat for now because I don't want to convert all the option calls to the new before I've heard your opinion
-$html5press_options = array(
-	'back_to_top' => true,
-	'infinite_scroll' => true,
-	'show_tagline' => true,
-	'enable_slimbox' => false,
-	'show_query_stats' => false,
-	'fuzzy_timestamps' => false,
-	'maintenance_mode' => false,
-	'custom_logo_url' => '',
-	'featured_image_size' => 'large',
-	'theme_color' => 'pink',
-	'theme_font' => 'droid-serif',
-	'featured_cat' => '',
-	'num_featured' => '5',
-	'custom_css' => '',
-	'homepage_article_summary' => false
-);
-
 /**
  * Returns the default options for HTML5Press
  */
