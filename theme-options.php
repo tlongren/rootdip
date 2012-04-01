@@ -345,7 +345,7 @@ function html5press_theme_notes_page() {
 
 // Function to generate options page
 function html5press_theme_options_page() {
-	global $html5press_options, $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors, $html5press_theme_fonts;
+	global $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors, $html5press_theme_fonts;
 
 	if ( ! isset( $_REQUEST['settings-updated'] ) )
 		$_REQUEST['settings-updated'] = false; ?>
@@ -360,7 +360,7 @@ function html5press_theme_options_page() {
 
 	<form method="post" action="options.php">
 
-	<?php $settings = get_option( 'html5press_options', $html5press_options ); ?>
+	<?php $options = html5press_get_options(); ?>
 	
 	<?php settings_fields( 'html5press_theme_options' ); ?>
 
@@ -368,55 +368,55 @@ function html5press_theme_options_page() {
 
 	<tr valign="top"><th scope="row"><label for="back_to_top">"Back to Top" Button</label></th>
 	<td>
-	<input type="checkbox" id="back_to_top" name="html5press_options[back_to_top]" value="1" <?php checked( true, $settings['back_to_top'] ); ?> />
+	<input type="checkbox" id="back_to_top" name="html5press_options[back_to_top]" value="1" <?php checked( true, $options['back_to_top'] ); ?> />
 	<label for="back_to_top">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="infinite_scroll">Infinite Scrolling</label></th>
 	<td>
-	<input type="checkbox" id="infinite_scroll" name="html5press_options[infinite_scroll]" value="1" <?php checked( true, $settings['infinite_scroll'] ); ?> />
+	<input type="checkbox" id="infinite_scroll" name="html5press_options[infinite_scroll]" value="1" <?php checked( true, $options['infinite_scroll'] ); ?> />
 	<label for="infinite_scroll">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="show_tagline">Show Tagline In Header</label></th>
 	<td>
-	<input type="checkbox" id="show_tagline" name="html5press_options[show_tagline]" value="1" <?php checked( true, $settings['show_tagline'] ); ?> />
+	<input type="checkbox" id="show_tagline" name="html5press_options[show_tagline]" value="1" <?php checked( true, $options['show_tagline'] ); ?> />
 	<label for="show_tagline">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="enable_slimbox">Slimbox2 Image Overlay</label></th>
 	<td>
-	<input type="checkbox" id="enable_slimbox" name="html5press_options[enable_slimbox]" value="1" <?php checked( true, $settings['enable_slimbox'] ); ?> />
+	<input type="checkbox" id="enable_slimbox" name="html5press_options[enable_slimbox]" value="1" <?php checked( true, $options['enable_slimbox'] ); ?> />
 	<label for="enable_slimbox">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="show_query_stats">Show Query Stats In Footer</label></th>
 	<td>
-	<input type="checkbox" id="show_query_stats" name="html5press_options[show_query_stats]" value="1" <?php checked( true, $settings['show_query_stats'] ); ?> />
+	<input type="checkbox" id="show_query_stats" name="html5press_options[show_query_stats]" value="1" <?php checked( true, $options['show_query_stats'] ); ?> />
 	<label for="show_query_stats">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="fuzzy_timestamps">Fuzzy Timestamps</label></th>
 	<td>
-	<input type="checkbox" id="fuzzy_timestamps" name="html5press_options[fuzzy_timestamps]" value="1" <?php checked( true, $settings['fuzzy_timestamps'] ); ?> />
+	<input type="checkbox" id="fuzzy_timestamps" name="html5press_options[fuzzy_timestamps]" value="1" <?php checked( true, $options['fuzzy_timestamps'] ); ?> />
 	<label for="fuzzy_timestamps">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="homepage_article_summary">Article Summaries on Home Page</label></th>
 	<td>
-	<input type="checkbox" id="homepage_article_summary" name="html5press_options[homepage_article_summary]" value="1" <?php checked( true, $settings['homepage_article_summary'] ); ?> />
+	<input type="checkbox" id="homepage_article_summary" name="html5press_options[homepage_article_summary]" value="1" <?php checked( true, $options['homepage_article_summary'] ); ?> />
 	<label for="homepage_article_summary">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="maintenance_mode">Maintenance Mode</label></th>
 	<td>
-	<input type="checkbox" id="maintenance_mode" name="html5press_options[maintenance_mode]" value="1" <?php checked( true, $settings['maintenance_mode'] ); ?> />
+	<input type="checkbox" id="maintenance_mode" name="html5press_options[maintenance_mode]" value="1" <?php checked( true, $options['maintenance_mode'] ); ?> />
 	<label for="maintenance_mode">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="custom_logo_url">Custom Logo URL</label></th>
 	<td>
-	<input type="text" id="custom_logo_url" name="html5press_options[custom_logo_url]" value="<?php echo esc_attr($settings['custom_logo_url']); ?>" />
+	<input type="text" id="custom_logo_url" name="html5press_options[custom_logo_url]" value="<?php echo esc_attr($options['custom_logo_url']); ?>" />
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="featured_image_size">Linked Featured Image Size</label></th>
@@ -426,7 +426,7 @@ function html5press_theme_options_page() {
 	foreach ( $html5press_image_sizes as $images ) :
 		$label = $images['label'];
 		$selected = '';
-		if ( $images['value'] == $settings['featured_image_size'] )
+		if ( $images['value'] == $options['featured_image_size'] )
 			$selected = 'selected="selected"';
 		echo '<option style="padding-right: 10px;" value="' . esc_attr( $images['value'] ) . '" ' . $selected . '>' . $label . '</option>';
 	endforeach;
@@ -441,7 +441,7 @@ function html5press_theme_options_page() {
 	foreach ( $html5press_theme_colors as $colors ) :
 		$label = $colors['label'];
 		$selected = '';
-		if ( $colors['value'] == $settings['theme_color'] )
+		if ( $colors['value'] == $options['theme_color'] )
 			$selected = 'selected="selected"';
 		echo '<option style="padding-right: 10px;" value="' . esc_attr( $colors['value'] ) . '" ' . $selected . '>' . $label . '</option>';
 	endforeach;
@@ -456,7 +456,7 @@ function html5press_theme_options_page() {
 	foreach ( $html5press_theme_fonts as $fonts ) :
 		$label = $fonts['label'];
 		$selected = '';
-		if ( $fonts['value'] == $settings['theme_font'] )
+		if ( $fonts['value'] == $options['theme_font'] )
 			$selected = 'selected="selected"';
 		echo '<option style="padding-right: 10px;" value="' . esc_attr( $fonts['value'] ) . '" ' . $selected . '>' . $label . '</option>';
 	endforeach;
@@ -471,7 +471,7 @@ function html5press_theme_options_page() {
 	foreach ( $html5press_categories as $category ) :
 		$label = $category['label'];
 		$selected = '';
-		if ( $category['value'] == $settings['featured_cat'] )
+		if ( $category['value'] == $options['featured_cat'] )
 			$selected = 'selected="selected"';
 		echo '<option style="padding-right: 10px;" value="' . esc_attr( $category['value'] ) . '" ' . $selected . '>' . $label . '</option>';
 	endforeach;
@@ -486,7 +486,7 @@ function html5press_theme_options_page() {
 	foreach ( $html5press_num_featured_options as $featured ) :
 		$label = $featured['label'];
 		$selected = '';
-		if ( $featured['value'] == $settings['num_featured'] )
+		if ( $featured['value'] == $options['num_featured'] )
 			$selected = 'selected="selected"';
 		echo '<option style="padding-right: 10px;" value="' . esc_attr( $featured['value'] ) . '" ' . $selected . '>' . $label . '</option>';
 	endforeach;
@@ -496,7 +496,7 @@ function html5press_theme_options_page() {
 	</tr>
 	<tr valign="top"><th scope="row"><label for="custom_css">Custom CSS</label></th>
 	<td>
-	<textarea name="html5press_options[custom_css]" style="width:350px; height:200px;" cols="" rows=""><?php echo esc_attr($settings['custom_css']); ?></textarea>
+	<textarea name="html5press_options[custom_css]" style="width:350px; height:200px;" cols="" rows=""><?php echo esc_attr($options['custom_css']); ?></textarea>
 	</td>
 	</tr>
 	</table>
@@ -511,36 +511,34 @@ function html5press_theme_options_page() {
 }
 
 function html5press_validate_options( $input ) {
-	global $html5press_options, $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors, $html5press_theme_fonts;
-
-	$settings = get_option( 'html5press_options', $html5press_options );
+	global $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors, $html5press_theme_fonts;
 	
 	$input['custom_logo_url'] = wp_filter_nohtml_kses( $input['custom_logo_url'] );
 	
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
-	$prev = $settings['featured_cat'];
+	$prev = $options['featured_cat'];
 	// We verify if the given value exists in the categories array
 	if ( !array_key_exists( $input['featured_cat'], $html5press_categories ) )
 		$input['featured_cat'] = $prev;
 		
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
-	$prev = $settings['num_featured'];
+	$prev = $options['num_featured'];
 	// We verify if the given value exists in the categories array
 	if ( !array_key_exists( $input['num_featured'], $html5press_num_featured_options ) )
 		$input['num_featured'] = $prev;
 		
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
-	$prev = $settings['theme_color'];
+	$prev = $options['theme_color'];
 	if ( !array_key_exists( $input['theme_color'], $html5press_theme_colors ) )
 		$input['theme_color'] = $prev;
 	
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
-	$prev = $settings['theme_font'];
+	$prev = $options['theme_font'];
 	if ( !array_key_exists( $input['theme_font'], $html5press_theme_fonts ) )
 		$input['theme_font'] = $prev;
 
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
-	$prev = $settings['featured_image_size'];
+	$prev = $options['featured_image_size'];
 	if ( !array_key_exists( $input['featured_image_size'], $html5press_image_sizes ) )
 		$input['featured_image_size'] = $prev;
 	
