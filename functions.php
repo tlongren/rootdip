@@ -4,8 +4,7 @@ require_once ( get_template_directory() . '/theme-options.php' );
 // Setup options
 add_action( 'wp_head', 'html5press_layout_view' );
 function html5press_layout_view() {
-	global $html5press_options;
-	$settings = get_option( 'html5press_options', $html5press_options );
+	$options = html5press_get_options();
 }
 
 if ( ! isset( $content_width ) ) $content_width = 580;
@@ -339,11 +338,11 @@ function html5press_featured_posts() { ?>
 		<div id="slider-wrapper">
 			<ul id="slider">
 				<?php
-				global $wp_query, $html5press_options;
-				$settings = get_option( 'html5press_options', $html5press_options );
+				global $wp_query;
+				$options = html5press_get_options();
 				$tmp = $wp_query;
-				if ($settings['featured_cat'] == 10000) { $settings['featured_cat'] = "-1"; }
-				$wp_query = new WP_Query('posts_per_page='.esc_attr( $settings['num_featured'] ).'&cat='.esc_attr( $settings['featured_cat']));
+				if ($options['featured_cat'] == 10000) { $options['featured_cat'] = "-1"; }
+				$wp_query = new WP_Query('posts_per_page='.esc_attr( $options['num_featured'] ).'&cat='.esc_attr( $options['featured_cat']));
 				if(have_posts()) :
 					while(have_posts()) :
 						the_post();
