@@ -97,6 +97,61 @@ function html5press_register_styles() {
 	wp_enqueue_style( 'fonts', get_stylesheet_directory_uri().'/css/fonts/'.$options['theme_font'].'.css');
 }
 
+// Load custom javascript
+add_action('wp_footer', 'html5press_load_scripts');
+function html5press_load_scripts() {
+	if (($options['infinite_scroll'] == 1) && (!is_singular())) { ?>
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+        var count = 2;
+        var total = <?php echo $wp_query->max_num_pages; ?>;
+        $(window).scroll(function(){
+                if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+                   if (count > total){
+                        return false;
+                   }else{
+                        loadArticle(count);
+                   }
+                   count++;
+                }
+        }); 
+
+        function loadArticle(pageNumber){    
+                $('div#inifiniteLoader').show('fast');
+                $.ajax({
+                    url: "<?php bloginfo('wpurl') ?>/wp-admin/admin-ajax.php",
+                    type:'POST',
+                    data: "action=infinite_scroll&page_no="+ pageNumber + '&loop_file=loop', 
+                    success: function(html){
+                        $('div#inifiniteLoader').hide('1000');
+                        $("#content").append(html);    // This will be the div where our content will be loaded
+                    }
+                });
+            return false;
+        }
+
+    });
+	</script>
+<?php }
+
+	if ($options['back_to_top'] == 1) { ?>
+		<script type="text/javascript">
+	jQuery(document).ready(function() {		
+		jQuery().UItoTop({ easingType: 'easeOutQuart',text: 'Back To Top',min: '300'});
+	});
+	</script>
+<?php
+	}
+	if ($options['fuzzy_timestamps'] == 1) { ?>
+		<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery("time.timeago").timeago();
+	});
+	</script>
+<?php
+	}
+}
+
 // Setup update checking
 add_action( 'admin_notices', 'html5press_update_notice' );
 add_action( 'network_admin_notices', 'html5press_update_notice' ); // I have no idea if that actually works

@@ -38,21 +38,6 @@
 	<div class="clear"></div>
 
 </div> <!-- end #wrapper -->
-
-	<?php if ($options['back_to_top'] == 1) { ?>
-	<script type="text/javascript">
-	jQuery(document).ready(function() {		
-		jQuery().UItoTop({ easingType: 'easeOutQuart',text: 'Back To Top',min: '300'});
-	});
-	</script>
-	<?php } ?>
-	<?php if ($options['fuzzy_timestamps'] == 1) { ?>
-	<script type="text/javascript">
-	jQuery(document).ready(function() {
-		jQuery("time.timeago").timeago();
-	});
-	</script>
-	<?php } ?>
 	<?php wp_footer(); ?>
 </body>
 </html>
