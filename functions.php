@@ -101,45 +101,6 @@ function html5press_register_styles() {
 add_action('wp_footer', 'html5press_load_scripts');
 function html5press_load_scripts() {
 	$options = html5press_get_options();
-	$args = array(
-   'posts_per_page' => 3,
-   'post_type' => 'post'
-	);
-	$myquery = new WP_Query($args);
-	if (($options['infinite_scroll'] == 1) && (!is_singular())) { ?>
-	<script type="text/javascript">
-	jQuery(document).ready(function($) {
-        var count = 2;
-        var total = <?=$myquery->found_posts?>;
-        $(window).scroll(function(){
-                if  ($(window).scrollTop() == $(document).height() - $(window).height()){
-                   if (count > total){
-                        return false;
-                   }else{
-                        loadArticle(count);
-                   }
-                   count++;
-                }
-        }); 
-
-        function loadArticle(pageNumber){    
-                $('div#inifiniteLoader').show('fast');
-                $.ajax({
-                    url: "<?php bloginfo('wpurl') ?>/wp-admin/admin-ajax.php",
-                    type:'POST',
-                    data: 'action=infinite_scroll&page_no=' + pageNumber + '&loop_file=loop', 
-                    success: function(html){
-                        $('div#inifiniteLoader').hide('1000');
-                        $("#content").append(html);    // This will be the div where our content will be loaded
-                    }
-                });
-            return false;
-        }
-
-    });
-	</script>
-<?php }
-
 	if ($options['back_to_top'] == 1) { ?>
 		<script type="text/javascript">
 	jQuery(document).ready(function() {		

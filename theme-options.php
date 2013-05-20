@@ -376,12 +376,6 @@ function html5press_theme_options_page() {
 	<label for="back_to_top">Enabled</label>
 	</td>
 	</tr>
-	<tr valign="top"><th scope="row"><label for="infinite_scroll">Infinite Scrolling</label></th>
-	<td>
-	<input type="checkbox" id="infinite_scroll" name="html5press_options[infinite_scroll]" value="1" <?php checked( true, $options['infinite_scroll'] ); ?> />
-	<label for="infinite_scroll">Enabled</label>
-	</td>
-	</tr>
 	<tr valign="top"><th scope="row"><label for="show_tagline">Show Tagline In Header</label></th>
 	<td>
 	<input type="checkbox" id="show_tagline" name="html5press_options[show_tagline]" value="1" <?php checked( true, $options['show_tagline'] ); ?> />
@@ -587,12 +581,6 @@ function html5press_validate_options( $input ) {
 		$input['back_to_top'] = null;
 	// We verify if the input is a boolean value
 	$input['back_to_top'] = ( $input['back_to_top'] == 1 ? 1 : 0 );
-
-	// If the checkbox has not been checked, we void it
-	if ( ! isset( $input['infinite_scroll'] ) )
-		$input['infinite_scroll'] = null;
-	// We verify if the input is a boolean value
-	$input['infinite_scroll'] = ( $input['infinite_scroll'] == 1 ? 1 : 0 );
 	
 	return $input;
 }
