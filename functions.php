@@ -367,13 +367,15 @@ function html5press_addlightboxrel_to_gallery( $attachment_link ) {
 	return $content;
 }
 
+add_filter('excerpt_more', 'html5press_excerpt_more');
 function html5press_excerpt_more($more) {
 	global $post;
 	$content = ' <a href="'. get_permalink($post->ID) . '" class="button">' . __( 'Continue reading...','html5press' ) . '</a>';
 	return $content;
 }
-add_filter('excerpt_more', 'html5press_excerpt_more');
 
+add_action('wp_ajax_infinite_scroll', 'html5press_infinitepaginate');           // for logged in user
+add_action('wp_ajax_nopriv_infinite_scroll', 'html5press_infinitepaginate');    // if user not logged in
 function html5press_infinitepaginate(){
     $loopFile        = $_POST['loop_file'];
     $paged           = $_POST['page_no'];
@@ -385,8 +387,6 @@ function html5press_infinitepaginate(){
 
     exit;
 }
-add_action('wp_ajax_infinite_scroll', 'html5press_infinitepaginate');           // for logged in user
-add_action('wp_ajax_nopriv_infinite_scroll', 'html5press_infinitepaginate');    // if user not logged in
 
 // Setup featured posts slider
 function html5press_featured_posts() { ?>
@@ -418,6 +418,7 @@ function html5press_featured_posts() { ?>
 		</div><!-- close #slider-wrapper -->
 <?php
 }
+add_shortcode('featured', 'html5press_featured_posts');
 // Custom callback function for add_custom_background
 function html5press_custom_background_callback() {
 
