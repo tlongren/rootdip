@@ -100,6 +100,7 @@ function html5press_register_styles() {
 // Load custom javascript
 add_action('wp_footer', 'html5press_load_scripts');
 function html5press_load_scripts() {
+	$options = html5press_get_options();
 	if (($options['infinite_scroll'] == 1) && (!is_singular())) { ?>
 	<script type="text/javascript">
 	jQuery(document).ready(function($) {
