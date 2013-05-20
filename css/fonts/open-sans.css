@@ -1,44 +1,44 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Abel', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 blockquote {
-	font: italic 18px/32px 'Abel', sans-serif;
+	font: italic 18px/32px 'Open Sans', sans-serif;
 }
 
 #site-title a {
-	font: bold 66px 'Abel', sans-serif;
+	font: bold 66px 'Open Sans', sans-serif;
 }
 
 #site-description {
-	font: normal 18px 'Abel', sans-serif;
+	font: normal 18px 'Open Sans', sans-serif;
 }
 
 #menu a {
-	font: 14px 'Abel', sans-serif;
+	font: 14px 'Open Sans', sans-serif;
 }
 
 .post-meta {
-	font: 14px 'Abel', sans-serif;
+	font: 14px 'Open Sans', sans-serif;
 }
 
 figcaption {
-	font: 14px 'Abel', sans-serif;
+	font: 14px 'Open Sans', sans-serif;
 }
 
 #footer a {
-	font: 14px 'Abel', sans-serif;
+	font: 14px 'Open Sans', sans-serif;
 }
 
 button, input, select, textarea, form label {
-	font: 14px 'Abel', sans-serif;	
+	font: 14px 'Open Sans', sans-serif;	
 }
 
 legend {
-	font: bold 14px 'Abel', sans-serif;
+	font: bold 14px 'Open Sans', sans-serif;
 }
 
 a.button {
-	font: bold 12px 'Abel', sans-serif;
+	font: bold 12px 'Open Sans', sans-serif;
 }
