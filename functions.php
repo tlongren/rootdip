@@ -35,10 +35,6 @@ function html5press_theme_setup() {
 	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
 	if ( is_readable( $locale_file ) )
 		require_once( $locale_file );
-	add_theme_support( 'infinite-scroll', array(
-    	'container'  => 'content',
-    	'footer'     => 'footer'
-	) );
 	add_theme_support( 'post-formats', array( 'link','quote','status' ) ); // support for post formats
 	add_theme_support( 'post-thumbnails' ); // post thumbnails
 	register_nav_menu( 'main-menu', __('Main Menu','html5press') ); // navigation menus
@@ -121,6 +117,20 @@ function html5press_load_scripts() {
 	</script>
 <?php
 	}
+}
+
+
+// Add theme support for infinity scroll
+function twenty_ten_infinite_scroll_init() {
+    add_theme_support( 'infinite-scroll', array(
+        'container' => 'content',
+        'render'    => 'html5press_infinite_scroll_render',
+        'footer'    => 'wrapper',
+    ) );
+}
+add_action( 'init', 'twenty_ten_infinite_scroll_init' );
+function html5press_infinite_scroll_render() {
+    get_template_part( 'loop' );
 }
 
 // Setup update checking
