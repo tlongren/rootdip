@@ -242,6 +242,10 @@ $html5press_theme_fonts = array(
 		'value' => 'nunito',
 		'label' => 'Nunito'
 	),
+	'open-sans' => array(
+		'value' => 'open-sans',
+		'label' => 'Open Sans'
+	),
 	'patrick-hand' => array(
 		'value' => 'patrick-hand',
 		'label' => 'Patrick Hand'
