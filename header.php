@@ -32,7 +32,7 @@
 
 	<header id="header" class="clearfix" role="banner">
 	
-		<hgroup>
+		<div id="hgroup">
 			<h1 id="site-title">
 				<a href="<?php echo home_url(); ?>">
 					<?php
@@ -48,7 +48,7 @@
 			<?php if ( $options['show_tagline'] ) { ?>
 				<h2 id="site-description"><?php bloginfo('description'); ?></h2>
 			<?php } ?>
-		</hgroup>
+		</div>
 		
 	</header> <!-- end header -->
 
