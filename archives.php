@@ -8,7 +8,7 @@ $count_tags         = wp_count_terms( 'post_tag', array( 'hide_empty' => true ) 
 ?>
 <?php get_header(); ?>
 
-<div id="content" role="main">
+<main id="content" role="main">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>
         
@@ -62,7 +62,7 @@ $count_tags         = wp_count_terms( 'post_tag', array( 'hide_empty' => true ) 
 		</article> <!-- end post 1 -->
 		<?php endwhile; endif; ?>
     
-	</div> <!-- end main -->
+	</main> <!-- end main -->
 
 <?php get_sidebar(); ?>
 

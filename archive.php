@@ -6,7 +6,7 @@ else :
 	$curauth = get_userdata(intval($author));
 endif;
 ?>
-<div id="content" role="main">
+<main id="content" role="main">
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
  	  <?php /* If this is a category archive */ if (is_category()) { ?>
 		<h1 class="pagetitle"><?php _e( 'Archive for the','html5press' ); ?> &#8216;<?php single_cat_title(); ?>&#8217; <?php _e( 'Category','html5press' ); ?></h1>
@@ -49,7 +49,7 @@ endif;
 			<div class="nav-previous alignleft"><?php previous_posts_link( __( '<span class="meta-nav">&larr;</span> Newer Posts','html5press' ) ); ?></div>
 			<div class="nav-next alignright"><?php next_posts_link( __( 'Older Posts <span class="meta-nav">&rarr;</span>','html5press' ) ); ?></div>
 		</nav>
-    </div> <!-- end main -->
+    </main> <!-- end main -->
 
 <?php get_sidebar(); ?>
 

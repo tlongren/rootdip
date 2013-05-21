@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php $options = html5press_get_options(); ?>
-<div id="content" role="main">
+<main id="content" role="main">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>
         
@@ -32,7 +32,7 @@
         </article> <!-- end post 1 -->
 		<?php endwhile; endif; ?>
     
-    </div> <!-- end main -->
+    </main> <!-- end main -->
 
 <?php get_sidebar(); ?>
 
