@@ -42,3 +42,8 @@ legend {
 a.button {
     font: bold 12px 'Days One', sans-serif;
 }
+article p { font: 14px 'Days One', sans-serif;}
+
+.widget p, .widget li, footer p {
+    font-family: 'Days One', sans-serif;
+}

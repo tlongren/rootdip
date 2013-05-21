@@ -42,3 +42,8 @@ legend {
 a.button {
     font: bold 12px 'Aclonica', sans-serif;
 }
+article p { font: 14px 'Aclonica', sans-serif;}
+
+.widget p, .widget li, footer p {
+    font-family: 'Aclonica', sans-serif;
+}

@@ -42,3 +42,8 @@ legend {
 a.button {
 	font: bold 12px 'Voltaire', sans-serif;
 }
+article p { font: 14px 'Voltaire', sans-serif;}
+
+.widget p, .widget li, footer p {
+	font-family: 'Voltaire', sans-serif;
+}

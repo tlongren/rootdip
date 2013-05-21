@@ -42,3 +42,8 @@ legend {
 a.button {
 	font: bold 12px 'Rationale', cursive;
 }
+article p { font: 14px 'Rationale', cursive;}
+
+.widget p, .widget li, footer p {
+	font-family: 'Rationale', cursive;
+}

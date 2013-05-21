@@ -42,3 +42,8 @@ legend {
 a.button {
     font: bold 12px 'Istok Web', sans-serif;
 }
+article p { font: 14px 'Istok Web', sans-serif;}
+
+.widget p, .widget li, footer p {
+    font-family: 'Istok Web', sans-serif;
+}

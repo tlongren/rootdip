@@ -42,3 +42,8 @@ legend {
 a.button {
 	font: bold 12px 'Varela Round', sans-serif;
 }
+article p { font: 14px 'Varela Round', sans-serif;}
+
+.widget p, .widget li, footer p {
+	font-family: 'Varela Round', sans-serif;
+}

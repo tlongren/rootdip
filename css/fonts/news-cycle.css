@@ -42,3 +42,8 @@ legend {
 a.button {
     font: bold 12px 'News Cycle', sans-serif;
 }
+article p { font: 14px 'News Cycle', sans-serif;}
+
+.widget p, .widget li, footer p {
+    font-family: 'News Cycle', sans-serif;
+}

@@ -42,3 +42,13 @@ legend {
 a.button {
     font: bold 12px 'Architects Daughter', cursive;
 }
+article p { font: 14px 'Architects Daughter', cursive;}
+
+.widget p, .widget li, footer p {
+    font-family: 'Architects Daughter', cursive;
+}
+article p { font: 14px 'Architects Daughter', cursive;}
+
+.widget p, .widget li, footer p {
+    font-family: 'Architects Daughter', cursive;
+}
