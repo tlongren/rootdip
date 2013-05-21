@@ -6,9 +6,9 @@ if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
 <?php
 else:
 ?>
-<aside class="widget">
+<section class="widget">
 <?php get_search_form(); ?>
-</aside>
+</section>
 
 <section class="widget">
 	<h3 class="widget-title"><?php _e( 'Archives','html5press' ); ?></h3>
