@@ -119,16 +119,15 @@ function html5press_load_scripts() {
 	}
 }
 
-
 // Add theme support for infinity scroll
-function twenty_ten_infinite_scroll_init() {
+function html5press_infinite_scroll_init() {
     add_theme_support( 'infinite-scroll', array(
         'container' => 'content',
         'render'    => 'html5press_infinite_scroll_render',
         'footer'    => 'wrapper',
     ) );
 }
-add_action( 'init', 'twenty_ten_infinite_scroll_init' );
+add_action( 'init', 'html5press_infinite_scroll_init' );
 function html5press_infinite_scroll_render() {
     get_template_part( 'loop' );
 }
