@@ -350,11 +350,86 @@ hr {
 }
 
 /**
+ * Simple grid system
+ * @credits Twitter Bootstrap
+ */
+.row {
+  width: 100%;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+}
+.row:after {
+  clear: both;
+}
+.row [class*="span"] {
+  float: left;
+  margin-left: 2.127659574%;
+  *margin-left: 2.0744680846382977%;
+}
+.row [class*="span"]:first-child {
+  margin-left: 0;
+}
+.row .span12 {
+  width: 99.99999998999999%;
+  *width: 99.94680850063828%;
+}
+.row .span11 {
+  width: 91.489361693%;
+  *width: 91.4361702036383%;
+}
+.row .span10 {
+  width: 82.97872339599999%;
+  *width: 82.92553190663828%;
+}
+.row .span9 {
+  width: 74.468085099%;
+  *width: 74.4148936096383%;
+}
+.row .span8 {
+  width: 65.95744680199999%;
+  *width: 65.90425531263828%;
+}
+.row .span7 {
+  width: 57.446808505%;
+  *width: 57.3936170156383%;
+}
+.row .span6 {
+  width: 48.93617020799999%;
+  *width: 48.88297871863829%;
+}
+.row .span5 {
+  width: 40.425531911%;
+  *width: 40.3723404216383%;
+}
+.row .span4 {
+  width: 31.914893614%;
+  *width: 31.8617021246383%;
+}
+.row .span3 {
+  width: 23.404255317%;
+  *width: 23.3510638276383%;
+}
+.row .span2 {
+  width: 14.89361702%;
+  *width: 14.8404255306383%;
+}
+.row .span1 {
+  width: 6.382978723%;
+  *width: 6.329787233638298%;
+}
+
+/**
  * Header
  */
 
-#header {
-	padding: 60px 20px 60px;
+#master-header {
+	padding: 40px;
+	position: relative;
+	z-index: 2;
 }
 
 #site-title a {
@@ -534,7 +609,7 @@ input[type=submit]:hover {
 }
 
 /* Post meta */
-.post-meta {
+.entry-meta {
 	margin: 40px 0 -20px;
 	
 	/* CSS3 Flexible Box Model */
@@ -546,7 +621,7 @@ input[type=submit]:hover {
 	box-orient: horizontal;
 }
 
-.post-meta p {
+.entry-meta p {
 	background: #f3f3f3; /* Fallback */
 	background: -moz-linear-gradient(top, #f3f3f3 0%, #ececec 100%); /* FF 3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#ececec)); /* Chrome, Safari 4+ */
@@ -586,7 +661,7 @@ input[type=submit]:hover {
 }
 
 	/* No support for CSS3 Flexible Box Model */
-	.no-flexbox .post-meta p {
+	.no-flexbox .entry-meta p {
 		display: inline-block;
 		max-width: 480px;
 	}

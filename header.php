@@ -1,19 +1,20 @@
 <?php $options = html5press_get_options(); ?>
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<!DOCTYPE html>
+<!-- Consider specifying the language of your content by adding the `lang` attribute to <html> -->
+<!--[if lt IE 7]> <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
 	
-	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!-- Always force latest IE rendering engine & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
 	<title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
 	
 	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width">
 	<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" />
 	<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/<?php echo esc_attr( $options['theme_color'] ); ?>.css" rel="stylesheet" />
 	
@@ -29,8 +30,11 @@
 <body <?php body_class(); ?>>
 
 <div id="wrapper">
-
-	<header id="header" class="clearfix" role="banner">
+	<!-- Prompt IE 6 and 7 users to install Chrome Frame:		chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 8]>
+		<p class="chromeframe alert alert-warning">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+	<![endif]-->
+	<header id="master-header" class="clearfix" role="banner">
 	
 		<div id="hgroup">
 			<h1 id="site-title">
@@ -50,12 +54,12 @@
 			<?php } ?>
 		</div>
 		
-	</header> <!-- end header -->
+	</header> <!-- #master-header -->
 
-<div id="main" class="clearfix">
+<div id="main" class="row">
 	
-	<!-- Navigation -->
-	<nav id="menu" class="clearfix" role="navigation">
-		<h2 class="assistive-text"><?php _e( 'Main menu', 'html5press' ); ?></h2> 
+	<!-- Main navigation -->
+	<nav id="menu" class="main-navigation span12 clearfix" role="navigation">
+		<h3 class="assistive-text"><?php _e( 'Main menu', 'html5press' ); ?></h2> 
 		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu' => 'top-menu', 'container' => 'false' ) ); ?>
 	</nav> <!-- #nav -->

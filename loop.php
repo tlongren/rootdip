@@ -2,17 +2,20 @@
 		<?php if (!empty($options['featured_cat']) && is_front_page()) { html5press_featured_posts(); } ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>
-        
+        	<header class="entry-header">
             <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1><?php if (!has_post_format('link')) { ?><span class="comments-link"><a href="<?php comments_link(); ?>"><?php comments_number('0','1','%'); ?></a></span><?php } ?>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' ); ?>
-            <?php if ( has_post_thumbnail() ) { ?><figure><a href="<?php the_permalink(); ?>"><img src="<?php echo "$image[0]"; ?>" alt="" class="thumbnail alignleft" /></a></figure><?php } ?>
-            <?php if ($options['homepage_article_summary'] == 1) { ?>
-				<?php the_excerpt(); ?>
-			<?php } else { ?>
-				<?php the_content(__( 'Read more','html5press' )); ?>
-            <?php } ?>
+            <?php if ( has_post_thumbnail() ) { ?><a href="<?php the_permalink(); ?>"><img src="<?php echo "$image[0]"; ?>" alt="" class="thumbnail alignleft" /></a><?php } ?>
+           	</header> <!-- .entry-header -->
+            <div class="entry-content">
+	            <?php if ($options['homepage_article_summary'] == 1) { ?>
+					<?php the_excerpt(); ?>
+				<?php } else { ?>
+					<?php the_content(__( 'Read more','html5press' )); ?>
+	            <?php } ?>
+            </div> <!-- .entry-content -->
 			<?php /* Edit Link */ edit_post_link(); ?>
-			<footer class="post-meta">
+			<footer class="entry-meta">
 				<p>
 					<?php _e( 'In ','html5press'); ?><?php the_category(', '); ?>
 					<?php _e( 'by ','html5press'); ?> <span class="author vcard"><?php the_author_posts_link(); ?></span>

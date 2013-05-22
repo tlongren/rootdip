@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="content" role="main">
+<main id="content" role="main"">
 	<?php $results = absint( $wp_query->found_posts ); ?>
 	<h2 class="pagetitle">
 		<?php printf( _n( "%d Results for", "%d Search Results for:", $results, 'html5press' ), $results ); ?>
