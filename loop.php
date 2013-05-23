@@ -32,4 +32,3 @@
     <?php endwhile; else: ?>
 		<p><?php _e( 'Sorry, no posts matched your criteria.','html5press' ); ?></p>
 	<?php endif; ?>
-	<div id="inifiniteLoader"><?php _e( 'Loading more content','html5press' ); ?> <img src="<?php bloginfo('template_directory'); ?>/images/ajax-loader.gif"></div>
