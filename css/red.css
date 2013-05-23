@@ -1,3 +1,7 @@
+#site-title a {
+	color: #D81711;
+}
+
 a {
 	color: #D81711;
 	text-decoration: none;
