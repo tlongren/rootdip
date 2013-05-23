@@ -93,7 +93,7 @@ function html5press_register_styles() {
 	if ( $options['enable_slimbox'] == 1 ) {
 		wp_enqueue_style( 'slimbox2-style', get_stylesheet_directory_uri().'/css/slimbox2.css');
 	}
-
+	wp_enqueue_style( 'fonts', get_stylesheet_directory_uri().'/css/html5press.css');
 	wp_enqueue_style( 'fonts', get_stylesheet_directory_uri().'/css/fonts/'.$options['theme_font'].'.css');
 }
 
