@@ -1,4 +1,4 @@
-<aside id="sidebar" role="complementary">
+<div id="sidebar" role="complementary" class="span4">
 <?php
 if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
 <?php
@@ -33,5 +33,4 @@ else:
 	</ul>
 </section>
 <?php endif; ?>
-</aside> <!-- end sidebar -->
- </div> <!-- end content -->
+</div> <!-- end sidebar -->
