@@ -1,9 +1,10 @@
+#site-title a {
+	color: #444444;
+}
+
 a {
 	color: #444444;
 	text-decoration: none;
-	-webkit-transition: all 100ms linear;
-	-moz-transition: all 100ms linear;
-	transition: all 100ms linear;
 }
 
 .hentry p a {
