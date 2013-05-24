@@ -14,6 +14,7 @@ a {
 a:hover {
 	color: #333333;
 	text-shadow: 0 1px 0 #fff;
+	text-decoration: underline;
 }
 
 #menu a:hover {
@@ -22,10 +23,17 @@ a:hover {
 	opacity: 0.75;
 }
 
+blockquote {
+  border-left: 5px solid #444444;
+}
+
 figure:hover {
 	border: 2px solid #444444;
 }
 
+a:hover img {
+  box-shadow: 0 0 8px #444444;
+}
 /* Current nav, buttons, more-link */
 #menu .current-menu-item > a,
 .btn,

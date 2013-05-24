@@ -31,6 +31,9 @@ figure:hover {
 	border: 2px solid #F48339;
 }
 
+a:hover img {
+  box-shadow: 0 0 8px #F48339;
+}
 /* Current nav, buttons, more-link */
 #menu .current-menu-item > a,
 .btn,
