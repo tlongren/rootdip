@@ -12,6 +12,14 @@
 }
 
 /*next button*/
+.bx-next:before {
+	content: "\00BB";
+	display: block;
+	text-align: center; 
+	vertical-align:middle;
+	line-height: 20px; 
+	font-size: 30px;
+}
 .bx-next {
 	color: #333;
 	position:absolute;
@@ -26,14 +34,21 @@
 	-webkit-border-radius:300px;
 	-moz-border-radius:300px;
 	border-radius:300px;
-	/*
-	background: -webkit-gradient(linear, left top, left bottombottom, from(#539abf), to(#315d88));  
-	background: -moz-linear-gradient(top, #539abf, #315d88);
-	*/
-	background: url(../images/arrow_right_16x16.png) no-repeat 7px 7px;
+	display: inline-block;
+	text-decoration: none;
 }
-
+.bx-next:hover {
+	text-decoration: none;
+}
 /*previous button*/
+.bx-prev:before {
+	content: "\00AB";
+	display: block;
+	text-align: center; 
+	vertical-align:middle;
+	line-height: 20px; 
+	font-size: 30px;
+}
 .bx-prev {
 	color: #333;
 	position:absolute;
@@ -48,11 +63,9 @@
 	-webkit-border-radius:300px;
 	-moz-border-radius:300px;
 	border-radius:300px;
-	/*
-	background: -webkit-gradient(linear, left top, left bottombottom, from(#539abf), to(#315d88));  
-	background: -moz-linear-gradient(top, #539abf, #315d88);
-	*/
-	background: url(../images/arrow_left_16x16.png) no-repeat 7px 7px;
+}
+.bx-prev:hover {
+	text-decoration: none;
 }
 
 /*pager links*/
