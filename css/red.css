@@ -5,20 +5,26 @@
 a {
 	color: #D81711;
 	text-decoration: none;
-	-webkit-transition: all 100ms linear;
-	-moz-transition: all 100ms linear;
-	transition: all 100ms linear;
+}
+
+.hentry p a {
+	text-decoration: underline;
 }
 
 a:hover {
 	color: #AA0A05;
 	text-shadow: 0 1px 0 #fff;
+	text-decoration: underline;
 }
 
 #menu a:hover {
 	color: #AA0A05;
 	border-radius: 10px 0 10px 0;
 	opacity: 0.75;
+}
+
+blockquote {
+  border-left: 5px solid #D81711;
 }
 
 figure:hover {
