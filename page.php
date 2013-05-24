@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php $options = html5press_get_options(); ?>
-<main id="content" role="main">
+<main id="content" role="main" class="span7">
 		<?php if (!empty($options['featured_cat']) && is_front_page()) { html5press_featured_posts(); } ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>

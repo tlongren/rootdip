@@ -6,7 +6,7 @@ else :
 	$curauth = get_userdata(intval($author));
 endif;
 ?>
-<main id="content" role="main">
+<main id="content" role="main" class="span7">
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
  	  <?php /* If this is a category archive */ if (is_category()) { ?>
 		<h1 class="pagetitle"><?php _e( 'Archive for the','html5press' ); ?> &#8216;<?php single_cat_title(); ?>&#8217; <?php _e( 'Category','html5press' ); ?></h1>

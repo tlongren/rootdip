@@ -2,7 +2,7 @@
 
 <?php $options = html5press_get_options(); ?>
 
-<main id="content" role="main">
+<main id="content" role="main" class="span7">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

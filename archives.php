@@ -8,7 +8,7 @@ $count_tags         = wp_count_terms( 'post_tag', array( 'hide_empty' => true ) 
 ?>
 <?php get_header(); ?>
 
-<main id="content" role="main">
+<main id="content" role="main" class="span7">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>
         
