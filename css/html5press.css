@@ -213,3 +213,160 @@ a#toTop:hover {
     color: #fff;
     text-shadow: none;
 }
+
+/* =Comments
+-------------------------------------------------------------- */
+
+/* Comments link */
+.hentry .comments-link a {
+    background: url(../images/comment-bubble.png) no-repeat right top;
+    color: #666;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 35px;
+    margin-right: -38px;
+    margin-top: -75px;
+    float: right;
+    text-align: center;
+    text-decoration: none;
+    width: 43px;
+    height: 36px;
+}
+.hentry .comments-link a:hover,
+.hentry .comments-link a:focus,
+.hentry .comments-link a:active {
+    text-decoration: underline;
+}
+#comments {
+    clear: both;
+}
+.commentlist {
+    list-style: none;
+    margin: 0;
+}
+.commentlist li.comment {
+    border-bottom: 1px solid #464646;
+    margin: 0 0 24px 0;
+    padding: 10px 0 10px 56px;
+    position: relative;
+}
+/*
+.commentlist li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+*/
+#comments .comment-body ul,
+#comments .comment-body ol {
+    margin-bottom: 18px;
+}
+#comments .comment-body p:last-child {
+    margin-bottom: 6px;
+}
+#comments .comment-body blockquote p:last-child {
+    margin-bottom: 24px;
+}
+.commentlist ol {
+    list-style: decimal;
+}
+.commentlist .avatar {
+    position: absolute;
+    top: 7px;
+    left: 5px;
+}
+
+.comment-meta {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 15px 10px;
+}
+
+.reply {
+    font-size: 14px;
+}
+
+.comment-author {
+}
+.comment-author cite {
+    color: #000;
+    font-style: normal;
+    font-weight: bold;
+}
+.comment-author .says {
+    font-style: italic;
+}
+.commentlist .even {
+    background: #D8D8D8;
+}
+.commentlist .bypostauthor {
+}
+.commentlist .children {
+    list-style: none;
+    margin: 0;
+}
+#respond {
+    border-top: 1px solid #e7e7e7;
+    margin: 24px 0;
+    overflow: hidden;
+    position: relative;
+}
+#respond p {
+    margin: 0;
+}
+#respond .comment-notes {
+    margin-bottom: 1em;
+}
+.form-allowed-tags {
+    line-height: 1em;
+}
+.children #respond {
+    margin: 0 48px 0 0;
+}
+h3#reply-title {
+    margin: 18px 0;
+}
+#comments-list #respond {
+    margin: 0 0 18px 0;
+}
+#comments-list ul #respond {
+    margin: 0;
+}
+#cancel-comment-reply-link {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
+}
+#respond .required {
+    color: #ff4b33;
+    font-weight: bold;
+}
+#respond label {
+    color: #333;
+    font-size: 13px;
+}
+#respond input {
+    margin: 0 0 20px;
+    width: 95%;
+}
+#respond textarea {
+    width: 95%;
+}
+#respond .form-allowed-tags {
+    color: #333;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 15px;
+}
+#respond .form-allowed-tags code {
+    font-size: 11px;
+}
+#respond .form-submit {
+    margin: 12px 0;
+}
+#respond .form-submit input {
+    font-size: 14px;
+    width: auto;
+}
+#comments-title {
+    margin-top: 50px;
+}

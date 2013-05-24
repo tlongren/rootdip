@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php $options = html5press_get_options(); ?>
-<main id="content" role="main">
+<main id="content" role="main" class="span7">
 		<?php get_template_part( 'loop', 'index' ); ?>
 	<h2 class="assistive-text"><?php _e( 'Post navigation', 'html5press' ); ?></h2>
 	<nav class="navigation">

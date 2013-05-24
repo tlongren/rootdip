@@ -12,7 +12,7 @@
 	
 	<title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
 	
-	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<!-- Mobile viewport optimized: h5bp.com/viewport -->
 	<meta name="viewport" content="width=device-width">
 	<link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" />
 	<link href="<?php echo get_stylesheet_directory_uri(); ?>/css/<?php echo esc_attr( $options['theme_color'] ); ?>.css" rel="stylesheet" />
@@ -27,8 +27,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-<div id="wrapper">
 	<!-- Prompt IE 6 and 7 users to install Chrome Frame:		chromium.org/developers/how-tos/chrome-frame-getting-started -->
 	<!--[if lt IE 8]>
 		<p class="chromeframe alert alert-warning">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
@@ -55,7 +53,7 @@
 		
 	</header> <!-- #master-header -->
 
-<div id="main" class="row">
+<div id="main" class="row clearfix">
 	
 	<!-- Main navigation -->
 	<nav id="menu" class="main-navigation span12 clearfix" role="navigation">

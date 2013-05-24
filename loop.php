@@ -28,7 +28,7 @@
 				<?php comments_template(); ?>
 			</article>
         </article> <!-- end post 1 -->
-		<hr />
+		
     <?php endwhile; else: ?>
 		<p><?php _e( 'Sorry, no posts matched your criteria.','html5press' ); ?></p>
 	<?php endif; ?>
