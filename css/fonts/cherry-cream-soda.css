@@ -47,3 +47,19 @@ article p { font-family: 'Cherry Cream Soda', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Cherry Cream Soda', cursive;
 }
+
+figure figcaption {
+  font-family: 'Cherry Cream Soda', cursive;
+}
+
+label {
+  font-family: 'Cherry Cream Soda', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Cherry Cream Soda', cursive;
+}
+
+.more-link {
+  font-family: 'Cherry Cream Soda', cursive;
+}

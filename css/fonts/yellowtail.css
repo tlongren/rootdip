@@ -47,3 +47,19 @@ article p { font-family: 'Yellowtail', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Yellowtail', cursive;
 }
+
+figure figcaption {
+  font-family: 'Yellowtail', cursive;
+}
+
+label {
+  font-family: 'Yellowtail', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Yellowtail', cursive;
+}
+
+.more-link {
+  font-family: 'Yellowtail', cursive;
+}

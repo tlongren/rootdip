@@ -47,3 +47,19 @@ article p { font-family: 'Calligraffitti', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Calligraffitti', cursive;
 }
+
+figure figcaption {
+  font-family: 'Calligraffitti', cursive;
+}
+
+label {
+  font-family: 'Calligraffitti', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Calligraffitti', cursive;
+}
+
+.more-link {
+  font-family: 'Calligraffitti', cursive;
+}

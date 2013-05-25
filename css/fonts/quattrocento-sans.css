@@ -47,3 +47,19 @@ article p { font-family: 'Quattrocento Sans', sans-serif;}
 .widget p, .widget li, footer p {
 	font-family: 'Quattrocento Sans', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+label {
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.more-link {
+  font-family: 'Quattrocento Sans', sans-serif;
+}

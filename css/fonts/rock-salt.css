@@ -47,3 +47,19 @@ article p { font-family: 'Rock Salt', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Rock Salt', cursive;
 }
+
+figure figcaption {
+  font-family: 'Rock Salt', cursive;
+}
+
+label {
+  font-family: 'Rock Salt', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Rock Salt', cursive;
+}
+
+.more-link {
+  font-family: 'Rock Salt', cursive;
+}

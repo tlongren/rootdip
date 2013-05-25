@@ -47,3 +47,19 @@ article p { font-family: 'IM Fell Great Primer SC', serif;}
 .widget p, .widget li, footer p {
 	font-family: 'IM Fell Great Primer SC', serif;
 }
+
+figure figcaption {
+  font-family: 'IM Fell Great Primer SC', serif;
+}
+
+label {
+  font-family: 'IM Fell Great Primer SC', serif;
+}
+
+.main-navigation a {
+  font-family: 'IM Fell Great Primer SC', serif;
+}
+
+.more-link {
+  font-family: 'IM Fell Great Primer SC', serif;
+}

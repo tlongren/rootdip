@@ -47,3 +47,19 @@ article p { font-family: 'Comfortaa', cursive;}
 .widget p, .widget li, footer p {
 	font-family: 'Comfortaa', cursive;
 }
+
+figure figcaption {
+  font-family: 'Comfortaa', cursive;
+}
+
+label {
+  font-family: 'Comfortaa', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Comfortaa', cursive;
+}
+
+.more-link {
+  font-family: 'Comfortaa', cursive;
+}

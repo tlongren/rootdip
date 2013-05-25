@@ -47,3 +47,19 @@ article p { font-family: 'Nothing You Could Do', cursive;}
 .widget p, .widget li, footer p {
 	font-family: 'Nothing You Could Do', cursive;
 }
+
+figure figcaption {
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+label {
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+.more-link {
+  font-family: 'Nothing You Could Do', cursive;
+}

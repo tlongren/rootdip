@@ -47,3 +47,19 @@ article p { font-family: 'Walter Turncoat', cursive;}
 .widget p, .widget li, footer p {
 	font-family: 'Walter Turncoat', cursive;
 }
+
+figure figcaption {
+  font-family: 'Walter Turncoat', cursive;
+}
+
+label {
+  font-family: 'Walter Turncoat', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Walter Turncoat', cursive;
+}
+
+.more-link {
+  font-family: 'Walter Turncoat', cursive;
+}

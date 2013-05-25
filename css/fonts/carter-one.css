@@ -47,3 +47,19 @@ article p { font-family: 'Carter One', sans-serif;}
 .widget p, .widget li, footer p {
     font-family: 'Carter One', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Carter One', sans-serif;
+}
+
+label {
+  font-family: 'Carter One', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Carter One', sans-serif;
+}
+
+.more-link {
+  font-family: 'Carter One', sans-serif;
+}

@@ -47,3 +47,19 @@ article p { font-family: 'Neucha', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Neucha', cursive;
 }
+
+figure figcaption {
+  font-family: 'Neucha', cursive;
+}
+
+label {
+  font-family: 'Neucha', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Neucha', cursive;
+}
+
+.more-link {
+  font-family: 'Neucha', cursive;
+}

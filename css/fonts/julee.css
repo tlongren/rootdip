@@ -47,3 +47,19 @@ article p { font-family: 'Julee', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Julee', cursive;
 }
+
+figure figcaption {
+  font-family: 'Julee', cursive;
+}
+
+label {
+  font-family: 'Julee', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Julee', cursive;
+}
+
+.more-link {
+  font-family: 'Julee', cursive;
+}

@@ -47,3 +47,19 @@ article p { font-family: 'Terminal Dosis', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Terminal Dosis', cursive;
 }
+
+figure figcaption {
+  font-family: 'Terminal Dosis', cursive;
+}
+
+label {
+  font-family: 'Terminal Dosis', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Terminal Dosis', cursive;
+}
+
+.more-link {
+  font-family: 'Terminal Dosis', cursive;
+}

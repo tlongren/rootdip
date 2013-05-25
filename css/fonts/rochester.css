@@ -47,3 +47,19 @@ article p { font-family: 'Rochester', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Rochester', cursive;
 }
+
+figure figcaption {
+  font-family: 'Rochester', cursive;
+}
+
+label {
+  font-family: 'Rochester', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Rochester', cursive;
+}
+
+.more-link {
+  font-family: 'Rochester', cursive;
+}

@@ -47,3 +47,19 @@ article p { font-family: 'Hammersmith One', sans-serif;}
 .widget p, .widget li, footer p {
     font-family: 'Hammersmith One', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+label {
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.more-link {
+  font-family: 'Hammersmith One', sans-serif;
+}

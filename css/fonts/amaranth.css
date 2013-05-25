@@ -47,3 +47,19 @@ article p { font-family: 'Amaranth', sans-serif;}
 .widget p, .widget li, footer p {
 	font-family: 'Amaranth', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Amaranth', sans-serif;
+}
+
+label {
+  font-family: 'Amaranth', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Amaranth', sans-serif;
+}
+
+.more-link {
+  font-family: 'Amaranth', sans-serif;
+}

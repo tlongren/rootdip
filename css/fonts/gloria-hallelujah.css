@@ -47,3 +47,19 @@ article p { font-family: 'Gloria Hallelujah', cursive;}
 .widget p, .widget li, footer p {
 	font-family: 'Gloria Hallelujah', cursive;
 }
+
+figure figcaption {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+label {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.more-link {
+  font-family: 'Gloria Hallelujah', cursive;
+}

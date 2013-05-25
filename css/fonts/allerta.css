@@ -47,3 +47,19 @@ article p { font-family: 'Allerta', sans-serif;}
 .widget p, .widget li, footer p {
     font-family: 'Allerta', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Allerta', sans-serif;
+}
+
+label {
+  font-family: 'Allerta', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Allerta', sans-serif;
+}
+
+.more-link {
+  font-family: 'Allerta', sans-serif;
+}

@@ -47,3 +47,19 @@ article p { font-family: 'Sue Ellen Francisco', cursive;}
 .widget p, .widget li, footer p {
 	font-family: 'Sue Ellen Francisco', cursive;
 }
+
+figure figcaption {
+  font-family: 'Sue Ellen Francisco', cursive;
+}
+
+label {
+  font-family: 'Sue Ellen Francisco', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Sue Ellen Francisco', cursive;
+}
+
+.more-link {
+  font-family: 'Sue Ellen Francisco', cursive;
+}

@@ -47,3 +47,19 @@ article p { font-family: 'Cabin', sans-serif;}
 .widget p, .widget li, footer p {
     font-family: 'Cabin', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Cabin', sans-serif;
+}
+
+label {
+  font-family: 'Cabin', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Cabin', sans-serif;
+}
+
+.more-link {
+  font-family: 'Cabin', sans-serif;
+}

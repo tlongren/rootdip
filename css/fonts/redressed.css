@@ -47,3 +47,19 @@ article p { font-family: 'Redressed', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Redressed', cursive;
 }
+
+figure figcaption {
+  font-family: 'Redressed', cursive;
+}
+
+label {
+  font-family: 'Redressed', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Redressed', cursive;
+}
+
+.more-link {
+  font-family: 'Redressed', cursive;
+}

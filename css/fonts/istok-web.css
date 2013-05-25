@@ -47,3 +47,19 @@ article p { font-family: 'Istok Web', sans-serif;}
 .widget p, .widget li, footer p {
     font-family: 'Istok Web', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Istok Web', sans-serif;
+}
+
+label {
+  font-family: 'Istok Web', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Istok Web', sans-serif;
+}
+
+.more-link {
+  font-family: 'Istok Web', sans-serif;
+}

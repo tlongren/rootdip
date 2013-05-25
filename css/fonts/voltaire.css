@@ -47,3 +47,19 @@ article p { font-family: 'Voltaire', sans-serif;}
 .widget p, .widget li, footer p {
 	font-family: 'Voltaire', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Voltaire', sans-serif;
+}
+
+label {
+  font-family: 'Voltaire', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Voltaire', sans-serif;
+}
+
+.more-link {
+  font-family: 'Voltaire', sans-serif;
+}

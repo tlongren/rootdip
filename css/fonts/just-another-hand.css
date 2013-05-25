@@ -47,3 +47,19 @@ article p { font-family: 'Just Another Hand', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Just Another Hand', cursive;
 }
+
+figure figcaption {
+  font-family: 'Just Another Hand', cursive;
+}
+
+label {
+  font-family: 'Just Another Hand', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Just Another Hand', cursive;
+}
+
+.more-link {
+  font-family: 'Just Another Hand', cursive;
+}

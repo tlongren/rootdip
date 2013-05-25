@@ -47,3 +47,19 @@ article p { font-family: 'Patrick Hand', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Patrick Hand', cursive;
 }
+
+figure figcaption {
+  font-family: 'Patrick Hand', cursive;
+}
+
+label {
+  font-family: 'Patrick Hand', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Patrick Hand', cursive;
+}
+
+.more-link {
+  font-family: 'Patrick Hand', cursive;
+}

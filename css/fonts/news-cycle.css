@@ -47,3 +47,19 @@ article p { font-family: 'News Cycle', sans-serif;}
 .widget p, .widget li, footer p {
     font-family: 'News Cycle', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'News Cycle', sans-serif;
+}
+
+label {
+  font-family: 'News Cycle', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'News Cycle', sans-serif;
+}
+
+.more-link {
+  font-family: 'News Cycle', sans-serif;
+}

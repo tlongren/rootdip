@@ -47,3 +47,19 @@ article p { font-family: 'Short Stack', cursive;}
 .widget p, .widget li, footer p {
 	font-family: 'Short Stack', cursive;
 }
+
+figure figcaption {
+  font-family: 'Short Stack', cursive;
+}
+
+label {
+  font-family: 'Short Stack', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Short Stack', cursive;
+}
+
+.more-link {
+  font-family: 'Short Stack', cursive;
+}

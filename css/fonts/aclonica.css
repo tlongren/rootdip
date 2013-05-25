@@ -47,3 +47,19 @@ article p { font-family: 'Aclonica', sans-serif;}
 .widget p, .widget li, footer p {
     font-family: 'Aclonica', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Aclonica', sans-serif;
+}
+
+label {
+  font-family: 'Aclonica', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Aclonica', sans-serif;
+}
+
+.more-link {
+  font-family: 'Aclonica', sans-serif;
+}

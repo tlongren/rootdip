@@ -47,3 +47,19 @@ article p { font-family: 'Give You Glory', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Give You Glory', cursive;
 }
+
+figure figcaption {
+  font-family: 'Give You Glory', cursive;
+}
+
+label {
+  font-family: 'Give You Glory', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Give You Glory', cursive;
+}
+
+.more-link {
+  font-family: 'Give You Glory', cursive;
+}

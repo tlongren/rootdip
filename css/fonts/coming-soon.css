@@ -47,3 +47,19 @@ article p { font-family: 'Coming Soon', cursive;}
 .widget p, .widget li, footer p {
 	font-family: 'Coming Soon', cursive;
 }
+
+figure figcaption {
+  font-family: 'Coming Soon', cursive;
+}
+
+label {
+  font-family: 'Coming Soon', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Coming Soon', cursive;
+}
+
+.more-link {
+  font-family: 'Coming Soon', cursive;
+}

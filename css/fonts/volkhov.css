@@ -47,3 +47,19 @@ article p { font-family: 'Volkhov', serif;}
 .widget p, .widget li, footer p {
 	font-family: 'Volkhov', serif;
 }
+
+figure figcaption {
+  font-family: 'Volkhov', serif;
+}
+
+label {
+  font-family: 'Volkhov', serif;
+}
+
+.main-navigation a {
+  font-family: 'Volkhov', serif;
+}
+
+.more-link {
+  font-family: 'Volkhov', serif;
+}

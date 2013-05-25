@@ -47,3 +47,19 @@ article p { font-family: 'Vibur', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Vibur', cursive;
 }
+
+figure figcaption {
+  font-family: 'Vibur', cursive;
+}
+
+label {
+  font-family: 'Vibur', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Vibur', cursive;
+}
+
+.more-link {
+  font-family: 'Vibur', cursive;
+}

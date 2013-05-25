@@ -47,3 +47,19 @@ article p { font-family: 'Smythe', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Smythe', cursive;
 }
+
+figure figcaption {
+  font-family: 'Smythe', cursive;
+}
+
+label {
+  font-family: 'Smythe', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Smythe', cursive;
+}
+
+.more-link {
+  font-family: 'Smythe', cursive;
+}

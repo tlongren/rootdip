@@ -47,3 +47,19 @@ article p { font-family: 'Lobster Two', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Lobster Two', cursive;
 }
+
+figure figcaption {
+  font-family: 'Lobster Two', cursive;
+}
+
+label {
+  font-family: 'Lobster Two', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Lobster Two', cursive;
+}
+
+.more-link {
+  font-family: 'Lobster Two', cursive;
+}

@@ -47,3 +47,19 @@ article p { font-family: 'Questrial', sans-serif;}
 .widget p, .widget li, footer p {
 	font-family: 'Questrial', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Questrial', sans-serif;
+}
+
+label {
+  font-family: 'Questrial', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Questrial', sans-serif;
+}
+
+.more-link {
+  font-family: 'Questrial', sans-serif;
+}

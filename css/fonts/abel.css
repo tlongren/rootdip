@@ -47,3 +47,19 @@ article p { font-family: 'Abel', sans-serif;}
 .widget p, .widget li, footer p {
 	font-family: 'Abel', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Abel', sans-serif;
+}
+
+label {
+  font-family: 'Abel', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Abel', sans-serif;
+}
+
+.more-link {
+  font-family: 'Abel', sans-serif;
+}

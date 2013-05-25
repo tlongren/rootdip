@@ -47,3 +47,19 @@ article p { font-family: 'Antic', sans-serif;}
 .widget p, .widget li, footer p {
 	font-family: 'Antic', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Antic', sans-serif;
+}
+
+label {
+  font-family: 'Antic', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Antic', sans-serif;
+}
+
+.more-link {
+  font-family: 'Antic', sans-serif;
+}

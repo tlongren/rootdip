@@ -47,3 +47,19 @@ article p { font-family: 'Days One', sans-serif;}
 .widget p, .widget li, footer p {
     font-family: 'Days One', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Days One', sans-serif;
+}
+
+label {
+  font-family: 'Days One', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Days One', sans-serif;
+}
+
+.more-link {
+  font-family: 'Days One', sans-serif;
+}

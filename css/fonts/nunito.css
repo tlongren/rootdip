@@ -47,3 +47,19 @@ article p { font-family: 'Nunito', sans-serif;}
 .widget p, .widget li, footer p {
     font-family: 'Nunito', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Nunito', sans-serif;
+}
+
+label {
+  font-family: 'Nunito', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Nunito', sans-serif;
+}
+
+.more-link {
+  font-family: 'Nunito', sans-serif;
+}

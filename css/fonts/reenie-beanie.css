@@ -47,3 +47,19 @@ article p { font-family: 'Reenie Beanie', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Reenie Beanie', cursive;
 }
+
+figure figcaption {
+  font-family: 'Reenie Beanie', cursive;
+}
+
+label {
+  font-family: 'Reenie Beanie', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Reenie Beanie', cursive;
+}
+
+.more-link {
+  font-family: 'Reenie Beanie', cursive;
+}

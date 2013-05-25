@@ -47,3 +47,19 @@ article p { font-family: 'Rationale', cursive;}
 .widget p, .widget li, footer p {
 	font-family: 'Rationale', cursive;
 }
+
+figure figcaption {
+  font-family: 'Rationale', cursive;
+}
+
+label {
+  font-family: 'Rationale', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Rationale', cursive;
+}
+
+.more-link {
+  font-family: 'Rationale', cursive;
+}

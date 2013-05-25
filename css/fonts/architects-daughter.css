@@ -52,3 +52,19 @@ article p { font-family: 'Architects Daughter', cursive;}
 .widget p, .widget li, footer p {
     font-family: 'Architects Daughter', cursive;
 }
+
+figure figcaption {
+  font-family: 'Architects Daughter', cursive;
+}
+
+label {
+  font-family: 'Architects Daughter', cursive;
+}
+
+.main-navigation a {
+  font-family: 'Architects Daughter', cursive;
+}
+
+.more-link {
+  font-family: 'Architects Daughter', cursive;
+}

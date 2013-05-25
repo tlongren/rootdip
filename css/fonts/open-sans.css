@@ -48,3 +48,19 @@ article p { font-family: 'Open Sans', sans-serif;}
 .widget p, .widget li, footer p {
 	font-family: 'Open Sans', sans-serif;
 }
+
+figure figcaption {
+  font-family: 'Open Sans', sans-serif;
+}
+
+label {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-navigation a {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.more-link {
+  font-family: 'Open Sans', sans-serif;
+}
