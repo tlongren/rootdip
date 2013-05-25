@@ -201,7 +201,7 @@ a.download-big {
   
     /* make it big and easy to see (size, style to preferences) */
     width: 150px;
-    line-height: 38px;
+    line-height: 30px;
     height: 38px;
     padding: 3px;
     background-color: #000;
