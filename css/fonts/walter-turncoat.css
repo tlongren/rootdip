@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'Walter Turncoat', cursive;
 }
-article p { font: 14px 'Walter Turncoat', cursive;}
+article p { font-family: 'Walter Turncoat', cursive;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Walter Turncoat', cursive;

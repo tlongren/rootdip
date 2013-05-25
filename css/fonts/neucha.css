@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Neucha', cursive;
 }
-article p { font: 14px 'Neucha', cursive;}
+article p { font-family: 'Neucha', cursive;}
 
 .widget p, .widget li, footer p {
     font-family: 'Neucha', cursive;

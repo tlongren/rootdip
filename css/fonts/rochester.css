@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Rochester', cursive;
 }
-article p { font: 14px 'Rochester', cursive;}
+article p { font-family: 'Rochester', cursive;}
 
 .widget p, .widget li, footer p {
     font-family: 'Rochester', cursive;

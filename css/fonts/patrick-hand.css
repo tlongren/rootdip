@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Patrick Hand', cursive;
 }
-article p { font: 14px 'Patrick Hand', cursive;}
+article p { font-family: 'Patrick Hand', cursive;}
 
 .widget p, .widget li, footer p {
     font-family: 'Patrick Hand', cursive;

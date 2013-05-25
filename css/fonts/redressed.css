@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Redressed', cursive;
 }
-article p { font: 14px 'Redressed', cursive;}
+article p { font-family: 'Redressed', cursive;}
 
 .widget p, .widget li, footer p {
     font-family: 'Redressed', cursive;

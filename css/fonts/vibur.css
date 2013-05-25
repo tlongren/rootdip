@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Vibur', cursive;
 }
-article p { font: 14px 'Vibur', cursive;}
+article p { font-family: 'Vibur', cursive;}
 
 .widget p, .widget li, footer p {
     font-family: 'Vibur', cursive;

@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'PT Sans Narrow', sans-serif;
 }
-article p { font: 14px 'PT Sans Narrow', sans-serif;}
+article p { font-family: 'PT Sans Narrow', sans-serif;}
 
 .widget p, .widget li, footer p {
 	font-family: 'PT Sans Narrow', sans-serif;

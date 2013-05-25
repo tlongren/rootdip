@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'Nothing You Could Do', cursive;
 }
-article p { font: 14px 'Nothing You Could Do', cursive;}
+article p { font-family: 'Nothing You Could Do', cursive;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Nothing You Could Do', cursive;

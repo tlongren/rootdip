@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'Gloria Hallelujah', cursive;
 }
-article p { font: 14px 'Gloria Hallelujah', cursive;}
+article p { font-family: 'Gloria Hallelujah', cursive;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Gloria Hallelujah', cursive;

@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'Antic', sans-serif;
 }
-article p { font: 14px 'Antic', sans-serif;}
+article p { font-family: 'Antic', sans-serif;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Antic', sans-serif;

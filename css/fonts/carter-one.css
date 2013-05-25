@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Carter One', sans-serif;
 }
-article p { font: 14px 'Carter One', sans-serif;}
+article p { font-family: 'Carter One', sans-serif;}
 
 .widget p, .widget li, footer p {
     font-family: 'Carter One', sans-serif;

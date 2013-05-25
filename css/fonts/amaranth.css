@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'Amaranth', sans-serif;
 }
-article p { font: 14px 'Amaranth', sans-serif;}
+article p { font-family: 'Amaranth', sans-serif;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Amaranth', sans-serif;

@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'Sue Ellen Francisco', cursive;
 }
-article p { font: 14px 'Sue Ellen Francisco', cursive;}
+article p { font-family: 'Sue Ellen Francisco', cursive;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Sue Ellen Francisco', cursive;

@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Just Another Hand', cursive;
 }
-article p { font: 14px 'Just Another Hand', cursive;}
+article p { font-family: 'Just Another Hand', cursive;}
 
 .widget p, .widget li, footer p {
     font-family: 'Just Another Hand', cursive;

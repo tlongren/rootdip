@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'Short Stack', cursive;
 }
-article p { font: 14px 'Short Stack', cursive;}
+article p { font-family: 'Short Stack', cursive;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Short Stack', cursive;

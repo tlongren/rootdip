@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Calligraffitti', cursive;
 }
-article p { font: 14px 'Calligraffitti', cursive;}
+article p { font-family: 'Calligraffitti', cursive;}
 
 .widget p, .widget li, footer p {
     font-family: 'Calligraffitti', cursive;

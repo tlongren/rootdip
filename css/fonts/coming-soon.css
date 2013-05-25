@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'Coming Soon', cursive;
 }
-article p { font: 14px 'Coming Soon', cursive;}
+article p { font-family: 'Coming Soon', cursive;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Coming Soon', cursive;

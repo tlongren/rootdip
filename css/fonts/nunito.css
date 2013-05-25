@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Nunito', sans-serif;
 }
-article p { font: 14px 'Nunito', sans-serif;}
+article p { font-family: 'Nunito', sans-serif;}
 
 .widget p, .widget li, footer p {
     font-family: 'Nunito', sans-serif;

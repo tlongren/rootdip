@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Cabin', sans-serif;
 }
-article p { font: 14px 'Cabin', sans-serif;}
+article p { font-family: 'Cabin', sans-serif;}
 
 .widget p, .widget li, footer p {
     font-family: 'Cabin', sans-serif;

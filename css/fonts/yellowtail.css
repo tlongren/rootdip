@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Yellowtail', cursive;
 }
-article p { font: 14px 'Yellowtail', cursive;}
+article p { font-family: 'Yellowtail', cursive;}
 
 .widget p, .widget li, footer p {
     font-family: 'Yellowtail', cursive;

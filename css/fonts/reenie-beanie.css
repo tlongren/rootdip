@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Reenie Beanie', cursive;
 }
-article p { font: 14px 'Reenie Beanie', cursive;}
+article p { font-family: 'Reenie Beanie', cursive;}
 
 .widget p, .widget li, footer p {
     font-family: 'Reenie Beanie', cursive;

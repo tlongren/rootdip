@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Terminal Dosis', cursive;
 }
-article p { font: 14px 'Terminal Dosis', cursive;}
+article p { font-family: 'Terminal Dosis', cursive;}
 
 .widget p, .widget li, footer p {
     font-family: 'Terminal Dosis', cursive;

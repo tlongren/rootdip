@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Give You Glory', cursive;
 }
-article p { font: 14px 'Give You Glory', cursive;}
+article p { font-family: 'Give You Glory', cursive;}
 
 .widget p, .widget li, footer p {
     font-family: 'Give You Glory', cursive;

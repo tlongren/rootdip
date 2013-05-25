@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'Questrial', sans-serif;
 }
-article p { font: 14px 'Questrial', sans-serif;}
+article p { font-family: 'Questrial', sans-serif;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Questrial', sans-serif;

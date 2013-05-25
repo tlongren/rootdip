@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'Volkhov', serif;
 }
-article p { font: 14px 'Volkhov', serif;}
+article p { font-family: 'Volkhov', serif;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Volkhov', serif;

@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'Comfortaa', cursive;
 }
-article p { font: 14px 'Comfortaa', cursive;}
+article p { font-family: 'Comfortaa', cursive;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Comfortaa', cursive;

@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'Abel', sans-serif;
 }
-article p { font: 14px 'Abel', sans-serif;}
+article p { font-family: 'Abel', sans-serif;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Abel', sans-serif;

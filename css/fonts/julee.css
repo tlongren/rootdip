@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Julee', cursive;
 }
-article p { font: 14px 'Julee', cursive;}
+article p { font-family: 'Julee', cursive;}
 
 .widget p, .widget li, footer p {
     font-family: 'Julee', cursive;

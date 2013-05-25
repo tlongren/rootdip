@@ -42,7 +42,8 @@ legend {
 a.button {
 	font: bold 12px 'Open Sans', sans-serif;
 }
-article p { font: 14px 'Open Sans', sans-serif;}
+
+article p { font-family: 'Open Sans', sans-serif;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Open Sans', sans-serif;

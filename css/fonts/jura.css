@@ -42,7 +42,7 @@ legend {
 a.button {
 	font: bold 12px 'Jura', sans-serif;
 }
-article p { font: 14px 'Jura', sans-serif;}
+article p { font-family: 'Jura', sans-serif;}
 
 .widget p, .widget li, footer p {
 	font-family: 'Jura', sans-serif;

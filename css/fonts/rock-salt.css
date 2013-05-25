@@ -42,7 +42,7 @@ legend {
 a.button {
     font: bold 12px 'Rock Salt', cursive;
 }
-article p { font: 14px 'Rock Salt', cursive;}
+article p { font-family: 'Rock Salt', cursive;}
 
 .widget p, .widget li, footer p {
     font-family: 'Rock Salt', cursive;
