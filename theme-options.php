@@ -12,8 +12,8 @@ function html5press_get_default_options() {
 		'maintenance_mode' => false,
 		'custom_logo_url' => '',
 		'featured_image_size' => 'large',
-		'theme_color' => 'pink',
-		'theme_font' => 'droid-serif',
+		'theme_color' => 'black',
+		'theme_font' => 'open-sans',
 		'featured_cat' => '',
 		'num_featured' => '5',
 		'custom_css' => '',
@@ -130,9 +130,9 @@ $html5press_theme_colors = array(
 
 // Store font choices in an array
 $html5press_theme_fonts = array(
-	'droid-serif' => array(
-		'value' => 'droid-serif',
-		'label' => 'Droid Serif'
+	'open-sans' => array(
+		'value' => 'open-sans',
+		'label' => 'Open Sans'
 	),
 	'abel' => array(
 		'value' => 'abel',
@@ -185,6 +185,10 @@ $html5press_theme_fonts = array(
 	'days-one' => array(
 		'value' => 'days-one',
 		'label' => 'Days One'
+	),
+	'droid-serif' => array(
+		'value' => 'droid-serif',
+		'label' => 'Droid Serif'
 	),
 	'give-you-glory' => array(
 		'value' => 'give-you-glory',
@@ -241,10 +245,6 @@ $html5press_theme_fonts = array(
 	'nunito' => array(
 		'value' => 'nunito',
 		'label' => 'Nunito'
-	),
-	'open-sans' => array(
-		'value' => 'open-sans',
-		'label' => 'Open Sans'
 	),
 	'patrick-hand' => array(
 		'value' => 'patrick-hand',
