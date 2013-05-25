@@ -476,7 +476,6 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 a:hover img {
-  box-shadow: 0 0 8px #f71570;
   -webkit-transition: all 200ms ease;
   -moz-transition: all 200ms ease;
   -ms-transition: all 200ms ease;

@@ -35,11 +35,7 @@ a:hover img {
   box-shadow: 0 0 8px #F48339;
 }
 /* Current nav, buttons, more-link */
-#menu .current-menu-item > a,
-.btn,
-.more-link,
-input[type=submit],
-legend {
+#menu .current-menu-item > a {
 	background: #F48339; /* Fallback */
 	background: -moz-linear-gradient(top, #F48339 0%, #F47724 100%); /* FF 3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F48339), color-stop(100%,#F47724)); /* Chrome, Safari 4+ */

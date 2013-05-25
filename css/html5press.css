@@ -1,5 +1,5 @@
 /* Google Buttons CSS. From: http://pixify.com/blog/use-google-plus-to-improve-your-ui/ */
-a.button {
+a.button, a.more-link {
     color: #6e6e6e;
     text-decoration: none;
     padding: 7px 12px;
@@ -17,13 +17,13 @@ a.button {
     border-radius: 2px;
     margin-right: 10px;
 }
-a.button:hover {
+a.button:hover, a.more-link:hover {
     color: #333;
     border-color: #999;
     -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2) -webkit-box-shadow:0 2px 5px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
-a.button:active {
+a.button:active, a.more-link:active {
     color: #000;
     border-color: #444;
 }
