@@ -13,7 +13,6 @@ a {
 
 a:hover {
 	color: #333333;
-	text-shadow: 0 1px 0 #fff;
 	text-decoration: underline;
 }
 
@@ -64,10 +63,6 @@ a:hover img {
 		margin-left: 10px;
 	}
 
-input[type="submit"]:hover {
-	text-shadow: 0 1px 0 #444444;
-}
-
 /*pager links hover and active states*/
 .bx-pager .pager-active,
 .bx-pager a:hover {
@@ -101,7 +96,4 @@ input:focus,
 textarea:hover,
 textarea:focus {
 	color: #333;
-	-webkit-box-shadow: 0px 1px 1px #ccc, inset 1px 2px 1px rgba(68, 68, 68, 0.3);
-	-moz-box-shadow: 0px 1px 1px #ccc, inset 1px 2px 1px rgba(68, 68, 68, 0.3);
-	box-shadow: 0px 1px 1px #ccc, inset 1px 2px 1px rgba(68, 68, 68, 0.3);
 }
