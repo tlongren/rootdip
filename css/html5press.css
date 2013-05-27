@@ -65,67 +65,67 @@ a.supersize {
     padding: 15px 20px;
 }
 a.save {
-    background: url(images/sprite.png) 10px 7px no-repeat #f3f3f3;
+    background: url(../images/sprite.png) 10px 7px no-repeat #f3f3f3;
     padding-left: 30px;
 }
 a.add {
-    background: url(images/sprite.png)  10px -27px no-repeat #f3f3f3;
+    background: url(../images/sprite.png)  10px -27px no-repeat #f3f3f3;
     padding-left: 30px;
 }
 a.delete {
-    background: url(images/sprite.png)  10px -61px no-repeat #f3f3f3;
+    background: url(../images/sprite.png)  10px -61px no-repeat #f3f3f3;
     padding-left: 30px;
 }
 a.flag {
-    background: url(images/sprite.png)  10px -96px no-repeat #f3f3f3;
+    background: url(../images/sprite.png)  10px -96px no-repeat #f3f3f3;
     padding-left: 30px;
 }
 a.up {
-    background: url(images/sprite.png)  13px -133px no-repeat #f3f3f3;
+    background: url(../images/sprite.png)  13px -133px no-repeat #f3f3f3;
     width: 18px;
 }
 a.down {
-    background: url(images/sprite.png)  13px -168px no-repeat #f3f3f3;
+    background: url(../images/sprite.png)  13px -168px no-repeat #f3f3f3;
     width: 18px;
 }
 a.download {
-    background: url(images/sprite.png)  10px -190px no-repeat #f3f3f3;
+    background: url(../images/sprite.png)  10px -190px no-repeat #f3f3f3;
     padding-left: 30px;
 }
 a.save-big {
-    background: url(images/sprite.png) 15px 11px no-repeat #f3f3f3;
+    background: url(../images/sprite.png) 15px 11px no-repeat #f3f3f3;
     font-size: 16px;
     padding: 10px 15px 10px 35px;
 }
 a.add-big {
-    background: url(images/sprite.png)  15px -23px no-repeat #f3f3f3;
+    background: url(../images/sprite.png)  15px -23px no-repeat #f3f3f3;
     font-size: 16px;
     padding: 10px 15px 10px 35px;
 }
 a.delete-big {
-    background: url(images/sprite.png)  15px -57px no-repeat #f3f3f3;
+    background: url(../images/sprite.png)  15px -57px no-repeat #f3f3f3;
     font-size: 16px;
     padding: 10px 15px 10px 35px;
 }
 a.flag-big {
-    background: url(images/sprite.png)  15px -92px no-repeat #f3f3f3;
+    background: url(../images/sprite.png)  15px -92px no-repeat #f3f3f3;
     font-size: 16px;
     padding: 10px 15px 10px 35px;
 }
 a.up-big {
-    background: url(images/sprite.png)  15px -128px no-repeat #f3f3f3;
+    background: url(../images/sprite.png)  15px -128px no-repeat #f3f3f3;
     width: 18px;
     font-size: 16px;
     padding: 10px 15px;
 }
 a.down-big {
-    background: url(images/sprite.png)  15px -163px no-repeat #f3f3f3;
+    background: url(../images/sprite.png)  15px -163px no-repeat #f3f3f3;
     width: 18px;
     font-size: 16px;
     padding: 10px 15px;
 }
 a.download-big {
-    background: url(images/sprite.png)  10px -190px no-repeat #f3f3f3;
+    background: url(../images/sprite.png)  10px -190px no-repeat #f3f3f3;
     font-size: 16px;
     padding: 10px 15px 10px 35px;
 }
