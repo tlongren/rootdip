@@ -10,9 +10,7 @@ I thought Jesper's stuff looked nice, and no WordPress theme existed yet based o
 
 Demo
 -----------------------------
-You can find [a demo here](http://longren.org/), and a very large screenshot below.
-
-![HTML5Press Screenshot](http://i.imgur.com/zKWAhzz.png "HTML5Press Screenshot")
+You can find [a demo here](http://longren.org/), and a very large screenshot below at the end of this README.
 
 
 Notes
@@ -35,3 +33,15 @@ Notes
 Other Considerations
 -----------------------------
 A majority of the images included in HTML5Press are from the [iconic icon set](http://somerandomdude.com/projects/iconic/ "Iconic Icons!") by [P.J. Onori](http://somerandomdude.com/ "Some Random Dude"). Images from Iconic are the tag, sticky post identifier, link post format identifier, status post format identifier, quote post format identifier and left and right arrows. I will likely use more images from Iconic as I add additional features/post formats to HTML5Press.
+
+
+How To Contribute
+-----------------------------
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+
+![HTML5Press Screenshot](http://i.imgur.com/zKWAhzz.png "HTML5Press Screenshot")
