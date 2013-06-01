@@ -231,6 +231,34 @@ a#toTop:hover {
 }
 #main #gallery-1 .gallery-item {width:auto !important;}
 
+/* Post Format Styles */
+.format-link { background:url(images/format-link.png) no-repeat left top; }
+.format-quote { background:url(images/format-quote.png) no-repeat left top; }
+.format-status { background:url(images/format-status.png) no-repeat left top; }
+.format-status h1.entry-title a { font-size: 70%; }
+.sticky { background:url(images/pin.png) no-repeat left top; }
+
+.sticky .entry-title, .format-link .entry-title, .format-quote .entry-title, .format-status .entry-title {
+    margin-left: 30px;
+}
+.post-tags {
+    margin: 5px 0 5px 5px;
+    background: url(images/tag.png) no-repeat left 3px;
+    display: block;
+    padding-left: 30px;
+}
+.post-page-links { text-align:center; font-size: 18px; }
+
+.more-span {
+    padding-top: 15px;
+}
+article .btn a { color: #fff; }
+
+img#wpstats {
+    height:0;
+    overflow:hidden;
+}
+
 /* =Comments
 -------------------------------------------------------------- */
 
