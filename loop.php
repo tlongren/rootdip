@@ -15,12 +15,12 @@
 	            <?php } ?>
             </div> <!-- .entry-content -->
 			<?php /* Edit Link */ edit_post_link(); ?>
+			<?php the_tags( '<span class="post-tags">' . __( 'Tagged with: ','html5press' ), ', ', '</span>' );	?>
 			<footer class="entry-meta">
 					<?php _e( 'In ','html5press'); ?><?php the_category(', '); ?>
 					<?php _e( 'by ','html5press'); ?> <span class="author vcard"><?php the_author_posts_link(); ?></span>
 					<?php if ($options['fuzzy_timestamps'] == 0) { _e( '','html5press'); } ?> <time datetime="<?php the_time('Y-m-d\TH:i:sO'); ?>" class="timeago" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time><?php if (get_the_modified_time() != get_the_time()) { ?>, updated <time datetime="<?php the_modified_time('Y-m-d\TH:i:sO'); ?>"><?php the_modified_date(); ?></time><?php } ?>
 					<?php wp_link_pages( array( 'before' => __( '<span class="alignright">Pages:', 'html5press' ), 'after' => '</span>' ) ); ?>
-				
             </footer> <!-- end post meta -->
 			<article class="comments">
 				<?php comments_template(); ?>
