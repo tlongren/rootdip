@@ -287,14 +287,7 @@ function html5press_admin_bar_link() {
 		'parent' => '',
 		'id' => 'html5press-options',
 		'title' => __( 'HTML5Press Options','html5press' ),
-		'href' => admin_url( 'admin.php?page=theme_options'),
-		'meta' => false
-	));
-	$wp_admin_bar->add_menu( array(
-		'parent' => 'html5press-options',
-		'id' => 'html5press-notes',
-		'title' => __( 'HTML5Press Notes','html5press' ),
-		'href' => admin_url( 'admin.php?page=theme_options_notes'),
+		'href' => admin_url( 'themes.php?page=theme_options' ),
 		'meta' => false
 	));
 }
