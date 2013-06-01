@@ -132,45 +132,45 @@ a.download-big {
 
 /* Author Info */
 #author-info {
-	font-size: 12px;
-	overflow: hidden;
-	margin-top:25px;
+    font-size: 12px;
+    overflow: hidden;
+    margin-top:25px;
 }
 .singular #author-info {
-	background: #f9f9f9;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	margin: 2.2em -35.6% 0 -35.4%;
-	padding: 20px 35.4%;
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 2.2em -35.6% 0 -35.4%;
+    padding: 20px 35.4%;
 }
 .archive #author-info {
-	border-bottom: 1px solid #ddd;
-	margin: 0 0 2.2em;
-	padding: 0 0 2.2em;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 2.2em;
+    padding: 0 0 2.2em;
 }
 #author-avatar {
-	float: left;
-	width:85px;
+    float: left;
+    width:85px;
 }
 #author-avatar img {
-	background: #fff;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	-webkit-box-shadow: 0 1px 2px #bbb;
-	-moz-box-shadow: 0 1px 2px #bbb;
-	box-shadow: 0 1px 2px #bbb;
-	padding: 3px;
+    background: #fff;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px #bbb;
+    -moz-box-shadow: 0 1px 2px #bbb;
+    box-shadow: 0 1px 2px #bbb;
+    padding: 3px;
 }
 #author-description {
-	float: left;
-	margin-left: 10px;
-	width: 490px;
+    float: left;
+    margin-left: 10px;
+    width: 490px;
 }
 #author-description h2 {
-	color: #000;
-	font-size: 15px;
-	font-weight: bold;
-	margin: 5px 0 10px;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px 0 10px;
 }
 
 #toTop {
@@ -232,18 +232,18 @@ a#toTop:hover {
 #main #gallery-1 .gallery-item {width:auto !important;}
 
 /* Post Format Styles */
-.format-link { background:url(images/format-link.png) no-repeat left top; }
-.format-quote { background:url(images/format-quote.png) no-repeat left top; }
-.format-status { background:url(images/format-status.png) no-repeat left top; }
+.format-link { background:url(../images/format-link.png) no-repeat left top; }
+.format-quote { background:url(../images/format-quote.png) no-repeat left top; }
+.format-status { background:url(../images/format-status.png) no-repeat left top; }
 .format-status h1.entry-title a { font-size: 70%; }
-.sticky { background:url(images/pin.png) no-repeat left top; }
+.sticky { background:url(../images/pin.png) no-repeat left top; }
 
 .sticky .entry-title, .format-link .entry-title, .format-quote .entry-title, .format-status .entry-title {
     margin-left: 30px;
 }
 .post-tags {
     margin: 5px 0 5px 5px;
-    background: url(images/tag.png) no-repeat left 3px;
+    background: url(../images/tag.png) no-repeat left 3px;
     display: block;
     padding-left: 30px;
 }
