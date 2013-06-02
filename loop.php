@@ -15,7 +15,7 @@
 	            <?php } ?>
             </div> <!-- .entry-content -->
 			<?php /* Edit Link */ edit_post_link(); ?>
-			<?php the_tags( '<span class="post-tags">' . __( 'Tagged with: ','html5press' ), ', ', '</span>' );	?>
+			<?php if (!is_home()) { the_tags( '<span class="post-tags">' . __( 'Tagged with: ','html5press' ), ', ', '</span>' ); } ?>
 			<footer class="entry-meta">
 					<?php _e( 'In ','html5press'); ?><?php the_category(', '); ?>
 					<?php _e( 'by ','html5press'); ?> <span class="author vcard"><?php the_author_posts_link(); ?></span>
