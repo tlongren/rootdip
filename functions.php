@@ -40,7 +40,7 @@ function html5press_theme_setup() {
 	register_nav_menu( 'main-menu', __('Main Menu','html5press') ); // navigation menus
 	add_theme_support( 'automatic-feed-links' ); // automatic feeds
 	add_image_size( 'bxthumb', 200, 200, true ); // featured post slider image size
-	add_custom_background( 'html5press_custom_background_callback' ); // enable custom backgrounds
+	add_theme_support( 'html5press_custom_background_callback' ); // enable custom backgrounds
 	add_editor_style( '/css/editor-style.css' );
 }
 
