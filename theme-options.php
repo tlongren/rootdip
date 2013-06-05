@@ -331,21 +331,6 @@ function html5press_theme_options() {
 
 add_action( 'admin_menu', 'html5press_theme_options' );
 
-// Function for notes page
-function html5press_theme_notes_page() {
-	echo '<div class="wrap">';
-	screen_icon();
-	echo '<h2>HTML5Press Notes</h2><ol>
-	<li><strong>Archive Page:</strong> There\'s a page template called Archives. Don\'t enter any page content, just title the page and select Archives for the page template. The archives will be generated automatically. See <a href="http://html5press.com/archives/">here for an example</a>.</li>
-	<li><strong>Link Post Format:</strong> To utilize the link Post Format, simply write a new post and select "Link" for the format. You\'ll also need to add a custom field with the URL you want to link to. The custom field name should be LinkFormatURL and the custom field value should be the URL you want to link to.</li>
-	<li><strong>Quote Post Format:</strong> When using this post format, I usually use the author or source as the post title, and then put the quote inside a blockquote for the actual post content.</li>
-	<li><strong>Status Post Format:</strong> Just put your status as the post title and publish (make sure you select the status format!). No post content is necessary.</li>
-	<li><strong>Maintenance Mode:</strong> This option lets you show a "maintenance" message to visitors who aren\'t logged in. This can be useful while making changes to your website or while tinkering with HTML5Press. Just don\'t forget to disable it when you\'re done or your visitors won\'t see your site!</li>
-	<li><strong>Fuzzy Timestamps:</strong> Enabling fuzzy timestamps on the options page will cause dates/times to display like "two days ago" or "4 hours ago", instead of dates showing "10/07/2011 11:23:34".</li>
-	<li><strong>Twitter Widget:</strong> A custom twitter widget is included with HTML5Press as of version 2.1. This widget is based on the <a href="https://github.com/matthiassiegel/Simple-Twitter-Widget" target="_blank">Simple Twitter Widget</a> by <a href="http://chipsandtv.com" target="_blank">Matthias Siegel</a>. Matthias graciously allowed me to include his code in HTML5Press.</li>
-</ol></div>';
-}
-
 // Function to generate options page
 function html5press_theme_options_page() {
 	global $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors, $html5press_theme_fonts;
