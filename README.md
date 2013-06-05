@@ -1,6 +1,6 @@
 html5press
 ==================
-html5press is a theme for WordPress based on work from [Jesper](http://jayj.dk/2009/a-free-html5-and-css3-theme/ "Original work"). He's [on GitHub too](https://github.com/jayj)!
+html5press is a theme for WordPress based on work from [Jesper](http://jayj.dk/2009/a-free-html5-and-css3-theme/ "Original work"). He's [on GitHub too](https://github.com/jayj)! It's fully compatible with WordPress 3.6.
 
 
 Background
