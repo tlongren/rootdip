@@ -1,4 +1,4 @@
-<?php if (is_paged()) { ?><h1 class="pagetitle"><?php $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1; _e( 'Page','html5press' ); ?> <?=$pageNumber?></h1><?php } ?>
+<?php if (is_paged()) { ?><h1 class="pagetitle"><?php $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1; _e( 'Page','html5press' ); ?> <?php echo $pageNumber; ?></h1><?php } ?>
 		<?php if (!empty($options['featured_cat']) && is_front_page()) { html5press_featured_posts(); } ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>
