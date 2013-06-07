@@ -10,7 +10,6 @@ function html5press_get_default_options() {
 		'show_query_stats' => false,
 		'fuzzy_timestamps' => false,
 		'maintenance_mode' => false,
-		'custom_logo_url' => '',
 		'featured_image_size' => 'large',
 		'theme_color' => 'black',
 		'theme_font' => 'open-sans',
@@ -396,11 +395,6 @@ function html5press_theme_options_page() {
 	<label for="maintenance_mode">Enabled</label>
 	</td>
 	</tr>
-	<tr valign="top"><th scope="row"><label for="custom_logo_url">Custom Logo URL</label></th>
-	<td>
-	<input type="text" id="custom_logo_url" name="html5press_options[custom_logo_url]" value="<?php echo esc_attr($options['custom_logo_url']); ?>" />
-	</td>
-	</tr>
 	<tr valign="top"><th scope="row"><label for="featured_image_size">Linked Featured Image Size</label></th>
 	<td>
 	<select id="featured_image_size" name="html5press_options[featured_image_size]">
@@ -494,8 +488,6 @@ function html5press_theme_options_page() {
 
 function html5press_validate_options( $input ) {
 	global $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors, $html5press_theme_fonts;
-	
-	$input['custom_logo_url'] = wp_filter_nohtml_kses( $input['custom_logo_url'] );
 	
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
 	$prev = $options['featured_cat'];
