@@ -34,19 +34,20 @@
 	<header id="master-header" class="clearfix" role="banner">
 	
 		<div id="hgroup">
-			<h1 id="site-title">
+			<?php
+			$header_image = get_header_image();
+			if ( !empty( $header_image ) ) {
+			?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                	<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+            	</a>
+			<?php } else { ?>
+            	<h1 id="site-title">
 				<a href="<?php echo home_url(); ?>">
-					<?php
-						if ( empty( $options['custom_logo_url'] ) ) {
-							bloginfo( 'name' );
-						} else {
-					?>
-						<img src="<?php echo esc_url( $options['custom_logo_url'] ); ?>" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
-					<?php } ?>
+					<?php bloginfo( 'name' ); ?>
 				</a>
 			</h1>
-
-			<?php if ( $options['show_tagline'] ) { ?>
+			<?php } if ( $options['show_tagline'] ) { ?>
 				<h2 id="site-description"><?php bloginfo('description'); ?></h2>
 			<?php } ?>
 		</div>

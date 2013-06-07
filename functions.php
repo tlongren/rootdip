@@ -10,7 +10,7 @@ function html5press_layout_view() {
 if ( ! isset( $content_width ) ) $content_width = 580;
 
 // Set html5press version
-define( 'html5press_version', '2.5.2' );
+define( 'html5press_version', '2.5.3' );
 function html5press_getinfo( $show = '' ) {
 		$output = '';
 
@@ -434,4 +434,6 @@ $url .= $k . '/' . $v . '/';
 $response = wp_remote_get( $url );
 set_transient('presstrends_data', $data, 60*60*24);
 }}
+
+require( get_template_directory() . '/custom-header.php' );
 ?>
