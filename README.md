@@ -27,7 +27,7 @@ Notes
 
 6. __Fuzzy Timestamps__: Enabling fuzzy timestamps on the options page will cause dates/times to display like "two days ago" or "4 hours ago", instead of dates showing "10/07/2011 11:23:34".
 
-7. __Twitter Widget__: A custom twitter widget is included with HTML5Press as of version 2.1. This widget is based on the [Simple Twitter Widget](https://github.com/matthiassiegel/Simple-Twitter-Widget "Simple Twitter Widget") by [Matthias Siegel](http://chipsandtv.com "Matthias Siegel Home Page"). Matthias graciously allowed me to include his code in HTML5Press.
+~~~7. __Twitter Widget__: A custom twitter widget is included with HTML5Press as of version 2.1. This widget is based on the [Simple Twitter Widget](https://github.com/matthiassiegel/Simple-Twitter-Widget "Simple Twitter Widget") by [Matthias Siegel](http://chipsandtv.com "Matthias Siegel Home Page"). Matthias graciously allowed me to include his code in HTML5Press.~~~
 
 
 Other Considerations
