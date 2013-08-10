@@ -221,6 +221,10 @@ $html5press_theme_fonts = array(
 		'value' => 'just-another-hand',
 		'label' => 'Just Another Hand'
 	),
+	'lato' => array(
+		'value' => 'lato',
+		'label' => 'Lato'
+	),
 	'lobster-two' => array(
 		'value' => 'lobster-two',
 		'label' => 'Lobster Two'
