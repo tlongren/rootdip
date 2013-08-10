@@ -10,7 +10,7 @@ function rootdip_layout_view() {
 if ( ! isset( $content_width ) ) $content_width = 580;
 
 // Set rootdip version
-define( 'rootdip_version', '2.5.3' );
+define( 'rootdip_version', '2.5.4' );
 function rootdip_getinfo( $show = '' ) {
 		$output = '';
 
