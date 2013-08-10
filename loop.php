@@ -1,6 +1,6 @@
-<?php $options = html5press_get_options(); ?>
-<?php if (is_paged()) { ?><h1 class="pagetitle"><?php $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1; _e( 'Page','html5press' ); ?> <?php echo $pageNumber; ?></h1><?php } ?>
-		<?php if (!empty($options['featured_cat']) && is_front_page()) { html5press_featured_posts(); } ?>
+<?php $options = rootdip_get_options(); ?>
+<?php if (is_paged()) { ?><h1 class="pagetitle"><?php $pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1; _e( 'Page','rootdip' ); ?> <?php echo $pageNumber; ?></h1><?php } ?>
+		<?php if (!empty($options['featured_cat']) && is_front_page()) { rootdip_featured_posts(); } ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>
         	<header class="entry-header">
@@ -13,16 +13,16 @@
 	            <?php if ($options['homepage_article_summary'] == 1) { ?>
 					<?php the_excerpt(); ?>
 				<?php } else { ?>
-					<?php the_content(__( 'Read more','html5press' )); ?>
+					<?php the_content(__( 'Read more','rootdip' )); ?>
 	            <?php } ?>
             </div> <!-- .entry-content -->
 			<?php /* Edit Link */ edit_post_link(); ?>
-			<?php if (!is_home()) { the_tags( '<span class="post-tags">' . __( 'Tagged with: ','html5press' ), ', ', '</span>' ); } ?>
+			<?php if (!is_home()) { the_tags( '<span class="post-tags">' . __( 'Tagged with: ','rootdip' ), ', ', '</span>' ); } ?>
 			<footer class="entry-meta">
-					<?php _e( 'In ','html5press'); ?><?php the_category(', '); ?>
-					<?php _e( 'by ','html5press'); ?> <span class="author vcard"><?php the_author_posts_link(); ?></span>
-					<?php if ($options['fuzzy_timestamps'] == 0) { _e( '','html5press'); } ?> <time datetime="<?php the_time('Y-m-d\TH:i:sO'); ?>" class="timeago" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time><?php if (get_the_modified_time() != get_the_time()) { ?>, updated <time datetime="<?php the_modified_time('Y-m-d\TH:i:sO'); ?>"><?php the_modified_date(); ?></time><?php } ?>
-					<?php wp_link_pages( array( 'before' => __( '<span class="alignright">Pages:', 'html5press' ), 'after' => '</span>' ) ); ?>
+					<?php _e( 'In ','rootdip'); ?><?php the_category(', '); ?>
+					<?php _e( 'by ','rootdip'); ?> <span class="author vcard"><?php the_author_posts_link(); ?></span>
+					<?php if ($options['fuzzy_timestamps'] == 0) { _e( '','rootdip'); } ?> <time datetime="<?php the_time('Y-m-d\TH:i:sO'); ?>" class="timeago" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time><?php if (get_the_modified_time() != get_the_time()) { ?>, updated <time datetime="<?php the_modified_time('Y-m-d\TH:i:sO'); ?>"><?php the_modified_date(); ?></time><?php } ?>
+					<?php wp_link_pages( array( 'before' => __( '<span class="alignright">Pages:', 'rootdip' ), 'after' => '</span>' ) ); ?>
             </footer> <!-- end post meta -->
 			<article class="comments">
 				<?php comments_template(); ?>
@@ -30,5 +30,5 @@
         </article> <!-- end post 1 -->
 		
     <?php endwhile; else: ?>
-		<p><?php _e( 'Sorry, no posts matched your criteria.','html5press' ); ?></p>
+		<p><?php _e( 'Sorry, no posts matched your criteria.','rootdip' ); ?></p>
 	<?php endif; ?>

@@ -17,13 +17,13 @@ $count_tags         = wp_count_terms( 'post_tag', array( 'hide_empty' => true ) 
 			<p class="archivetext">
 			<?php
 			/* translators: 1: blog name, 2: post count, 3: page count 4: comment count, 5: category count, 6: tag count */
-			printf( __('This is the frontpage of the <strong>%1$s</strong> archives. Currently the archives consist of <strong>%2$s</strong>, <strong>%3$s</strong> and <strong>%4$s</strong>, with a total of <strong>%5$s</strong> and <strong>%6$s</strong>.', 'html5press'),
+			printf( __('This is the frontpage of the <strong>%1$s</strong> archives. Currently the archives consist of <strong>%2$s</strong>, <strong>%3$s</strong> and <strong>%4$s</strong>, with a total of <strong>%5$s</strong> and <strong>%6$s</strong>.', 'rootdip'),
 					get_bloginfo('name'),
-					sprintf( _n( '%d post', '%d posts', $count_posts->publish, 'html5press' ), number_format_i18n( $count_posts->publish ) ),
-					sprintf( _n( '%d page', '%d pages', $count_pages->publish, 'html5press' ), number_format_i18n( $count_posts->publish ) ),
-					sprintf( _n( '%d comment', '%d comments', $count_comments->approved, 'html5press' ), number_format_i18n( $count_comments->approved ) ),
-					sprintf( _n( '%d category', '%d categories', $count_cats, 'html5press' ), number_format_i18n( $count_cats ) ),
-					sprintf( _n( '%d tag', '%d tags', $count_tags, 'html5press' ), number_format_i18n( $count_tags ) )
+					sprintf( _n( '%d post', '%d posts', $count_posts->publish, 'rootdip' ), number_format_i18n( $count_posts->publish ) ),
+					sprintf( _n( '%d page', '%d pages', $count_pages->publish, 'rootdip' ), number_format_i18n( $count_posts->publish ) ),
+					sprintf( _n( '%d comment', '%d comments', $count_comments->approved, 'rootdip' ), number_format_i18n( $count_comments->approved ) ),
+					sprintf( _n( '%d category', '%d categories', $count_cats, 'rootdip' ), number_format_i18n( $count_cats ) ),
+					sprintf( _n( '%d tag', '%d tags', $count_tags, 'rootdip' ), number_format_i18n( $count_tags ) )
 			);
 			?>
 			</p>
@@ -32,27 +32,27 @@ $count_tags         = wp_count_terms( 'post_tag', array( 'hide_empty' => true ) 
 			$tag_cloud = get_terms( 'post_tag' );
 			if ( $tag_cloud ) :
 			?>
-					<h3><?php _e('Tag Cloud', 'html5press'); ?></h3>
+					<h3><?php _e('Tag Cloud', 'rootdip'); ?></h3>
 					<div id="tag-cloud">
 							<?php wp_tag_cloud('number=0'); ?>
 					</div>
 			<?php endif; ?>
 			
-			<h3><?php _e('Browse by Month', 'html5press'); ?></h3>
+			<h3><?php _e('Browse by Month', 'rootdip'); ?></h3>
 			<ul class="archive-list">
 					<?php wp_get_archives('show_post_count=1'); ?>
 			</ul>
 			
 			<br class="clear" />
 			
-			<h3><?php _e('Browse by Category', 'html5press'); ?></h3>
+			<h3><?php _e('Browse by Category', 'rootdip'); ?></h3>
 			<ul class="archive-list">
 					<?php wp_list_categories( array( 'hierarchical' => true, 'show_count' => 1, 'title_li' => '' ) ); ?>
 			</ul>
 			
 			<footer class="post-meta">
                 <p>
-                	<?php _e( 'Created ','html5press'); ?><time datetime="<?php the_time('Y-m-d\TH:i:sO'); ?>" class="timeago" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time>
+                	<?php _e( 'Created ','rootdip'); ?><time datetime="<?php the_time('Y-m-d\TH:i:sO'); ?>" class="timeago" pubdate><?php the_time( get_option( 'date_format' ) ); ?></time>
 				</p>
 				<?php /* Edit Link */ edit_post_link(); ?>
             </footer><!-- end post meta -->

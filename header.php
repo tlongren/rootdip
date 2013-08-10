@@ -1,4 +1,4 @@
-<?php $options = html5press_get_options(); ?>
+<?php $options = rootdip_get_options(); ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js ie6" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7" <?php language_attributes(); ?>> <![endif]-->
@@ -58,6 +58,6 @@
 	
 	<!-- Main navigation -->
 	<nav id="menu" class="main-navigation span12 clearfix" role="navigation">
-		<h3 class="assistive-text"><?php _e( 'Main menu', 'html5press' ); ?></h2> 
+		<h3 class="assistive-text"><?php _e( 'Main menu', 'rootdip' ); ?></h2> 
 		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu' => 'top-menu', 'container' => 'false' ) ); ?>
 	</nav> <!-- #nav -->

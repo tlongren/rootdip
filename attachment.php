@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php $options = html5press_get_options(); ?>
+<?php $options = rootdip_get_options(); ?>
 
 <main id="content" role="main" class="span7">
 
@@ -11,11 +11,11 @@
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
 		<div class="alignleft prev-post">
-			<?php previous_image_link( false, __( 'Previous Attachment', 'html5press' ) ); ?>
+			<?php previous_image_link( false, __( 'Previous Attachment', 'rootdip' ) ); ?>
 		</div>
 
 		<div class="alignright next-post">
-			<?php next_image_link( false, __( 'Next Attachment','html5press' ) ); ?>
+			<?php next_image_link( false, __( 'Next Attachment','rootdip' ) ); ?>
 		</div>
 		
 		<div class="clear"></div>
@@ -35,7 +35,7 @@
 				<figcaption><?php if ( ! empty( $excerpt ) ) echo $excerpt; ?></figcaption>
 			</figure>
 
-			<p><a href="<?php echo get_permalink( $post->post_parent ); ?>">&laquo;<?php _e( 'Back to Post','html5press' ); ?></a></p>
+			<p><a href="<?php echo get_permalink( $post->post_parent ); ?>">&laquo;<?php _e( 'Back to Post','rootdip' ); ?></a></p>
 
 		<?php else : ?>
 
@@ -49,7 +49,7 @@
 
 		<footer class="post-meta">
 			<p>
-				<?php printf( __( 'Created on %s', 'html5press' ), '<time datetime="' . get_the_date('Y-m-d\TH:i:sO') . '" pubdate>' . get_the_date( get_option( 'date_format' ) ) . '</time>' ); ?>
+				<?php printf( __( 'Created on %s', 'rootdip' ), '<time datetime="' . get_the_date('Y-m-d\TH:i:sO') . '" pubdate>' . get_the_date( get_option( 'date_format' ) ) . '</time>' ); ?>
 			</p>
 		</footer> <!-- .post-meta -->
 

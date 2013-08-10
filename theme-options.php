@@ -1,8 +1,8 @@
 <?php
 /**
- * Returns the default options for HTML5Press
+ * Returns the default options for RootDip
  */
-function html5press_get_default_options() {
+function rootdip_get_default_options() {
 	return array(
 		'back_to_top' => true,
 		'show_tagline' => true,
@@ -21,24 +21,24 @@ function html5press_get_default_options() {
 }
 
 /**
- * Returns the options array for HTML5Press.
+ * Returns the options array for RootDip.
  */
-function html5press_get_options() {
-	return get_option( 'html5press_options', html5press_get_default_options() );
+function rootdip_get_options() {
+	return get_option( 'rootdip_options', rootdip_get_default_options() );
 }
 
 
 if ( is_admin() ) : // Load only if we are viewing an admin page
 
-function html5press_register_settings() {
+function rootdip_register_settings() {
 	// Register settings and call sanitation functions
-	register_setting( 'html5press_theme_options', 'html5press_options', 'html5press_validate_options' );
+	register_setting( 'rootdip_theme_options', 'rootdip_options', 'rootdip_validate_options' );
 }
 
-add_action( 'admin_init', 'html5press_register_settings' );
+add_action( 'admin_init', 'rootdip_register_settings' );
 
 // Store image sizes in array
-$html5press_image_sizes = array(
+$rootdip_image_sizes = array(
 	'full' => array(
 		'value' => 'full',
 		'label' => 'Full'
@@ -58,25 +58,25 @@ $html5press_image_sizes = array(
 );
 
 // Store categories in array
-$html5press_categories[0] = array(
+$rootdip_categories[0] = array(
 	'value' => 0,
 	'label' => ''
 );
-$html5press_cats = get_categories(); $i = 1;
-foreach( $html5press_cats as $html5press_cat ) :
-	$html5press_categories[$html5press_cat->cat_ID] = array(
-		'value' => $html5press_cat->cat_ID,
-		'label' => $html5press_cat->cat_name
+$rootdip_cats = get_categories(); $i = 1;
+foreach( $rootdip_cats as $rootdip_cat ) :
+	$rootdip_categories[$rootdip_cat->cat_ID] = array(
+		'value' => $rootdip_cat->cat_ID,
+		'label' => $rootdip_cat->cat_name
 	);
 	$i++;
 endforeach;
-$html5press_categories[10000] = array(
+$rootdip_categories[10000] = array(
 	'value' => 10000,
 	'label' => 'All Categories'
 );
 
 // Store number of featured posts to show options
-$html5press_num_featured_options = array(
+$rootdip_num_featured_options = array(
 	'5' => array(
 		'value' => '5',
 		'label' => '5'
@@ -96,7 +96,7 @@ $html5press_num_featured_options = array(
 );
 
 // Store stylesheet choices in an array
-$html5press_theme_colors = array(
+$rootdip_theme_colors = array(
 	'pink' => array(
 		'value' => 'pink',
 		'label' => 'Pink'
@@ -128,7 +128,7 @@ $html5press_theme_colors = array(
 );
 
 // Store font choices in an array
-$html5press_theme_fonts = array(
+$rootdip_theme_fonts = array(
 	'open-sans' => array(
 		'value' => 'open-sans',
 		'label' => 'Open Sans'
@@ -327,83 +327,83 @@ $html5press_theme_fonts = array(
 	)
 );
 
-function html5press_theme_options() {
+function rootdip_theme_options() {
 	// Add theme options page to the addmin menu
-	add_theme_page( 'HTML5Press Options', 'HTML5Press Options', 'edit_theme_options', 'theme_options', 'html5press_theme_options_page' );
+	add_theme_page( 'RootDip Options', 'RootDip Options', 'edit_theme_options', 'theme_options', 'rootdip_theme_options_page' );
 }
 
-add_action( 'admin_menu', 'html5press_theme_options' );
+add_action( 'admin_menu', 'rootdip_theme_options' );
 
 // Function to generate options page
-function html5press_theme_options_page() {
-	global $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors, $html5press_theme_fonts;
+function rootdip_theme_options_page() {
+	global $rootdip_image_sizes, $rootdip_categories, $rootdip_num_featured_options, $rootdip_theme_colors, $rootdip_theme_fonts;
 
 	if ( ! isset( $_REQUEST['settings-updated'] ) )
 		$_REQUEST['settings-updated'] = false; ?>
 
 	<div class="wrap">
 
-	<?php screen_icon(); echo "<h2>" . wp_get_theme() . __( ' Theme Options','html5press' ) . "</h2>"; ?>
+	<?php screen_icon(); echo "<h2>" . wp_get_theme() . __( ' Theme Options','rootdip' ) . "</h2>"; ?>
 
 	<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
-	<div class="updated fade"><p><strong><?php _e( 'Options saved', 'html5press' ); ?></strong></p></div>
+	<div class="updated fade"><p><strong><?php _e( 'Options saved', 'rootdip' ); ?></strong></p></div>
 	<?php endif; ?>
 
 	<form method="post" action="options.php">
 
-	<?php $options = html5press_get_options(); ?>
+	<?php $options = rootdip_get_options(); ?>
 	
-	<?php settings_fields( 'html5press_theme_options' ); ?>
+	<?php settings_fields( 'rootdip_theme_options' ); ?>
 
 	<table class="form-table">
 
 	<tr valign="top"><th scope="row"><label for="back_to_top">"Back to Top" Button</label></th>
 	<td>
-	<input type="checkbox" id="back_to_top" name="html5press_options[back_to_top]" value="1" <?php checked( true, $options['back_to_top'] ); ?> />
+	<input type="checkbox" id="back_to_top" name="rootdip_options[back_to_top]" value="1" <?php checked( true, $options['back_to_top'] ); ?> />
 	<label for="back_to_top">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="show_tagline">Show Tagline In Header</label></th>
 	<td>
-	<input type="checkbox" id="show_tagline" name="html5press_options[show_tagline]" value="1" <?php checked( true, $options['show_tagline'] ); ?> />
+	<input type="checkbox" id="show_tagline" name="rootdip_options[show_tagline]" value="1" <?php checked( true, $options['show_tagline'] ); ?> />
 	<label for="show_tagline">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="enable_slimbox">Slimbox2 Image Overlay</label></th>
 	<td>
-	<input type="checkbox" id="enable_slimbox" name="html5press_options[enable_slimbox]" value="1" <?php checked( true, $options['enable_slimbox'] ); ?> />
+	<input type="checkbox" id="enable_slimbox" name="rootdip_options[enable_slimbox]" value="1" <?php checked( true, $options['enable_slimbox'] ); ?> />
 	<label for="enable_slimbox">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="show_query_stats">Show Query Stats In Footer</label></th>
 	<td>
-	<input type="checkbox" id="show_query_stats" name="html5press_options[show_query_stats]" value="1" <?php checked( true, $options['show_query_stats'] ); ?> />
+	<input type="checkbox" id="show_query_stats" name="rootdip_options[show_query_stats]" value="1" <?php checked( true, $options['show_query_stats'] ); ?> />
 	<label for="show_query_stats">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="fuzzy_timestamps">Fuzzy Timestamps</label></th>
 	<td>
-	<input type="checkbox" id="fuzzy_timestamps" name="html5press_options[fuzzy_timestamps]" value="1" <?php checked( true, $options['fuzzy_timestamps'] ); ?> />
+	<input type="checkbox" id="fuzzy_timestamps" name="rootdip_options[fuzzy_timestamps]" value="1" <?php checked( true, $options['fuzzy_timestamps'] ); ?> />
 	<label for="fuzzy_timestamps">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="homepage_article_summary">Article Summaries on Home Page</label></th>
 	<td>
-	<input type="checkbox" id="homepage_article_summary" name="html5press_options[homepage_article_summary]" value="1" <?php checked( true, $options['homepage_article_summary'] ); ?> />
+	<input type="checkbox" id="homepage_article_summary" name="rootdip_options[homepage_article_summary]" value="1" <?php checked( true, $options['homepage_article_summary'] ); ?> />
 	<label for="homepage_article_summary">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="maintenance_mode">Maintenance Mode</label></th>
 	<td>
-	<input type="checkbox" id="maintenance_mode" name="html5press_options[maintenance_mode]" value="1" <?php checked( true, $options['maintenance_mode'] ); ?> />
+	<input type="checkbox" id="maintenance_mode" name="rootdip_options[maintenance_mode]" value="1" <?php checked( true, $options['maintenance_mode'] ); ?> />
 	<label for="maintenance_mode">Enabled</label>
 	</td>
 	</tr>
 	<tr valign="top"><th scope="row"><label for="featured_image_size">Linked Featured Image Size</label></th>
 	<td>
-	<select id="featured_image_size" name="html5press_options[featured_image_size]">
+	<select id="featured_image_size" name="rootdip_options[featured_image_size]">
 	<?php
-	foreach ( $html5press_image_sizes as $images ) :
+	foreach ( $rootdip_image_sizes as $images ) :
 		$label = $images['label'];
 		$selected = '';
 		if ( $images['value'] == $options['featured_image_size'] )
@@ -416,9 +416,9 @@ function html5press_theme_options_page() {
 	</tr>
 	<tr valign="top"><th scope="row"><label for="theme_color">Theme Color</label></th>
 	<td>
-	<select id="theme_color" name="html5press_options[theme_color]">
+	<select id="theme_color" name="rootdip_options[theme_color]">
 	<?php
-	foreach ( $html5press_theme_colors as $colors ) :
+	foreach ( $rootdip_theme_colors as $colors ) :
 		$label = $colors['label'];
 		$selected = '';
 		if ( $colors['value'] == $options['theme_color'] )
@@ -431,9 +431,9 @@ function html5press_theme_options_page() {
 	</tr>
 	<tr valign="top"><th scope="row"><label for="theme_font">Theme Font</label></th>
 	<td>
-	<select id="theme_font" name="html5press_options[theme_font]">
+	<select id="theme_font" name="rootdip_options[theme_font]">
 	<?php
-	foreach ( $html5press_theme_fonts as $fonts ) :
+	foreach ( $rootdip_theme_fonts as $fonts ) :
 		$label = $fonts['label'];
 		$selected = '';
 		if ( $fonts['value'] == $options['theme_font'] )
@@ -446,9 +446,9 @@ function html5press_theme_options_page() {
 	</tr>
 	<tr valign="top"><th scope="row"><label for="featured_cat">Featured Post Category</label></th>
 	<td>
-	<select id="featured_cat" name="html5press_options[featured_cat]">
+	<select id="featured_cat" name="rootdip_options[featured_cat]">
 	<?php
-	foreach ( $html5press_categories as $category ) :
+	foreach ( $rootdip_categories as $category ) :
 		$label = $category['label'];
 		$selected = '';
 		if ( $category['value'] == $options['featured_cat'] )
@@ -461,9 +461,9 @@ function html5press_theme_options_page() {
 	</tr>
 	<tr valign="top"><th scope="row"><label for="num_featured"># Featured Posts to Show</label></th>
 	<td>
-	<select id="num_featured" name="html5press_options[num_featured]">
+	<select id="num_featured" name="rootdip_options[num_featured]">
 	<?php
-	foreach ( $html5press_num_featured_options as $featured ) :
+	foreach ( $rootdip_num_featured_options as $featured ) :
 		$label = $featured['label'];
 		$selected = '';
 		if ( $featured['value'] == $options['num_featured'] )
@@ -476,7 +476,7 @@ function html5press_theme_options_page() {
 	</tr>
 	<tr valign="top"><th scope="row"><label for="custom_css">Custom CSS</label></th>
 	<td>
-	<textarea name="html5press_options[custom_css]" style="width:350px; height:200px;" cols="" rows=""><?php echo esc_attr($options['custom_css']); ?></textarea>
+	<textarea name="rootdip_options[custom_css]" style="width:350px; height:200px;" cols="" rows=""><?php echo esc_attr($options['custom_css']); ?></textarea>
 	</td>
 	</tr>
 	</table>
@@ -490,34 +490,34 @@ function html5press_theme_options_page() {
 	<?php
 }
 
-function html5press_validate_options( $input ) {
-	global $html5press_image_sizes, $html5press_categories, $html5press_num_featured_options, $html5press_theme_colors, $html5press_theme_fonts;
+function rootdip_validate_options( $input ) {
+	global $rootdip_image_sizes, $rootdip_categories, $rootdip_num_featured_options, $rootdip_theme_colors, $rootdip_theme_fonts;
 	
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
 	$prev = $options['featured_cat'];
 	// We verify if the given value exists in the categories array
-	if ( !array_key_exists( $input['featured_cat'], $html5press_categories ) )
+	if ( !array_key_exists( $input['featured_cat'], $rootdip_categories ) )
 		$input['featured_cat'] = $prev;
 		
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
 	$prev = $options['num_featured'];
 	// We verify if the given value exists in the categories array
-	if ( !array_key_exists( $input['num_featured'], $html5press_num_featured_options ) )
+	if ( !array_key_exists( $input['num_featured'], $rootdip_num_featured_options ) )
 		$input['num_featured'] = $prev;
 		
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
 	$prev = $options['theme_color'];
-	if ( !array_key_exists( $input['theme_color'], $html5press_theme_colors ) )
+	if ( !array_key_exists( $input['theme_color'], $rootdip_theme_colors ) )
 		$input['theme_color'] = $prev;
 	
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
 	$prev = $options['theme_font'];
-	if ( !array_key_exists( $input['theme_font'], $html5press_theme_fonts ) )
+	if ( !array_key_exists( $input['theme_font'], $rootdip_theme_fonts ) )
 		$input['theme_font'] = $prev;
 
 	// We select the previous value of the field, to restore it in case an invalid entry has been given
 	$prev = $options['featured_image_size'];
-	if ( !array_key_exists( $input['featured_image_size'], $html5press_image_sizes ) )
+	if ( !array_key_exists( $input['featured_image_size'], $rootdip_image_sizes ) )
 		$input['featured_image_size'] = $prev;
 	
 	// If the checkbox has not been checked, we void it
