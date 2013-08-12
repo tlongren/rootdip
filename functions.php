@@ -157,7 +157,7 @@ function rootdip_update_notice() {
 			foreach ( $rss_items as $item ) {
 				// Compare feed version to theme version
 				if ( version_compare( $item->get_title(), rootdip_getinfo('version') ) > 0 )
-					echo '<div id="update-nag">HTML5Press ' . esc_html( $item->get_title() ) .' is available! <a href="' . esc_url( $item->get_permalink() ) .'">Click here to download</a>. ' . esc_html( $item->get_description() ) .
+					echo '<div id="update-nag">RootDip ' . esc_html( $item->get_title() ) .' is available! <a href="' . esc_url( $item->get_permalink() ) .'">Click here to download</a>. ' . esc_html( $item->get_description() ) .
 '</div>';
 }
 endif;
@@ -206,7 +206,7 @@ function rootdip_commentfield() {
 	return '<p><label for="comment">' . _x( 'Comment','noun','rootdip' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required></textarea></p>';
 }
 
-// Show comments the HTML5Press way
+// Show comments the RootDip way
 function rootdip_list_comments( $comment, $args, $depth ) {
 
 	$GLOBALS['comment'] = $comment; ?>
@@ -282,14 +282,14 @@ function rootdip_page_menu($menu) {
 	return $menu;
 }
 
-// Setup HTML5Press Options link in the admin bar
+// Setup RootDip Options link in the admin bar
 add_action( 'wp_before_admin_bar_render', 'rootdip_admin_bar_link' );
 function rootdip_admin_bar_link() {
 	global $wp_admin_bar;
 	$wp_admin_bar->add_menu( array(
 		'parent' => '',
 		'id' => 'rootdip-options',
-		'title' => __( 'HTML5Press Options','rootdip' ),
+		'title' => __( 'RootDip Options','rootdip' ),
 		'href' => admin_url( 'themes.php?page=theme_options' ),
 		'meta' => false
 	));
