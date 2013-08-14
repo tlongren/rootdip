@@ -5,10 +5,9 @@
 		<p>
 			<?php
 				/* translators: 1: year, 2: blog name, 3: link to designer 4: link to theme */
-				printf( __( 'Copyright &copy; %1$s %2$s - Design by %3$s & WordPress\'d by %4$s','rootdip' ),
+				printf( __( 'Copyright &copy; %1$s %2$s - Theme by %3$s','rootdip' ),
 					date('Y'),
 					'<a href="' . home_url() . '" title="' . get_bloginfo('name') . '">' . get_bloginfo('name') . '</a>',
-					'<a href="http://jayj.dk" title="Design by Jayj.dk">Jayj.dk</a>',
 					'<a href="http://www.longren.org/wordpress/rootdip/">Tyler Longren</a>'
 				);
 			?>
