@@ -403,37 +403,5 @@ function rootdip_custom_background_callback() {
 <?php
 
 }
-
-// PressTrends theme tracking
-add_action('wp_head', 'presstrends');
-function presstrends() {
-// Add your PressTrends and Theme API Keys
-$api_key = 'a772ez0rwkeszmbwt9glta1bimxxfevhah4f';
-$auth = 'bjt6p2d21y2cygqofqp6lkk0c9iy1snqf';
-
-// NO NEED TO EDIT BELOW
-$data = get_transient( 'presstrends_data' );
-if (!$data || $data == ''){
-$api_base = 'http://api.presstrends.io/index.php/api/sites/add/auth/';
-$url = $api_base . $auth . '/api/' . $api_key . '/';
-$data = array();
-$count_posts = wp_count_posts();
-$comments_count = wp_count_comments();
-$theme_data = wp_get_theme(get_template_directory() . '/style.css');
-$plugin_count = count(get_option('active_plugins'));
-$data['url'] = stripslashes(str_replace(array('http://', '/', ':' ), '', site_url()));
-$data['posts'] = $count_posts->publish;
-$data['comments'] = $comments_count->total_comments;
-$data['theme_version'] = $theme_data['Version'];
-$data['theme_name'] = str_replace( ' ', '', get_bloginfo( 'name' ));
-$data['plugins'] = $plugin_count;
-$data['wpversion'] = get_bloginfo('version');
-foreach ( $data as $k => $v ) {
-$url .= $k . '/' . $v . '/';
-}
-$response = wp_remote_get( $url );
-set_transient('presstrends_data', $data, 60*60*24);
-}}
-
 require( get_template_directory() . '/custom-header.php' );
 ?>
