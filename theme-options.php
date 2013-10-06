@@ -363,6 +363,12 @@ function rootdip_theme_options_page() {
 	<label for="back_to_top">Enabled</label>
 	</td>
 	</tr>
+	<tr valign="top"><th scope="row"><label for="pace_loader"><a href="http://github.hubspot.com/pace/docs/welcome/" target="_blank">Pace</a> Page Load Indicator</label></th>
+	<td>
+	<input type="checkbox" id="pace_loader" name="rootdip_options[pace_loader]" value="1" <?php checked( true, $options['pace_loader'] ); ?> />
+	<label for="pace_loader">Enabled</label>
+	</td>
+	</tr>
 	<tr valign="top"><th scope="row"><label for="show_tagline">Show Tagline In Header</label></th>
 	<td>
 	<input type="checkbox" id="show_tagline" name="rootdip_options[show_tagline]" value="1" <?php checked( true, $options['show_tagline'] ); ?> />
@@ -562,6 +568,12 @@ function rootdip_validate_options( $input ) {
 	// We verify if the input is a boolean value
 	$input['back_to_top'] = ( $input['back_to_top'] == 1 ? 1 : 0 );
 	
+	// If the checkbox has not been checked, we void it
+	if ( ! isset( $input['pace_loader'] ) )
+		$input['pace_loader'] = null;
+	// We verify if the input is a boolean value
+	$input['pace_loader'] = ( $input['pace_loader'] == 1 ? 1 : 0 );
+
 	return $input;
 }
 
