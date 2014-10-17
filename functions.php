@@ -149,7 +149,7 @@ function rootdip_update_notice() {
 		include_once( ABSPATH . WPINC . '/feed.php' );
 
 		// Get the update feed
-		$rss = fetch_feed( 'http://www.longren.org/rootdip.xml' );
+		$rss = fetch_feed( 'http://longren.io/rootdip.xml' );
 
 		if ( ! is_wp_error( $rss ) ) :
 			$maxitems = $rss->get_item_quantity(1); // We only want the latest
